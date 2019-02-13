@@ -26,3 +26,22 @@ Game setup screen,
 alert with match name and any message.
 
 User stories?
+1.       How do you normally set up a game?  Post on FB?  Messenger?  Text?  Phone call?  Other? 
+Usually on FB on the MYCL page, more rarely on Messenger. - S. Hook
+Text or Messenger. - P. Wisniewski
+Face book and Text. - J. Miller
+
+2.       How much back and forth do you feel you engage in?  1-2 questions?  4-5?  More?  
+I usually just agree on points.  Many times say if I am doing narrative or competitive - but most of the people I play know I do more narrative. - S. Hook
+Engagement depends on the type of game.  The more narrative, the more questions. - P. Wisniewski
+3-4 questions. - J. Miller
+
+3.       What sort of questions do you always want covered before you agree to a game?  Game type?  ITC vs. narrative?  Points?  Location?  Time/Date?  Particular army?  Scenario?  
+Usually just when and where, usually decide on scenario once there. - S. Hook
+Game type, points, location, time/date, (army only depends if we are trying a scenario). - P. Wisniewski
+Are you free to play? What time? Where? Points? - J. Miller
+
+4.       Anything else you like to know that helps you achieve a more enjoyable game?
+Usually I try to choose my opponents that are looking for a similar game style, for me more theme or narrative driven. - S. Hook
+Amount of time available to play, a fast I need to get this done during the week vs a weekend night where getting home at a reasonable hour isn't as important. The way things are done has changed over the years, I hate trying to organize a game over FB. - P. Wisniewski
+Fun list? Hard List? Tourney practice list? - J. Miller
