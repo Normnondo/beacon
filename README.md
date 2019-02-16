@@ -45,3 +45,12 @@ Are you free to play? What time? Where? Points? - J. Miller
 Usually I try to choose my opponents that are looking for a similar game style, for me more theme or narrative driven. - S. Hook
 Amount of time available to play, a fast I need to get this done during the week vs a weekend night where getting home at a reasonable hour isn't as important. The way things are done has changed over the years, I hate trying to organize a game over FB. - P. Wisniewski
 Fun list? Hard List? Tourney practice list? - J. Miller
+
+Project Plan:
+    Determine how many classes will be needed on the back end to make these pages run.  
+    Figure out a few issues like changing army selection based on game selected. 
+    Build out database.
+    Figure out my DAO and how to work with an API and if I'll need anything other 
+    than a zip code API.   
+    Deploy to web server.
+    Put on finishing touches and test, test, test.
