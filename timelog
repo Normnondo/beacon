@@ -1,9 +1,26 @@
 Week 1 -  Exercise ~ 8-10 hours, was very groggy from being sick
 Week 2 -  Exercise ~ 4 hours Sat, setting up initial files, LineTest completed
-          Exercise ~ 
-          
+Week 3 -  Exercise ~ 4 hours Sat, doing taglib exercises, another hour or so Sunday figuring out what I did wrong 
+Week 4 -  Spent 3 hours going through videos and setting up demo classes          
           
 Week 1 -  Project ~ 1-2 hours going over ideas, writing up initial questions around what is needed to plan a game
 Week 2 -  Project ~ 1 hour adding some more plans, how many screens, layout ideas, choosing web template
           Plans for this week include getting some user stories, hopefully starting work on Welcome screen
 Week 3 -  Spent a couple hours Wed night putzing around with the web template.  Looking pretty cool, needs cleanup.
+	  Another hour or so getting the last page roughed in.  Added a favicon as we learned how to do that in 
+	  Adv Web this week
+Week 4 -  Applying Hibernate lesson to Beacon, setting up Database, first POJO etc.
+
+
+Checklist:
+	Eliminate duplicate code in BeaconUsersDao
+
+Questions for project, is there a way to split army selection between AoS and 40k?yes with database
+Need to add Login/Register page
+How many tables will I need for DB? 5-6
+How exactly to I put the game information on the page so someone can select it, and how do I do the notifications?
+	Make it a link, but see if you can use CSS to make it look like something other than just a hyperlink.
+	
+Buying a domain name?  Recommendations? - Yes, free one available as part of student package.
+
+Future addition to Beacon, chat feature???
