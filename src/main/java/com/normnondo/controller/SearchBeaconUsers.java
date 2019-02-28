@@ -26,7 +26,7 @@ public class SearchBeaconUsers extends HttpServlet {
         String[] searchType = req.getParameterValues("searchType");
         String searchString = null;
 
-        if (searchTerm != null) {
+       /* if (searchTerm != null) {
 
             try {
 
@@ -48,10 +48,10 @@ public class SearchBeaconUsers extends HttpServlet {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, resp);
 
-        } else {
-            req.setAttribute("users", BeaconUsersDao.getAllUsers());
+        } else {*/
+            req.setAttribute("users", userDao.getAllUsers());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, resp);
-        }
+
     }
 }

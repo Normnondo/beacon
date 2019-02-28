@@ -6,11 +6,8 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.CriteriaQuery;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.Expression;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 public class BeaconUsersDao {
@@ -70,7 +67,7 @@ public class BeaconUsersDao {
         CriteriaQuery<BeaconUsers> query = builder.createQuery(BeaconUsers.class);
         Root<BeaconUsers> root = query.from(BeaconUsers.class);
         Expression<String> propertyPath = root.get("zipCode");
-        query.where(builder.like(propertyPath, "%" + zipCode + "%"));
+        query.where(builder.equal(propertyPath, zipCode));
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
@@ -84,7 +81,7 @@ public class BeaconUsersDao {
         CriteriaQuery<BeaconUsers> query = builder.createQuery(BeaconUsers.class);
         Root<BeaconUsers> root = query.from(BeaconUsers.class);
         Expression<String> propertyPath = root.get("phoneNumber");
-        query.where(builder.like(propertyPath, "%" + phoneNumber + "%"));
+        query.where(builder.equal(propertyPath, phoneNumber));
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
@@ -104,7 +101,7 @@ public class BeaconUsersDao {
         return users;
     }
 
-    public List<BeaconUsers> getUsersById(int id) {
+    public BeaconUsers getUserById(int id) {
 
         Session session = sessionFactory.openSession();
 

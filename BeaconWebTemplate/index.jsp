@@ -58,19 +58,19 @@
                     <div class="collapse navbar-collapse" id="mainNavbar">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="enterInfo.html">Enter your Info</a>
+                                    <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="gameSearch.html">Search for a game</a>
+                                    <a class="nav-link" href="gameSearch.jsp">Search for a game</a>
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="availableOpponents.html">See available opponents</a>
+                                    <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
                             </li>
                         </ul>
 
@@ -162,11 +162,11 @@
                                         </a>
                                     </li>
                                     <li class="page-item active"><a class="page-link" href="index">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="enterInfo.html">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="gameSearch.html">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="availableOpponents.html">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li>
                                     <li class="page-item">
-                                        <a class="page-link" href="enterInfo.html" aria-label="Next">
+                                        <a class="page-link" href="enterInfo.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                             <span class="sr-only">Next</span>
                                         </a>
@@ -181,10 +181,10 @@
                         <div class="sidebar-box">
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
-                                <a class="list-group-item active" href="index.html">Home Page</a>
-                                <a class="list-group-item" href="enterInfo.html">Enter your info</a>
-                                <a class="list-group-item" href="gameSearch.html">Search for a game</a>
-                                <a class="list-group-item" href="availableOpponents.html">See available opponents</a>
+                                <a class="list-group-item active" href="index.jsp">Home Page</a>
+                                <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
+                                <a class="list-group-item" href="gameSearch.jsp">Search for a game</a>
+                                <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a>
                             </div>
                         </div>
                     </aside> 

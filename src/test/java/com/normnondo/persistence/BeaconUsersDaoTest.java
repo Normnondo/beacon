@@ -1,9 +1,9 @@
 package com.normnondo.persistence;
 
-import com.normnondo.entity.BeaconUsers;
+import com.normnondo.entity.*;
+import com.normnondo.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,6 +15,9 @@ class BeaconUsersDaoTest {
     @BeforeEach
     void setUp() {
         dao = new BeaconUsersDao();
+
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
     }
 
     @Test
@@ -31,7 +34,7 @@ class BeaconUsersDaoTest {
 
     @Test
     void getUsersByFirstNameSuccess() {
-        List<BeaconUsers> users = dao.getUsersByFirstName("Billy");
+        List<BeaconUsers> users = dao.getUsersByFirstName("Freddie");
         assertEquals(1, users.size());
     }
 
@@ -54,28 +57,49 @@ class BeaconUsersDaoTest {
     }
 
     @Test
-    void getUsersByIdSuccess() {
-        List<BeaconUsers> users = dao.getUsersById(2);
+    void getUserByIdSuccess() {
+        BeaconUsers users = dao.getUserById(2);
         assertEquals("Billy", users.getFirstName());
     }
 
     @Test
     void saveOrUpdateSuccess() {
+        String newLastName = "Williams";
+        BeaconUsers userToUpdate = dao.getUserById(4);
+        userToUpdate.setLastName(newLastName);
+        dao.saveOrUpdate(userToUpdate);
+        BeaconUsers retrievedUser = dao.getUserById(4);
+        assertEquals(newLastName, retrievedUser.getLastName());
     }
 
     @Test
     void insertSuccess() {
+
+        BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
+        int id = dao.insert(beaconUsers);
+        assertNotEquals(0,id);
+        BeaconUsers insertedBeaconUser = dao.getUserById(id);
+        assertEquals("Fred", insertedBeaconUser.getFirstName());
     }
 
     @Test
     void deleteSuccess() {
+        dao.delete(dao.getUserById(3));
+        assertNull(dao.getUserById(3));
+
     }
 
     @Test
     void getByPropertyEqualSuccess() {
+        List<BeaconUsers> beaconUsers = dao.getByPropertyEqual("lastName", "Mercury");
+        assertEquals(1, beaconUsers.size());
+        assertEquals(3, beaconUsers.get(0).getId());
     }
 
     @Test
     void getByPropertyLikeSuccess() {
+        List<BeaconUsers> beaconUsers = dao.getByPropertyLike("lastName", "m");
+        assertEquals(4, beaconUsers.size());
+
     }
 }

@@ -58,19 +58,19 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.jsp">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="enterInfo.html">Enter your Info</a>
+                        <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="gameSearch.html">Search for a game</a>
+                        <a class="nav-link" href="gameSearch.jsp">Search for a game</a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="availableOpponents.html">See available opponents <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="availableOpponents.jsp">See available opponents <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
 
@@ -101,8 +101,8 @@
                     the details (or perhaps the details will be shown right there in the list, sounds easier) and then they
                     can click to confirm that's the game they are committing to play.</p>
 
-                    <a href="index.html" class="btn btn-primary">Home</a>
-                    <a href="gameSearch.html" class="btn btn-secondary">Search for a game</a>
+                    <a href="index.jsp" class="btn btn-primary">Home</a>
+                    <a href="gameSearch.jsp" class="btn btn-secondary">Search for a game</a>
 
                 </article>
                 <!-- Example pagination Bootstrap component -->
@@ -114,12 +114,12 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="enterInfo.html">2</a></li>
-                        <li class="page-item"><a class="page-link" href="gameSearch.html">3</a></li>
-                        <li class="page-item active"><a class="page-link" href="availableOpponents.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
+                        <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                        <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
+                        <li class="page-item active"><a class="page-link" href="availableOpponents.jsp">4</a></li>
                         <li class="page-item">
-                            <a class="page-link" href="index.html" aria-label="Next">
+                            <a class="page-link" href="index.jsp" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -134,10 +134,10 @@
                 <div class="sidebar-box">
                     <h4>Categories</h4>
                     <div class="list-group list-group-root">
-                        <a class="list-group-item" href="index.html">Home Page</a>
-                        <a class="list-group-item" href="enterInfo.html">Enter your info</a>
-                        <a class="list-group-item" href="gameSearch.html">Search for a game</a>
-                        <a class="list-group-item active" href="availableOpponents.html">See available opponents</a>
+                        <a class="list-group-item" href="index.jsp">Home Page</a>
+                        <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
+                        <a class="list-group-item" href="gameSearch.jsp">Search for a game</a>
+                        <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a>
                     </div>
                 </div>
             </aside>

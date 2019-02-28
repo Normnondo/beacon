@@ -1,0 +1,29 @@
+
+Checklist:
+	Eliminate duplicate code in BeaconUsersDao
+	Figure out genericDao
+
+Questions for project, is there a way to split army selection between AoS and 40k?yes with database
+Need to add Login/Register page
+How many tables will I need for DB? 5-6
+How exactly to I put the game information on the page so someone can select it, and how do I do the notifications?
+	Make it a link, but see if you can use CSS to make it look like something other than just a hyperlink.
+	
+Buying a domain name?  Recommendations? - Yes, free one available as part of student package.
+
+Future addition to Beacon, chat feature???
+
+Databases needed:,
+Users, need to add authentication
+Games
+Army options (unless I go with just 40k on deployment)
+
+How to notify someone? Leave opening in 'Games' database? When a user clicks on 'I'm your huckleberry' it should
+fill that open column and send notification?
+
+Classes needed:
+jsps for the four pages (created, roughed in)
+servlets, for all four?
+bean for user info (created, roughed in)
+bean for game info??
+bean for army info, or since that would just go to jsp, not needed?

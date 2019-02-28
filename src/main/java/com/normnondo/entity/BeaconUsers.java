@@ -10,7 +10,7 @@ import javax.persistence.*;
  * @author normnondo
  */
 @Entity(name = "BeaconUsers")
-@Table(name = "beacon_users")
+@Table(name = "beacon_user_test")
 public class BeaconUsers {
 
     @Id
@@ -49,8 +49,8 @@ public class BeaconUsers {
      * @param phoneNumber the phone number
      * @param email       the email
      */
-    public BeaconUsers(int id, String firstName, String lastName, int zipCode, int phoneNumber, String email) {
-        this.id = id;
+    public BeaconUsers(String firstName, String lastName, int zipCode, int phoneNumber, String email) {
+      //  this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.zipCode = zipCode;
