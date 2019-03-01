@@ -919,35 +919,97 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="231" parent="3" name="beacon_user_test"/>
-    <column id="232" parent="231" name="id">
+    <table id="232" parent="3" name="games_test"/>
+    <column id="233" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="231" name="first_name">
+    <column id="234" parent="231" name="first_name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="231" name="last_name">
+    <column id="235" parent="231" name="last_name">
       <Position>3</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="231" name="zip_code">
+    <column id="236" parent="231" name="zip_code">
       <Position>4</Position>
       <DataType>int(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="231" name="phone_number">
+    <column id="237" parent="231" name="phone_number">
       <Position>5</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="231" name="email">
+    <column id="238" parent="231" name="email">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+    <key id="239" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="240" parent="232" name="id">
+      <Position>1</Position>
+      <DataType>int(5)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="232" name="game_type">
+      <Position>2</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="232" name="game_style">
+      <Position>3</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="232" name="points">
+      <Position>4</Position>
+      <DataType>int(5)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="232" name="army">
+      <Position>5</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="232" name="location">
+      <Position>6</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="232" name="user_id">
+      <Position>7</Position>
+      <DataType>int(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="247" parent="232" name="games_test_beacon_user_test_id_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="248" parent="232" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="249" parent="232" name="games_test_beacon_user_test_id_fk">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>beacon_test</RefSchemaName>
+      <RefTableName>beacon_user_test</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
   </database-model>
 </dataSource>

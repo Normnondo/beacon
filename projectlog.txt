@@ -15,6 +15,7 @@ Future addition to Beacon, chat feature???
 
 Databases needed:,
 Users, need to add authentication
+Role??  Just me as admin, or someone else too?
 Games
 Army options (unless I go with just 40k on deployment)
 

@@ -17,6 +17,7 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
         <mapping class="com.normnondo.entity.BeaconUsers"/>
+        <mapping class="com.normnondo.entity.BeaconGames"/>
         <!-- add another 'mapping class' for each table you add -->
 
     </session-factory>

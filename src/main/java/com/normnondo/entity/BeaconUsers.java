@@ -3,6 +3,8 @@ package com.normnondo.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The type Beacon users.
@@ -32,6 +34,11 @@ public class BeaconUsers {
 
     @Column(name = "email")
     private String email;
+
+    @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<BeaconGames> games = new HashSet<>();
+
+
 
     /**
      * Instantiates a new Beacon users.
@@ -166,6 +173,34 @@ public class BeaconUsers {
         this.email = email;
     }
 
+    /**
+     * Gets games.
+     *
+     * @return the games
+     */
+    public Set<BeaconGames> getGames() {
+        return games;
+    }
+
+    /**
+     * Sets games.
+     *
+     * @param games the games
+     */
+    public void setGames(Set<BeaconGames> games) {
+        this.games = games;
+    }
+
+    public void addGame(BeaconGames game) {
+        games.add(game);
+        game.setBeaconUsers(this);
+    }
+
+    public void removeGame(BeaconGames game) {
+        games.remove(game);
+        game.setBeaconUsers(null);
+    }
+
     @Override
     public String toString() {
 
@@ -178,4 +213,6 @@ public class BeaconUsers {
                 "email= '" + email + '\'' +
                 "}";
     }
+
+
 }
