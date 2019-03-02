@@ -989,13 +989,13 @@
       <DataType>varchar(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="232" name="user_id">
+    <column id="246" parent="232" name="beaconUsers_id">
       <Position>7</Position>
       <DataType>int(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="247" parent="232" name="games_test_beacon_user_test_id_fk">
-      <ColNames>user_id</ColNames>
+      <ColNames>beaconUsers_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="248" parent="232" name="PRIMARY">
@@ -1004,7 +1004,7 @@
       <Primary>1</Primary>
     </key>
     <foreign-key id="249" parent="232" name="games_test_beacon_user_test_id_fk">
-      <ColNames>user_id</ColNames>
+      <ColNames>beaconUsers_id</ColNames>
       <RefSchemaName>beacon_test</RefSchemaName>
       <RefTableName>beacon_user_test</RefTableName>
       <RefColNames>id</RefColNames>

@@ -49,7 +49,7 @@ public class BeaconGames {
      * @param points    the points
      * @param army      the army
      * @param location  the location
-     * @param beaconUsers   the user
+     * @param beaconUsers      the user
      */
     public BeaconGames(String gameType, String gameStyle, int points, String army, String location, BeaconUsers beaconUsers) {
         this.gameType = gameType;

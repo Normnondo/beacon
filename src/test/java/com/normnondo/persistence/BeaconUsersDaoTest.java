@@ -109,11 +109,11 @@ class BeaconUsersDaoTest {
     void insertGamesSuccess() {
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
         int id = dao.insert(beaconUsers);
-       // BeaconGames game = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers);
-       // beaconUsers.addGame(game);
+        BeaconGames game = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers.getId());
+        beaconUsers.addGame(game);
         assertNotEquals(0,id);
         BeaconUsers insertedBeaconUser = dao.getUserById(id);
         assertEquals("Fred", insertedBeaconUser.getFirstName());
-      //  assertEquals(1, insertedBeaconUser.getGames().size());
+        assertEquals(1, insertedBeaconUser.getGames().size());
     }
 }

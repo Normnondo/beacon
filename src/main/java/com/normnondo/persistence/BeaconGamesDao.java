@@ -108,6 +108,7 @@ public class BeaconGamesDao {
     public BeaconGames getGameById(int id) {
 
         Session session = sessionFactory.openSession();
+        logger.debug("Searching for game by ID: " + id);
 
         BeaconGames game = session.get(BeaconGames.class, id);
         session.close();
