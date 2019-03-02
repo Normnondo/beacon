@@ -22,8 +22,13 @@ public class BeaconGames {
     @Column(name = "game_style")
     private String gameStyle;
 
+    @Column(name = "points")
     private int points;
+
+    @Column(name = "army")
     private String army;
+
+    @Column(name = "location")
     private String location;
 
     @ManyToOne

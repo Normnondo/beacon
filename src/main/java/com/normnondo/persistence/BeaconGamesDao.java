@@ -105,14 +105,14 @@ public class BeaconGamesDao {
         return games;
     }
 
-   /** public BeaconUsers getUserById(int id) {
+    public BeaconGames getGameById(int id) {
 
         Session session = sessionFactory.openSession();
 
-        BeaconUsers user = session.get(BeaconUsers.class, id);
+        BeaconGames game = session.get(BeaconGames.class, id);
         session.close();
-        return user;
-    }*/
+        return game;
+    }
 
     public void saveOrUpdate(BeaconGames game) {
 
