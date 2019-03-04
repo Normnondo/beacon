@@ -12,11 +12,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class BeaconGamesDaoTest {
 
     BeaconGamesDao dao;
+    BeaconUsersDao userDao;
 
 
     @BeforeEach
     void setUp() {
         dao = new BeaconGamesDao();
+        userDao = new BeaconUsersDao();
 
 
         Database database = Database.getInstance();
@@ -78,9 +80,11 @@ class BeaconGamesDaoTest {
     @Test
     void insertSuccess() {
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
+        int userid = userDao.insert(beaconUsers);
         BeaconGames beaconGames = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers);
+        beaconUsers.addGame(beaconGames);
         int id = dao.insert(beaconGames);
-        assertNotEquals(0,id);
+        assertNotEquals(0,userid);
         BeaconGames insertedBeaconGame = dao.getGameById(id);
         assertEquals(2000, insertedBeaconGame.getPoints());
     }

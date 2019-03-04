@@ -32,6 +32,7 @@ public class BeaconGames {
     private String location;
 
     @ManyToOne
+    @JoinColumn(name = "beaconUsers_id", nullable = false)
     private BeaconUsers beaconUsers;
 
     /**
@@ -49,7 +50,7 @@ public class BeaconGames {
      * @param points    the points
      * @param army      the army
      * @param location  the location
-     * @param beaconUsers      the user
+     * @param beaconUsers      the user id
      */
     public BeaconGames(String gameType, String gameStyle, int points, String army, String location, BeaconUsers beaconUsers) {
         this.gameType = gameType;
@@ -195,6 +196,7 @@ public class BeaconGames {
                 ", points=" + points +
                 ", army='" + army + '\'' +
                 ", location='" + location + '\'' +
+                ", userid-'" + beaconUsers + '\'' +
                 '}';
     }
 

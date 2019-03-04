@@ -49,7 +49,6 @@ public class BeaconUsers {
     /**
      * Instantiates a new Beacon users.
      *
-     * @param id          the id
      * @param firstName   the first name
      * @param lastName    the last name
      * @param zipCode     the zip code
@@ -57,7 +56,6 @@ public class BeaconUsers {
      * @param email       the email
      */
     public BeaconUsers(String firstName, String lastName, int zipCode, int phoneNumber, String email) {
-      //  this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.zipCode = zipCode;
@@ -191,7 +189,7 @@ public class BeaconUsers {
         this.games = games;
     }
 
-   public void addGame(BeaconGames game) {
+    public void addGame(BeaconGames game) {
         games.add(game);
         game.setBeaconUsers(this);
     }
