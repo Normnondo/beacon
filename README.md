@@ -54,3 +54,34 @@ Project Plan:
     than a zip code API.   
     Deploy to web server.
     Put on finishing touches and test, test, test.
+
+Class Plan -
+	*Will need JSPs for:
+		Welcome page
+		Info Entry/Registration
+		Setting up a game
+		Checking available games
+	Will need servlets for:
+		Welcome page? (if operating like Adv Java project)
+		Info Entry/Registration/Authentication (doable, or too much in one?)
+		Setting up a game
+		Checking available games
+	*Will need a bean for:
+		User info
+		Game info
+	*Will need a DAO for:
+		User info
+		Game info
+	*Will need a SessionFactory for hibernate to connect to the database
+	Will need a class to do the logic portion of matching up the current authenticated user 
+		to the user who set up a game. This should also send a notification e-mail to 
+		both users with the game information in it for reference. (Possibly a separate class?)
+		Games should also disappear from the available list once they've been matched.
+	May need a class to allow people to edit their game information, or at least delete and
+		start over.  Might be able to do that in an existing class however.
+		Also, should allow for someone to unmatch/cancel a game, allowing game to pop back up
+		on the available list for someone else to select.
+
+	* These are partially completed.
+	
+		

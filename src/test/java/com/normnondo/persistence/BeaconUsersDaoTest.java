@@ -9,6 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BeaconUsersDaoTest {
+    // mkyong for many to many demo
 
     BeaconUsersDao dao;
   //  BeaconGamesDao gamesDao;
