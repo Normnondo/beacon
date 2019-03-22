@@ -17,7 +17,7 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>beacon</web-resource-name>
-      <url-pattern>/beacon/*</url-pattern>
+      <url-pattern>/gameSearch.jsp</url-pattern> <!-- Should this just be the jsp? -->
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

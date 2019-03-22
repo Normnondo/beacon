@@ -1,7 +1,7 @@
-<Context docBase="needToFindThis" path="/needToFindThis" reloadable="true">
+<Context docBase="beacon_war" path="/beacon_war" reloadable="true">
         <Realm className="org.apache.catalina.realm.JDBCRealm"
                driverName="com.mysql.jdbc.Driver"
-               connectionURL="jdbc:mysql:///sample?user=tomcat&amp;password=tomcat"
+               connectionURL="jdbc:mysql:///beacon?user=tomcat&amp;password=tomcat"
                userTable="beacon_users" userNameCol="email" userCredCol="password"
                userRoleTable="role" roleNameCol="role_name" >
         </Realm>

@@ -66,7 +66,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="gameSearch.jsp">Search for a game</a>
+                        <a class="nav-link" href="gameSearch.jsp">Request a game</a>
                     </li>
 
                     <li class="nav-item active">
@@ -102,7 +102,7 @@
                     can click to confirm that's the game they are committing to play.</p>
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
-                    <a href="gameSearch.jsp" class="btn btn-secondary">Search for a game</a>
+                    <a href="gameSearch.jsp" class="btn btn-secondary">Request a game</a>
 
                 </article>
                 <!-- Example pagination Bootstrap component -->
@@ -136,7 +136,7 @@
                     <div class="list-group list-group-root">
                         <a class="list-group-item" href="index.jsp">Home Page</a>
                         <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
-                        <a class="list-group-item" href="gameSearch.jsp">Search for a game</a>
+                        <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                         <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a>
                     </div>
                 </div>

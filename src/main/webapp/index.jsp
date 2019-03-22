@@ -62,16 +62,16 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
+                                    <a class="nav-link" href="gameSearch.jsp">Register/Login</a>
                             </li>
 
-                            <li class="nav-item">
-                                    <a class="nav-link" href="gameSearch.jsp">Search for a game</a>
+                         <!--   <li class="nav-item">
+                                    <a class="nav-link" href="gameSearch.jsp">Request a game</a>
                             </li>
 
                             <li class="nav-item">
                                     <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
-                            </li>
+                            </li> -->
                         </ul>
 
                         <form class="form-inline header-search-form my-2 my-lg-0">
@@ -148,8 +148,8 @@
 
                             will tell you, "I'm your huckleberry."</p>
 
-                            <a href="#" class="btn btn-primary">Search for a game</a>
-                            <a href="#" class="btn btn-secondary">See available opponents</a>
+                          <!--  <a href="#" class="btn btn-primary">Request a game</a>
+                            <a href="#" class="btn btn-secondary">See available opponents</a> -->
 
                         </article>
                         <!-- Example pagination Bootstrap component -->
@@ -162,11 +162,11 @@
                                         </a>
                                     </li>
                                     <li class="page-item active"><a class="page-link" href="index">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="gameSearch.jsp">2</a></li>
+                                  <!--  <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                                     <li class="page-item">
-                                        <a class="page-link" href="enterInfo.jsp" aria-label="Next">
+                                        <a class="page-link" href="gameSearch.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                             <span class="sr-only">Next</span>
                                         </a>
@@ -182,9 +182,9 @@
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
                                 <a class="list-group-item active" href="index.jsp">Home Page</a>
-                                <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
-                                <a class="list-group-item" href="gameSearch.jsp">Search for a game</a>
-                                <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a>
+                                <a class="list-group-item" href="gameSearch.jsp">Register/Login</a>
+                              <!--  <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
+                                <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->
                             </div>
                         </div>
                     </aside> 
