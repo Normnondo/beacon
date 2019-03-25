@@ -96,7 +96,7 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newPilot" id="newPilot" action="need database here" method="post">
+                            <form name="newPilot" id="newPilot" action="/enterInfoAction" method="post">
                             <label for="firstName" title="First Name">First Name:</label>
                             <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" />
                             <label for="lastName" title="Last Name">Last Name:</label>
@@ -106,7 +106,7 @@
                             <label for="phone">Phone Number:</label>
                             <input type="tel" name="phone" id="phone" maxlength="15" />
                                 <!-- other social media?? Maybe later -->
-                            <label for="email">Email Address (optional):</label>
+                            <label for="email">Email Address:</label>
                             <input type="email" name="email" id="email" maxlength="40" /><br /><br />
                             <p><input type="submit" value="Create Account"> <input type="reset" value="Clear Info"></p>
                             </form>
