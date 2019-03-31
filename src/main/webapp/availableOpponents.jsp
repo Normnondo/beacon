@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -95,11 +96,23 @@
                     <h2 class="article-title">Search Available Opponents</h2>
 
                     <p class="article-meta">Posted on <time datetime="2019-02-16">0.017.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
+                    <h3>Games in your area</h3>
+                    <a href = "availableOpponents">Show games</a>
+                    <table>
+                    <c:forEach var="gamesAvailable" items="${gamesAvailable}">
+                        <tr><td>${gamesAvailable.gameType}</td>
+                        <td>${gamesAvailable.gameStyle}</td>
+                        <td>${gamesAvailable.points}</td>
+                        <td>${gamesAvailable.army}</td>
+                        <td>${gamesAvailable.location}</td>
+                        <td>${gamesAvailable.beaconUsers}</td></tr>
+                    </c:forEach>
+                    </table>
 
-                    <p>Here through the magic of Java, Hibernate, API's, DAO, and everything else we're supposed to learn
+                  <!--  <p>Here through the magic of Java, Hibernate, API's, DAO, and everything else we're supposed to learn
                     will be a list of the game searches that members have put out, people will be able to click on them to see
                     the details (or perhaps the details will be shown right there in the list, sounds easier) and then they
-                    can click to confirm that's the game they are committing to play.</p>
+                    can click to confirm that's the game they are committing to play.</p> -->
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
                     <a href="gameSearch.jsp" class="btn btn-secondary">Request a game</a>

@@ -1,73 +1,33 @@
 package com.normnondo.controller;
 
-import java.io.*;
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import com.normnondo.persistence.BeaconGamesDao;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
+import java.io.IOException;
 
 /**
- * This is a pretty busy servlet, it gets the parameters from the Employee
- * Search JSP, then sends those parameters to the EmployeeDirectory class. It
- * pulls back that information, and then sends it to the Employee Search Results
- * JSP which outputs it for the user to see.
- * @author Norm Nondorf
+ * Servlet to display the available games from the database to the availableOpponents jsp
  */
+
 @WebServlet(
-        name = "employeeSearchResults",
-        urlPatterns = { "/employeeResultsPage" }
+        urlPatterns = {"/availableOpponents"}
 )
-public class AvailableOpponentsServlet {
 
-    /**
-     *  Handles HTTP GET requests.
-     *
-     *@param  request               Description of the Parameter
-     *@param  response              Description of the Parameter
-     *@exception  ServletException  if there is a Servlet failure
-     *@exception  IOException       if there is an IO failure
-     */
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws ServletException, IOException {
+public class AvailableOpponentsServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-        Search searchResults = new Search();
+        BeaconGamesDao openGamesDao = new BeaconGamesDao();
 
-        try {
-            EmployeeDirectory directory;
-            directory = (EmployeeDirectory)getServletContext()
-                    .getAttribute("directoryOfEmployees");
+        req.setAttribute("gamesAvailable", openGamesDao.getAllGames());
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
+        dispatcher.forward(req, resp);
 
-            String searchTerm = request.getParameter("searchTerm");
-            String[] searchType = request.getParameterValues("searchType");
-            String searchString = null;
-
-
-            if (searchType[0] != null) {
-                searchString = searchType[0];
-            } else if (searchType[0] == null && searchType[1] != null) {
-                searchString = searchType[1];
-            } else if (searchType[1] == null && searchType[2] != null) {
-                searchString = searchType[2];
-            }
-            searchResults = directory.searchDatabase(searchTerm, searchString);
-        }
-        catch (NullPointerException nullPointer) {
-            System.out.println("NPException.");
-            nullPointer.printStackTrace();
-        }
-
-        session.setAttribute("searchResults", searchResults);
-
-        String url = "/jsp/employeeSearchResults.jsp";
-
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
 
     }
-
-
-
 }

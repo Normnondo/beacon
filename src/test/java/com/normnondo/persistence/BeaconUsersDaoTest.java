@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BeaconUsersDaoTest {
-    // mkyong for many to many demo
+  /*  // mkyong for many to many demo
 
     BeaconUsersDao dao;
   //  BeaconGamesDao gamesDao;
@@ -116,5 +116,5 @@ class BeaconUsersDaoTest {
         BeaconUsers insertedBeaconUser = dao.getUserById(id);
         assertEquals("Fred", insertedBeaconUser.getFirstName());
         assertEquals(1, insertedBeaconUser.getGames().size());
-    }
+    }*/
 }
