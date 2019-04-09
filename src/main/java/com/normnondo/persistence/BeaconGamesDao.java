@@ -15,7 +15,6 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class BeaconGamesDao {
-
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 

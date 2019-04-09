@@ -12,7 +12,7 @@ import java.util.Set;
  * @author normnondo
  */
 @Entity(name = "BeaconUsers")
-@Table(name = "beacon_users")
+@Table(name = "beacon_user_test") // Fix!
 public class BeaconUsers {
 
     @Id

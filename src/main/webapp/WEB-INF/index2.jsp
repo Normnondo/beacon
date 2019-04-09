@@ -2,10 +2,9 @@
 <html>
 <body>
 <h2>User Display Exercise - Week 1</h2>
-<a href = "searchBeaconUsers">Go to the User Search</a>
 <br /><br />
 <div>
-    <form name="nameSearch" action = "searchBeaconUsers" method="GET">
+ <!--   <form name="nameSearch" action = "searchBeaconUsers" method="GET">
         <label>Search Term:</label>
         <input type="text" name="searchTerm" id="searchTerm" placeholder="Search Term" maxlength="25" />
         <fieldset>
@@ -17,7 +16,7 @@
             </ul>
         </fieldset>
         <p><input type="submit" value="Submit Search"></p>
-    </form>
+    </form> -->
 </div>
 
 </body>

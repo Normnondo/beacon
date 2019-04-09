@@ -98,6 +98,7 @@
                     <p class="article-meta">Posted on <time datetime="2019-02-16">0.017.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
                     <h3>Games in your area</h3>
                     <a href = "availableOpponents">Show games</a>
+                    <a href = "/services/games/ORK">Click for Exercise</a>
                     <table>
                     <c:forEach var="gamesAvailable" items="${gamesAvailable}">
                         <tr><td>${gamesAvailable.gameType}</td>

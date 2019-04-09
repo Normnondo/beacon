@@ -8,7 +8,7 @@ import javax.persistence.*;
  * The type Beacon games.
  */
 @Entity(name = "BeaconGames")
-@Table(name = "games")
+@Table(name = "games_test") // fix!
 public class BeaconGames {
 
     @Id
