@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class GamesService {
     @GET
     @Path("/{param}")
 
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     /* @Produces("json" and "html")?, all in one, or each in it's own separate method?*/
     public Response getGames(@PathParam("param") String gamesParam) {
         // Return a simple message, could produce a json response or something else presumably
