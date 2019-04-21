@@ -1,6 +1,7 @@
 package com.normnondo.service;
 
 import com.normnondo.entity.BeaconGames;
+import com.normnondo.persistence.BeaconDao;
 import com.normnondo.persistence.BeaconGamesDao;
 
 import javax.ws.rs.GET;
@@ -22,7 +23,7 @@ public class GamesService {
     /* @Produces("json" and "html")?, all in one, or each in it's own separate method?*/
     public Response getGames(@PathParam("param") String gamesParam) {
         // Return a simple message, could produce a json response or something else presumably
-        List<BeaconGames> output = new BeaconGamesDao().getGamesByArmy(gamesParam);
+        List<BeaconGames> output = new BeaconDao(BeaconGames.class).getByArmy(gamesParam);
         return Response.status(200).entity(output).build();
     }
 

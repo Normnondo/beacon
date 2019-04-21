@@ -1,0 +1,796 @@
+[DEBUG] 2019-04-20 20:45:06.386 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2019-04-20 20:45:06.399 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2019-04-20 20:45:06.414 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2019-04-20 20:45:06.586 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
+[INFO ] 2019-04-20 20:45:06.588 [main] Environment - HHH000206: hibernate.properties not found
+[DEBUG] 2019-04-20 20:45:06.656 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2019-04-20 20:45:06.660 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2019-04-20 20:45:06.666 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2019-04-20 20:45:07.102 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2019-04-20 20:45:07.139 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2019-04-20 20:45:07.148 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[DEBUG] 2019-04-20 20:45:07.178 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6ca18a14
+[DEBUG] 2019-04-20 20:45:07.178 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6ca18a14
+[DEBUG] 2019-04-20 20:45:07.178 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6ca18a14
+[DEBUG] 2019-04-20 20:45:07.180 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@2462cb01
+[DEBUG] 2019-04-20 20:45:07.181 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@452e19ca
+[DEBUG] 2019-04-20 20:45:07.182 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@3cfdd820
+[DEBUG] 2019-04-20 20:45:07.183 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@19976a65
+[DEBUG] 2019-04-20 20:45:07.184 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@19976a65
+[DEBUG] 2019-04-20 20:45:07.184 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@19976a65
+[DEBUG] 2019-04-20 20:45:07.185 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@4bc222e
+[DEBUG] 2019-04-20 20:45:07.185 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@4bc222e
+[DEBUG] 2019-04-20 20:45:07.186 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4bc222e
+[DEBUG] 2019-04-20 20:45:07.188 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@102cec62
+[DEBUG] 2019-04-20 20:45:07.188 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@102cec62
+[DEBUG] 2019-04-20 20:45:07.188 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@102cec62
+[DEBUG] 2019-04-20 20:45:07.189 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@19b89d4
+[DEBUG] 2019-04-20 20:45:07.190 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@19b89d4
+[DEBUG] 2019-04-20 20:45:07.190 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@19b89d4
+[DEBUG] 2019-04-20 20:45:07.191 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@24c22fe
+[DEBUG] 2019-04-20 20:45:07.191 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@24c22fe
+[DEBUG] 2019-04-20 20:45:07.191 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@24c22fe
+[DEBUG] 2019-04-20 20:45:07.193 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@26adfd2d
+[DEBUG] 2019-04-20 20:45:07.194 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@26adfd2d
+[DEBUG] 2019-04-20 20:45:07.194 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@26adfd2d
+[DEBUG] 2019-04-20 20:45:07.196 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2663e964
+[DEBUG] 2019-04-20 20:45:07.196 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2663e964
+[DEBUG] 2019-04-20 20:45:07.196 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2663e964
+[DEBUG] 2019-04-20 20:45:07.198 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6aa8e115
+[DEBUG] 2019-04-20 20:45:07.199 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6aa8e115
+[DEBUG] 2019-04-20 20:45:07.200 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@239105a8
+[DEBUG] 2019-04-20 20:45:07.200 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@239105a8
+[DEBUG] 2019-04-20 20:45:07.201 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@1df8b5b8
+[DEBUG] 2019-04-20 20:45:07.201 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@1df8b5b8
+[DEBUG] 2019-04-20 20:45:07.202 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@4d6025c5
+[DEBUG] 2019-04-20 20:45:07.203 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3fa247d1
+[DEBUG] 2019-04-20 20:45:07.204 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@64e7619d
+[DEBUG] 2019-04-20 20:45:07.204 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@64e7619d
+[DEBUG] 2019-04-20 20:45:07.205 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@f627d13
+[DEBUG] 2019-04-20 20:45:07.205 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@f627d13
+[DEBUG] 2019-04-20 20:45:07.222 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@14a50707
+[DEBUG] 2019-04-20 20:45:07.222 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@14a50707
+[DEBUG] 2019-04-20 20:45:07.224 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7354b8c5
+[DEBUG] 2019-04-20 20:45:07.224 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7354b8c5
+[DEBUG] 2019-04-20 20:45:07.226 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7f8a9499
+[DEBUG] 2019-04-20 20:45:07.226 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7f8a9499
+[DEBUG] 2019-04-20 20:45:07.228 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@62833051
+[DEBUG] 2019-04-20 20:45:07.228 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@62833051
+[DEBUG] 2019-04-20 20:45:07.230 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13b3d178
+[DEBUG] 2019-04-20 20:45:07.230 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@13b3d178
+[DEBUG] 2019-04-20 20:45:07.232 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@51c693d
+[DEBUG] 2019-04-20 20:45:07.233 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@51c693d
+[DEBUG] 2019-04-20 20:45:07.236 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@26df6e3a
+[DEBUG] 2019-04-20 20:45:07.236 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@26df6e3a
+[DEBUG] 2019-04-20 20:45:07.238 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@2d9caaeb
+[DEBUG] 2019-04-20 20:45:07.238 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2d9caaeb
+[DEBUG] 2019-04-20 20:45:07.240 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@27508c5d
+[DEBUG] 2019-04-20 20:45:07.240 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@27508c5d
+[DEBUG] 2019-04-20 20:45:07.241 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@704deff2
+[DEBUG] 2019-04-20 20:45:07.241 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@704deff2
+[DEBUG] 2019-04-20 20:45:07.241 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@704deff2
+[DEBUG] 2019-04-20 20:45:07.243 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1e81f160
+[DEBUG] 2019-04-20 20:45:07.244 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@6e01f9b0
+[DEBUG] 2019-04-20 20:45:07.245 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6e01f9b0
+[DEBUG] 2019-04-20 20:45:07.245 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6e01f9b0
+[DEBUG] 2019-04-20 20:45:07.245 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@658c5a19
+[DEBUG] 2019-04-20 20:45:07.246 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@34f6515b
+[DEBUG] 2019-04-20 20:45:07.247 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@34f6515b
+[DEBUG] 2019-04-20 20:45:07.248 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@78a773fd
+[DEBUG] 2019-04-20 20:45:07.248 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@78a773fd
+[DEBUG] 2019-04-20 20:45:07.249 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@135606db
+[DEBUG] 2019-04-20 20:45:07.249 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@135606db
+[DEBUG] 2019-04-20 20:45:07.250 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@58594a11
+[DEBUG] 2019-04-20 20:45:07.251 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@58594a11
+[DEBUG] 2019-04-20 20:45:07.253 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3e2059ae
+[DEBUG] 2019-04-20 20:45:07.253 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3e2059ae
+[DEBUG] 2019-04-20 20:45:07.253 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@275bf9b3
+[DEBUG] 2019-04-20 20:45:07.255 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@2049a9c1
+[DEBUG] 2019-04-20 20:45:07.255 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@2049a9c1
+[DEBUG] 2019-04-20 20:45:07.255 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@2049a9c1
+[DEBUG] 2019-04-20 20:45:07.256 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5495333e
+[DEBUG] 2019-04-20 20:45:07.257 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5495333e
+[DEBUG] 2019-04-20 20:45:07.257 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5495333e
+[DEBUG] 2019-04-20 20:45:07.258 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@57576994
+[DEBUG] 2019-04-20 20:45:07.259 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@490caf5f
+[DEBUG] 2019-04-20 20:45:07.261 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@4032d386
+[DEBUG] 2019-04-20 20:45:07.261 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@4032d386
+[DEBUG] 2019-04-20 20:45:07.261 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@4032d386
+[DEBUG] 2019-04-20 20:45:07.263 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@27adc16e
+[DEBUG] 2019-04-20 20:45:07.263 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@27adc16e
+[DEBUG] 2019-04-20 20:45:07.263 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@27adc16e
+[DEBUG] 2019-04-20 20:45:07.264 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@4066c471
+[DEBUG] 2019-04-20 20:45:07.264 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@7d3d101b
+[DEBUG] 2019-04-20 20:45:07.269 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@c7045b9
+[DEBUG] 2019-04-20 20:45:07.269 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@c7045b9
+[DEBUG] 2019-04-20 20:45:07.269 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@30bce90b
+[DEBUG] 2019-04-20 20:45:07.274 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1b45c0e
+[DEBUG] 2019-04-20 20:45:07.274 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1b45c0e
+[DEBUG] 2019-04-20 20:45:07.277 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@3370f42
+[DEBUG] 2019-04-20 20:45:07.277 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3370f42
+[DEBUG] 2019-04-20 20:45:07.277 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@53251a66
+[DEBUG] 2019-04-20 20:45:07.278 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@21129f1f
+[DEBUG] 2019-04-20 20:45:07.279 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@14f9390f
+[DEBUG] 2019-04-20 20:45:07.282 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@41005828
+[DEBUG] 2019-04-20 20:45:07.282 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@41005828
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2141a12
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4196c360
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@41294f8
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@225129c
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@20435c40
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@573906eb
+[DEBUG] 2019-04-20 20:45:07.283 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@479ceda0
+[DEBUG] 2019-04-20 20:45:07.284 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6d07a63d
+[INFO ] 2019-04-20 20:45:07.295 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql:///beacon_test
+[INFO ] 2019-04-20 20:45:07.295 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=Norm, password=****}
+[INFO ] 2019-04-20 20:45:07.295 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2019-04-20 20:45:07.527 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2019-04-20 20:45:07.597 [main] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.7.25-log
+      major : 5
+      minor : 7
+[DEBUG] 2019-04-20 20:45:07.597 [main] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad )
+      major : 5
+      minor : 1
+[DEBUG] 2019-04-20 20:45:07.598 [main] JdbcEnvironmentInitiator - JDBC version : 4.0
+[INFO ] 2019-04-20 20:45:07.609 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[DEBUG] 2019-04-20 20:45:07.657 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2019-04-20 20:45:07.659 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2019-04-20 20:45:07.713 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2019-04-20 20:45:07.713 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2019-04-20 20:45:07.716 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2019-04-20 20:45:07.716 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2019-04-20 20:45:07.717 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2019-04-20 20:45:07.720 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2019-04-20 20:45:07.721 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2019-04-20 20:45:07.722 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2019-04-20 20:45:07.723 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2019-04-20 20:45:07.724 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2019-04-20 20:45:07.724 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2019-04-20 20:45:07.724 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2019-04-20 20:45:07.725 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2019-04-20 20:45:07.725 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[DEBUG] 2019-04-20 20:45:07.773 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2019-04-20 20:45:07.814 [main] AnnotationBinder - Binding entity from annotated class: com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:07.838 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2019-04-20 20:45:07.843 [main] EntityBinder - Import with entity name BeaconUsers
+[DEBUG] 2019-04-20 20:45:07.846 [main] EntityBinder - Bind entity com.normnondo.entity.BeaconUsers on table beacon_user_test
+[DEBUG] 2019-04-20 20:45:07.870 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.872 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2019-04-20 20:45:07.874 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:id]
+[DEBUG] 2019-04-20 20:45:07.876 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2019-04-20 20:45:07.877 [main] PropertyBinder - Building property id
+[DEBUG] 2019-04-20 20:45:07.888 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=email, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.888 [main] PropertyBinder - MetadataSourceProcessor property email with lazy=false
+[DEBUG] 2019-04-20 20:45:07.889 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:email]
+[DEBUG] 2019-04-20 20:45:07.889 [main] SimpleValueBinder - building SimpleValue for email
+[DEBUG] 2019-04-20 20:45:07.889 [main] PropertyBinder - Building property email
+[DEBUG] 2019-04-20 20:45:07.889 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.889 [main] PropertyBinder - MetadataSourceProcessor property firstName with lazy=false
+[DEBUG] 2019-04-20 20:45:07.889 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:firstName]
+[DEBUG] 2019-04-20 20:45:07.890 [main] SimpleValueBinder - building SimpleValue for firstName
+[DEBUG] 2019-04-20 20:45:07.890 [main] PropertyBinder - Building property firstName
+[DEBUG] 2019-04-20 20:45:07.890 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.890 [main] PropertyBinder - MetadataSourceProcessor property lastName with lazy=false
+[DEBUG] 2019-04-20 20:45:07.890 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:lastName]
+[DEBUG] 2019-04-20 20:45:07.891 [main] SimpleValueBinder - building SimpleValue for lastName
+[DEBUG] 2019-04-20 20:45:07.891 [main] PropertyBinder - Building property lastName
+[DEBUG] 2019-04-20 20:45:07.891 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=phone_number, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.892 [main] PropertyBinder - MetadataSourceProcessor property phoneNumber with lazy=false
+[DEBUG] 2019-04-20 20:45:07.892 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:phoneNumber]
+[DEBUG] 2019-04-20 20:45:07.892 [main] SimpleValueBinder - building SimpleValue for phoneNumber
+[DEBUG] 2019-04-20 20:45:07.893 [main] PropertyBinder - Building property phoneNumber
+[DEBUG] 2019-04-20 20:45:07.893 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(beacon_user_test), mappingColumn=zip_code, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.893 [main] PropertyBinder - MetadataSourceProcessor property zipCode with lazy=false
+[DEBUG] 2019-04-20 20:45:07.893 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconUsers:zipCode]
+[DEBUG] 2019-04-20 20:45:07.893 [main] SimpleValueBinder - building SimpleValue for zipCode
+[DEBUG] 2019-04-20 20:45:07.893 [main] PropertyBinder - Building property zipCode
+[DEBUG] 2019-04-20 20:45:07.894 [main] AnnotationBinder - Binding entity from annotated class: com.normnondo.entity.BeaconGames
+[DEBUG] 2019-04-20 20:45:07.894 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2019-04-20 20:45:07.894 [main] EntityBinder - Import with entity name BeaconGames
+[DEBUG] 2019-04-20 20:45:07.894 [main] EntityBinder - Bind entity com.normnondo.entity.BeaconGames on table games_test
+[DEBUG] 2019-04-20 20:45:07.901 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.901 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2019-04-20 20:45:07.902 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:id]
+[DEBUG] 2019-04-20 20:45:07.902 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2019-04-20 20:45:07.902 [main] PropertyBinder - Building property id
+[DEBUG] 2019-04-20 20:45:07.902 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=army, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.902 [main] PropertyBinder - MetadataSourceProcessor property army with lazy=false
+[DEBUG] 2019-04-20 20:45:07.902 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:army]
+[DEBUG] 2019-04-20 20:45:07.902 [main] SimpleValueBinder - building SimpleValue for army
+[DEBUG] 2019-04-20 20:45:07.902 [main] PropertyBinder - Building property army
+[DEBUG] 2019-04-20 20:45:07.904 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='beaconUsers_id', referencedColumn='', mappedBy=''}
+[DEBUG] 2019-04-20 20:45:07.904 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=beaconUsers, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.906 [main] PropertyBinder - Building property beaconUsers
+[DEBUG] 2019-04-20 20:45:07.907 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=game_style, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.907 [main] PropertyBinder - MetadataSourceProcessor property gameStyle with lazy=false
+[DEBUG] 2019-04-20 20:45:07.907 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:gameStyle]
+[DEBUG] 2019-04-20 20:45:07.907 [main] SimpleValueBinder - building SimpleValue for gameStyle
+[DEBUG] 2019-04-20 20:45:07.907 [main] PropertyBinder - Building property gameStyle
+[DEBUG] 2019-04-20 20:45:07.907 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=game_type, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.907 [main] PropertyBinder - MetadataSourceProcessor property gameType with lazy=false
+[DEBUG] 2019-04-20 20:45:07.907 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:gameType]
+[DEBUG] 2019-04-20 20:45:07.907 [main] SimpleValueBinder - building SimpleValue for gameType
+[DEBUG] 2019-04-20 20:45:07.907 [main] PropertyBinder - Building property gameType
+[DEBUG] 2019-04-20 20:45:07.907 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=location, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.908 [main] PropertyBinder - MetadataSourceProcessor property location with lazy=false
+[DEBUG] 2019-04-20 20:45:07.908 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:location]
+[DEBUG] 2019-04-20 20:45:07.908 [main] SimpleValueBinder - building SimpleValue for location
+[DEBUG] 2019-04-20 20:45:07.908 [main] PropertyBinder - Building property location
+[DEBUG] 2019-04-20 20:45:07.908 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(games_test), mappingColumn=points, insertable=true, updatable=true, unique=false}
+[DEBUG] 2019-04-20 20:45:07.908 [main] PropertyBinder - MetadataSourceProcessor property points with lazy=false
+[DEBUG] 2019-04-20 20:45:07.908 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.normnondo.entity.BeaconGames:points]
+[DEBUG] 2019-04-20 20:45:07.908 [main] SimpleValueBinder - building SimpleValue for points
+[DEBUG] 2019-04-20 20:45:07.908 [main] PropertyBinder - Building property points
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for email
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for firstName
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for lastName
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for phoneNumber
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for zipCode
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for army
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for gameStyle
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for gameType
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for location
+[DEBUG] 2019-04-20 20:45:07.909 [main] SimpleValueBinder - Starting fillSimpleValue for points
+[DEBUG] 2019-04-20 20:45:07.913 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [beacon_user_test]
+[DEBUG] 2019-04-20 20:45:07.913 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [games_test]
+[DEBUG] 2019-04-20 20:45:07.913 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:07.918 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:07.955 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - SessionFactory name : null
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Statistics: disabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2019-04-20 20:45:07.956 [main] Settings - Maximum outer join fetch depth: 2
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Default null ordering: NONE
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Query language substitutions: {}
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - JPA query language strict compliance: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Named query checking : enabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Second-level cache: enabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@61861a29
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - JDBC batch size: 15
+[DEBUG] 2019-04-20 20:45:07.957 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2019-04-20 20:45:07.958 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2019-04-20 20:45:08.037 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2019-04-20 20:45:08.037 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.c3p0.idle_test_period=3000, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.c3p0.min_size=5, java.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\plugins\junit\lib\junit-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\plugins\junit\lib\junit5-rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Users\Nondorf Family\IdeaProjects\beacon\target\test-classes;C:\Users\Nondorf Family\IdeaProjects\beacon\target\classes;C:\Users\Nondorf Family\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.0.0\junit-jupiter-engine-5.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\platform\junit-platform-engine\1.0.0\junit-platform-engine-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\platform\junit-platform-commons\1.0.0\junit-platform-commons-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.0.0\junit-jupiter-api-5.0.0.jar;C:\Users\Nondorf Family\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Nondorf Family\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\platform\junit-platform-runner\1.0.0\junit-platform-runner-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\platform\junit-platform-launcher\1.0.0\junit-platform-launcher-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\platform\junit-platform-suite-api\1.0.0\junit-platform-suite-api-1.0.0.jar;C:\Users\Nondorf Family\.m2\repository\org\junit\vintage\junit-vintage-engine\4.12.0\junit-vintage-engine-4.12.0.jar;C:\Users\Nondorf Family\.m2\repository\javax\javaee-web-api\7.0\javaee-web-api-7.0.jar;C:\Users\Nondorf Family\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\Nondorf Family\.m2\repository\org\apache\logging\log4j\log4j-core\2.10.0\log4j-core-2.10.0.jar;C:\Users\Nondorf Family\.m2\repository\org\hibernate\hibernate-core\5.2.12.Final\hibernate-core-5.2.12.Final.jar;C:\Users\Nondorf Family\.m2\repository\org\jboss\logging\jboss-logging\3.3.0.Final\jboss-logging-3.3.0.Final.jar;C:\Users\Nondorf Family\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Nondorf Family\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\Nondorf Family\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Nondorf Family\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.1.Final\jboss-transaction-api_1.2_spec-1.0.1.Final.jar;C:\Users\Nondorf Family\.m2\repository\org\jboss\jandex\2.0.3.Final\jandex-2.0.3.Final.jar;C:\Users\Nondorf Family\.m2\repository\com\fasterxml\classmate\1.3.0\classmate-1.3.0.jar;C:\Users\Nondorf Family\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Nondorf Family\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Nondorf Family\.m2\repository\org\hibernate\hibernate-c3p0\5.2.12.Final\hibernate-c3p0-5.2.12.Final.jar;C:\Users\Nondorf Family\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar;C:\Users\Nondorf Family\.m2\repository\com\mchange\mchange-commons-java\0.2.11\mchange-commons-java-0.2.11.jar;C:\Users\Nondorf Family\.m2\repository\mysql\mysql-connector-java\5.1.39\mysql-connector-java-5.1.39.jar;C:\Users\Nondorf Family\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\lib\idea_rt.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=America/Chicago, os.name=Windows 10, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_201\jre\bin, sun.java.command=com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 -junit5 com.normnondo.persistence.BeaconGamesDaoTest,deleteSuccess, sun.cpu.endian=little, hibernate.c3p0.max_statements=50, user.home=C:\Users\Nondorf Family, user.language=en, java.specification.vendor=Oracle Corporation, java.home=C:\Program Files\Java\jdk1.8.0_201\jre, file.separator=\, line.separator=
+, hibernate.c3p0.timeout=300, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes, user.script=, connection.password=Grotlo88er, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.c3p0.max_size=20, java.runtime.version=1.8.0_201-b09, user.name=Nondorf Family, path.separator=;, hibernate.connection.username=Norm, os.version=10.0, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql:///beacon_test, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\NONDOR~1\AppData\Local\Temp\, java.version=1.8.0_201, user.dir=C:\Users\Nondorf Family\IdeaProjects\beacon, os.arch=amd64, connection.username=Norm, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, connection.driver_class=com.mysql.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@245a26e1, java.library.path=C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\HTML_Class\152120_Website_Development\Getting_Started_152-120\jEdit;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_172;C:\Program Files\Java\jdk1.8.0_172\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Users\Nondorf Family\AppData\Local\Microsoft\WindowsApps;C:\Users\Nondorf Family\AppData\Local\atom\bin;C:\Program Files\heroku\bin;., java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.201-b09, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql:///beacon_test, java.class.version=52.0}
+[DEBUG] 2019-04-20 20:45:08.065 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+[DEBUG] 2019-04-20 20:45:08.066 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2019-04-20 20:45:08.067 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2019-04-20 20:45:08.141 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.normnondo.entity.BeaconGames] is safe
+[DEBUG] 2019-04-20 20:45:08.141 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.normnondo.entity.BeaconGames
+[DEBUG] 2019-04-20 20:45:08.169 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.normnondo.entity.BeaconGames] is safe
+[DEBUG] 2019-04-20 20:45:08.169 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.normnondo.entity.BeaconGames
+[DEBUG] 2019-04-20 20:45:08.251 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.normnondo.entity.BeaconUsers] is safe
+[DEBUG] 2019-04-20 20:45:08.251 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:08.251 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.normnondo.entity.BeaconUsers] is safe
+[DEBUG] 2019-04-20 20:45:08.251 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister - Static SQL for entity: com.normnondo.entity.BeaconGames
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Version select: select id from games_test where id =?
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Snapshot select: select beacongame_.id, beacongame_.army as army2_1_, beacongame_.beaconUsers_id as beaconUs7_1_, beacongame_.game_style as game_sty3_1_, beacongame_.game_type as game_typ4_1_, beacongame_.location as location5_1_, beacongame_.points as points6_1_ from games_test beacongame_ where beacongame_.id=?
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Insert 0: insert into games_test (army, beaconUsers_id, game_style, game_type, location, points, id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Update 0: update games_test set army=?, beaconUsers_id=?, game_style=?, game_type=?, location=?, points=? where id=?
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Delete 0: delete from games_test where id=?
+[DEBUG] 2019-04-20 20:45:08.263 [main] AbstractEntityPersister -  Identity insert: insert into games_test (army, beaconUsers_id, game_style, game_type, location, points) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2019-04-20 20:45:08.293 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78d50a3c]
+[DEBUG] 2019-04-20 20:45:08.296 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.296 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.306 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2a3a299]
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.email
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.firstName
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.lastName
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.phoneNumber
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.zipCode
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.309 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.309 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.332 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.339 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(beaconUsers)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.normnondo.entity.BeaconUsers)
+                - SQL table alias mapping - beaconuser1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+[DEBUG] 2019-04-20 20:45:08.342 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [NONE]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_, beaconuser1_.id as id1_0_1_, beaconuser1_.email as email2_0_1_, beaconuser1_.first_name as first_na3_0_1_, beaconuser1_.last_name as last_nam4_0_1_, beaconuser1_.phone_number as phone_nu5_0_1_, beaconuser1_.zip_code as zip_code6_0_1_ from games_test beacongame0_ inner join beacon_user_test beaconuser1_ on beacongame0_.beaconUsers_id=beaconuser1_.id where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.342 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64a896b0]
+[DEBUG] 2019-04-20 20:45:08.342 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.342 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.342 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@11a82d0f]
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.email
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.firstName
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.lastName
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.phoneNumber
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers.zipCode
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.343 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.343 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.343 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.344 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(beaconUsers)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.normnondo.entity.BeaconUsers)
+                - SQL table alias mapping - beaconuser1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+[DEBUG] 2019-04-20 20:45:08.344 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [READ]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_, beaconuser1_.id as id1_0_1_, beaconuser1_.email as email2_0_1_, beaconuser1_.first_name as first_na3_0_1_, beaconuser1_.last_name as last_nam4_0_1_, beaconuser1_.phone_number as phone_nu5_0_1_, beaconuser1_.zip_code as zip_code6_0_1_ from games_test beacongame0_ inner join beacon_user_test beaconuser1_ on beacongame0_.beaconUsers_id=beaconuser1_.id where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.344 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3ae66c85]
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.344 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4604b900]
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.344 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.344 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.345 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.345 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.345 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [UPGRADE]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.345 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@73d6d0c]
+[DEBUG] 2019-04-20 20:45:08.345 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.345 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.345 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3961a41a]
+[DEBUG] 2019-04-20 20:45:08.345 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.346 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.346 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.346 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.346 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.346 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.346 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.346 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [UPGRADE_NOWAIT]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.346 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a4ed68f]
+[DEBUG] 2019-04-20 20:45:08.346 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.347 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.347 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@d2387c8]
+[DEBUG] 2019-04-20 20:45:08.347 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.347 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.347 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.347 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.347 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.347 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.347 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.348 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [UPGRADE_SKIPLOCKED]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.348 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3956b302]
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.348 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1fd386c3]
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.348 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.348 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.349 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.349 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.349 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [FORCE]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.349 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@edf4f36]
+[DEBUG] 2019-04-20 20:45:08.349 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.349 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.350 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@100f9bbe]
+[DEBUG] 2019-04-20 20:45:08.350 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.350 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.350 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.350 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.350 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.350 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.351 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.351 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [PESSIMISTIC_READ]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? lock in share mode
+[DEBUG] 2019-04-20 20:45:08.351 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@13e9f2e2]
+[DEBUG] 2019-04-20 20:45:08.351 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.351 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.351 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@cd7f1ae]
+[DEBUG] 2019-04-20 20:45:08.351 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.351 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.352 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.352 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.352 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.352 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.352 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.352 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [PESSIMISTIC_WRITE]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.352 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@60e949e1]
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.353 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@680362a]
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.353 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.353 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.353 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.354 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.354 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [PESSIMISTIC_FORCE_INCREMENT]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.354 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3569edd5]
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.354 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7d0332e1]
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.354 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.355 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.355 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.355 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.355 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [OPTIMISTIC]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.355 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a356a0d]
+[DEBUG] 2019-04-20 20:45:08.355 [main] MetamodelGraphWalker - Visiting attribute path : army
+[DEBUG] 2019-04-20 20:45:08.356 [main] MetamodelGraphWalker - Visiting attribute path : beaconUsers
+[DEBUG] 2019-04-20 20:45:08.356 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@377c68c6]
+[DEBUG] 2019-04-20 20:45:08.356 [main] MetamodelGraphWalker - Visiting attribute path : gameStyle
+[DEBUG] 2019-04-20 20:45:08.356 [main] MetamodelGraphWalker - Visiting attribute path : gameType
+[DEBUG] 2019-04-20 20:45:08.356 [main] MetamodelGraphWalker - Visiting attribute path : location
+[DEBUG] 2019-04-20 20:45:08.356 [main] MetamodelGraphWalker - Visiting attribute path : points
+[DEBUG] 2019-04-20 20:45:08.356 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.356 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.356 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconGames)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconGames, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconGames)
+          - EntityAttributeFetchImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:1>, path=com.normnondo.entity.BeaconGames.beaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconGames)
+          - SQL table alias mapping - beacongame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2019-04-20 20:45:08.357 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconGames [OPTIMISTIC_FORCE_INCREMENT]: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.376 [main] Loader - Static select for action ACTION_MERGE on entity com.normnondo.entity.BeaconGames: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.376 [main] Loader - Static select for action ACTION_REFRESH on entity com.normnondo.entity.BeaconGames: select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_ from games_test beacongame0_ where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.376 [main] AbstractEntityPersister - Static SQL for entity: com.normnondo.entity.BeaconUsers
+[DEBUG] 2019-04-20 20:45:08.376 [main] AbstractEntityPersister -  Version select: select id from beacon_user_test where id =?
+[DEBUG] 2019-04-20 20:45:08.376 [main] AbstractEntityPersister -  Snapshot select: select beaconuser_.id, beaconuser_.email as email2_0_, beaconuser_.first_name as first_na3_0_, beaconuser_.last_name as last_nam4_0_, beaconuser_.phone_number as phone_nu5_0_, beaconuser_.zip_code as zip_code6_0_ from beacon_user_test beaconuser_ where beaconuser_.id=?
+[DEBUG] 2019-04-20 20:45:08.376 [main] AbstractEntityPersister -  Insert 0: insert into beacon_user_test (email, first_name, last_name, phone_number, zip_code, id) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2019-04-20 20:45:08.377 [main] AbstractEntityPersister -  Update 0: update beacon_user_test set email=?, first_name=?, last_name=?, phone_number=?, zip_code=? where id=?
+[DEBUG] 2019-04-20 20:45:08.377 [main] AbstractEntityPersister -  Delete 0: delete from beacon_user_test where id=?
+[DEBUG] 2019-04-20 20:45:08.377 [main] AbstractEntityPersister -  Identity insert: insert into beacon_user_test (email, first_name, last_name, phone_number, zip_code) values (?, ?, ?, ?, ?)
+[DEBUG] 2019-04-20 20:45:08.377 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3a43d133]
+[DEBUG] 2019-04-20 20:45:08.377 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.377 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.377 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.377 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.377 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.377 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.377 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.378 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.378 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [NONE]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.378 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f2afe62]
+[DEBUG] 2019-04-20 20:45:08.378 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.378 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.378 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.378 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.378 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.378 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.379 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.379 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.380 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [READ]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.380 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28782602]
+[DEBUG] 2019-04-20 20:45:08.380 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.380 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.380 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.380 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.380 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.380 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.380 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.381 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.381 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [UPGRADE]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.381 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@68105edc]
+[DEBUG] 2019-04-20 20:45:08.381 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.381 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.381 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.381 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.381 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.381 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.381 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.381 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.382 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [UPGRADE_NOWAIT]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.382 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38b972d7]
+[DEBUG] 2019-04-20 20:45:08.382 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.382 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.382 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.382 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.382 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.382 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.382 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.383 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.383 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [UPGRADE_SKIPLOCKED]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.383 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3935e9a8]
+[DEBUG] 2019-04-20 20:45:08.383 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.383 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.383 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.383 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.383 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.383 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.383 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.384 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.384 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [FORCE]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.384 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b56b654]
+[DEBUG] 2019-04-20 20:45:08.384 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.384 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.384 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.384 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.384 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.384 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.384 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.385 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.385 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [PESSIMISTIC_READ]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? lock in share mode
+[DEBUG] 2019-04-20 20:45:08.385 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@534243e4]
+[DEBUG] 2019-04-20 20:45:08.386 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.386 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.386 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.386 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.386 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.386 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.386 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.386 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.386 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [PESSIMISTIC_WRITE]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.386 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@470a9030]
+[DEBUG] 2019-04-20 20:45:08.387 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.387 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.387 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.387 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.387 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.387 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.387 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.387 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.387 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [PESSIMISTIC_FORCE_INCREMENT]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=? for update
+[DEBUG] 2019-04-20 20:45:08.387 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@27494e46]
+[DEBUG] 2019-04-20 20:45:08.388 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.388 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.388 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.388 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.388 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.388 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.388 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.389 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.389 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [OPTIMISTIC]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.389 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e411d81]
+[DEBUG] 2019-04-20 20:45:08.389 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2019-04-20 20:45:08.389 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2019-04-20 20:45:08.390 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2019-04-20 20:45:08.390 [main] MetamodelGraphWalker - Visiting attribute path : phoneNumber
+[DEBUG] 2019-04-20 20:45:08.390 [main] MetamodelGraphWalker - Visiting attribute path : zipCode
+[DEBUG] 2019-04-20 20:45:08.390 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2019-04-20 20:45:08.390 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2019-04-20 20:45:08.390 [main] LoadPlanTreePrinter - LoadPlan(entity=com.normnondo.entity.BeaconUsers)
+    - Returns
+       - EntityReturnImpl(entity=com.normnondo.entity.BeaconUsers, querySpaceUid=<gen:0>, path=com.normnondo.entity.BeaconUsers)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.normnondo.entity.BeaconUsers)
+          - SQL table alias mapping - beaconuser0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[DEBUG] 2019-04-20 20:45:08.390 [main] EntityLoader - Static select for entity com.normnondo.entity.BeaconUsers [OPTIMISTIC_FORCE_INCREMENT]: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.390 [main] Loader - Static select for action ACTION_MERGE on entity com.normnondo.entity.BeaconUsers: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.390 [main] Loader - Static select for action ACTION_REFRESH on entity com.normnondo.entity.BeaconUsers: select beaconuser0_.id as id1_0_0_, beaconuser0_.email as email2_0_0_, beaconuser0_.first_name as first_na3_0_0_, beaconuser0_.last_name as last_nam4_0_0_, beaconuser0_.phone_number as phone_nu5_0_0_, beaconuser0_.zip_code as zip_code6_0_0_ from beacon_user_test beaconuser0_ where beaconuser0_.id=?
+[DEBUG] 2019-04-20 20:45:08.421 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
+[DEBUG] 2019-04-20 20:45:08.421 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2019-04-20 20:45:08.422 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2019-04-20 20:45:08.428 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2019-04-20 20:45:08.429 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2019-04-20 20:45:08.429 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2019-04-20 20:45:08.432 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@5300f14a
+[DEBUG] 2019-04-20 20:45:08.434 [main] SessionFactoryRegistry - Registering SessionFactory: 59ab2513-55bf-4e8d-822c-94f7e6c5c3ed (<unnamed>)
+[DEBUG] 2019-04-20 20:45:08.435 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2019-04-20 20:45:08.537 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2019-04-20 20:45:08.561 [main] SQL - select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_, beaconuser1_.id as id1_0_1_, beaconuser1_.email as email2_0_1_, beaconuser1_.first_name as first_na3_0_1_, beaconuser1_.last_name as last_nam4_0_1_, beaconuser1_.phone_number as phone_nu5_0_1_, beaconuser1_.zip_code as zip_code6_0_1_ from games_test beacongame0_ inner join beacon_user_test beaconuser1_ on beacongame0_.beaconUsers_id=beaconuser1_.id where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.583 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2019-04-20 20:45:08.585 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2019-04-20 20:45:08.599 [main] TwoPhaseLoad - Resolving associations for [com.normnondo.entity.BeaconGames#3]
+[DEBUG] 2019-04-20 20:45:08.603 [main] TwoPhaseLoad - Done materializing entity [com.normnondo.entity.BeaconGames#3]
+[DEBUG] 2019-04-20 20:45:08.603 [main] TwoPhaseLoad - Resolving associations for [com.normnondo.entity.BeaconUsers#2]
+[DEBUG] 2019-04-20 20:45:08.603 [main] TwoPhaseLoad - Done materializing entity [com.normnondo.entity.BeaconUsers#2]
+[DEBUG] 2019-04-20 20:45:08.604 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2019-04-20 20:45:08.605 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.normnondo.entity.BeaconGames#3
+[DEBUG] 2019-04-20 20:45:08.605 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2019-04-20 20:45:08.611 [main] TransactionImpl - begin
+[DEBUG] 2019-04-20 20:45:08.623 [main] TransactionImpl - committing
+[DEBUG] 2019-04-20 20:45:08.624 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2019-04-20 20:45:08.624 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2019-04-20 20:45:08.626 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+[DEBUG] 2019-04-20 20:45:08.626 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2019-04-20 20:45:08.627 [main] EntityPrinter - Listing entities:
+[DEBUG] 2019-04-20 20:45:08.628 [main] EntityPrinter - com.normnondo.entity.BeaconGames{army=TAU, beaconUsers=com.normnondo.entity.BeaconUsers#2, gameType=40k, location=NBK, id=3, gameStyle=NAR, points=2000}
+[DEBUG] 2019-04-20 20:45:08.639 [main] SQL - delete from games_test where id=?
+[DEBUG] 2019-04-20 20:45:08.645 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2019-04-20 20:45:08.645 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2019-04-20 20:45:08.645 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2019-04-20 20:45:08.646 [main] SQL - select beacongame0_.id as id1_1_0_, beacongame0_.army as army2_1_0_, beacongame0_.beaconUsers_id as beaconUs7_1_0_, beacongame0_.game_style as game_sty3_1_0_, beacongame0_.game_type as game_typ4_1_0_, beacongame0_.location as location5_1_0_, beacongame0_.points as points6_1_0_, beaconuser1_.id as id1_0_1_, beaconuser1_.email as email2_0_1_, beaconuser1_.first_name as first_na3_0_1_, beaconuser1_.last_name as last_nam4_0_1_, beaconuser1_.phone_number as phone_nu5_0_1_, beaconuser1_.zip_code as zip_code6_0_1_ from games_test beacongame0_ inner join beacon_user_test beaconuser1_ on beacongame0_.beaconUsers_id=beaconuser1_.id where beacongame0_.id=?
+[DEBUG] 2019-04-20 20:45:08.648 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2019-04-20 20:45:08.648 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.normnondo.entity.BeaconGames#3
+[DEBUG] 2019-04-20 20:45:08.648 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction

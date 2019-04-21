@@ -20,7 +20,7 @@ public class BeaconUsersDao {
      *
      * @return all the users
      */
-    public List<BeaconUsers> getAllUsers() {
+ /*   public List<BeaconUsers> getAllUsers() {
 
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder =  session.getCriteriaBuilder();
@@ -29,9 +29,9 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public List<BeaconUsers> getUsersByLastName(String lastName) {
+  /*  public List<BeaconUsers> getUsersByLastName(String lastName) {
 
         Session session = sessionFactory.openSession();
 
@@ -43,9 +43,9 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public List<BeaconUsers> getUsersByFirstName(String firstName) {
+  /*  public List<BeaconUsers> getUsersByFirstName(String firstName) {
 
         Session session = sessionFactory.openSession();
 
@@ -57,9 +57,9 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public List<BeaconUsers> getUsersByZipCode(int zipCode) {
+   /* public List<BeaconUsers> getUsersByZipCode(int zipCode) {
 
         Session session = sessionFactory.openSession();
 
@@ -71,9 +71,9 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public List<BeaconUsers> getUsersByPhoneNumber(int phoneNumber) {
+ /*   public List<BeaconUsers> getUsersByPhoneNumber(int phoneNumber) {
 
         Session session = sessionFactory.openSession();
 
@@ -85,9 +85,9 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public List<BeaconUsers> getUsersByEmail(String email) {
+  /*  public List<BeaconUsers> getUsersByEmail(String email) {
 
         Session session = sessionFactory.openSession();
 
@@ -99,18 +99,18 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 
-    public BeaconUsers getUserById(int id) {
+ /*   public BeaconUsers getUserById(int id) {
 
         Session session = sessionFactory.openSession();
 
         BeaconUsers user = session.get(BeaconUsers.class, id);
         session.close();
         return user;
-    }
+    }*/
 
-    public void saveOrUpdate(BeaconUsers user) {
+  /*  public void saveOrUpdate(BeaconUsers user) {
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -169,5 +169,5 @@ public class BeaconUsersDao {
         List<BeaconUsers> users = session.createQuery(query).getResultList();
         session.close();
         return users;
-    }
+    }*/
 }

@@ -10,16 +10,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BeaconGamesDaoTest {
-/*
-    BeaconGamesDao dao;
-    BeaconUsersDao userDao;
+
+    BeaconDao beaconDao;
 
 
     @BeforeEach
     void setUp() {
-        dao = new BeaconGamesDao();
-        userDao = new BeaconUsersDao();
-
+        beaconDao = new BeaconDao(BeaconGames.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -27,88 +24,87 @@ class BeaconGamesDaoTest {
 
     @Test
     void getAllGamesSuccess() {
-        List<BeaconGames> games = dao.getAllGames();
+        List<BeaconGames> games = (List<BeaconGames>)beaconDao.getAll();
         assertEquals(6, games.size());
     }
 
     @Test
     void getGamesByTypeSuccess() {
-        List<BeaconGames> games = dao.getGamesByType("40k");
+        List<BeaconGames> games = beaconDao.getByType("40k");
         assertEquals(6, games.size());
     }
 
     @Test
     void getGamesByStyleSuccess() {
-        List<BeaconGames> games = dao.getGamesByStyle("HRD");
+        List<BeaconGames> games = beaconDao.getByStyle("HRD");
         assertEquals(2, games.size());
     }
 
     @Test
     void getGamesByPointsSuccess() {
-        List<BeaconGames> games = dao.getGamesByPoints(2000);
+        List<BeaconGames> games = beaconDao.getByPoints(2000);
         assertEquals(4, games.size());
     }
 
     @Test
     void getGamesByArmySuccess() {
-        List<BeaconGames> games = dao.getGamesByArmy("ORK");
+        List<BeaconGames> games = beaconDao.getByArmy("ORK");
         assertEquals(2, games.size());
     }
 
     @Test
     void getGamesByLocationSuccess() {
-        List<BeaconGames> games = dao.getGamesByLocation("PEG");
+        List<BeaconGames> games = beaconDao.getByLocation("PEG");
         assertEquals(2, games.size());
     }
 
     @Test
     void getGameByIdSuccess() {
-        BeaconGames games = dao.getGameById(2);
+        BeaconGames games = (BeaconGames)beaconDao.getById(2);
         assertEquals("ORK", games.getArmy());
     }
 
     @Test
     void saveOrUpdateSuccess() {
         String newArmy = "SPM";
-        BeaconGames gameToUpdate = dao.getGameById(4);
+        BeaconGames gameToUpdate = (BeaconGames)beaconDao.getById(4);
         gameToUpdate.setArmy(newArmy);
-        dao.saveOrUpdate(gameToUpdate);
-        BeaconGames retrievedGame = dao.getGameById(4);
+        beaconDao.saveOrUpdate(gameToUpdate);
+        BeaconGames retrievedGame = (BeaconGames)beaconDao.getById(4);
         assertEquals(newArmy, retrievedGame.getArmy());
     }
 
     @Test
     void insertSuccess() {
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
-        int userid = userDao.insert(beaconUsers);
+        int userid = beaconDao.insert(beaconUsers);
         BeaconGames beaconGames = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers);
-        beaconUsers.addGame(beaconGames);
-        int id = dao.insert(beaconGames);
+        int id = beaconDao.insert(beaconGames);
         assertNotEquals(0,userid);
-        BeaconGames insertedBeaconGame = dao.getGameById(id);
+        BeaconGames insertedBeaconGame = (BeaconGames)beaconDao.getById(id);
         assertEquals(2000, insertedBeaconGame.getPoints());
     }
 
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getGameById(3));
-        assertNull(dao.getGameById(3));
+        beaconDao.delete(beaconDao.getById(3));
+        assertNull(beaconDao.getById(3));
 
     }
 
-   /** @Test
+    @Test
     void getByPropertyEqualSuccess() {
-        List<BeaconUsers> beaconUsers = dao.getByPropertyEqual("lastName", "Mercury");
-        assertEquals(1, beaconUsers.size());
-        assertEquals(3, beaconUsers.get(0).getId());
+        List<BeaconGames> beaconGames = beaconDao.getByPropertyEqual("army", "ELD");
+        assertEquals(1, beaconGames.size());
+        assertEquals(4, beaconGames.get(0).getId());
     }
 
     @Test
     void getByPropertyLikeSuccess() {
-        List<BeaconUsers> beaconUsers = dao.getByPropertyLike("lastName", "m");
-        assertEquals(4, beaconUsers.size());
+        List<BeaconGames> beaconGames = beaconDao.getByPropertyLike("location", "M");
+        assertEquals(2, beaconGames.size());
 
-    }*/
+    }
 
 
 }

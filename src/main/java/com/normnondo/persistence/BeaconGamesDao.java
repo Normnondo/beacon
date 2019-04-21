@@ -23,7 +23,7 @@ public class BeaconGamesDao {
      *
      * @return all the users
      */
-    public List<BeaconGames> getAllGames() {
+  /*  public List<BeaconGames> getAllGames() {
 
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder =  session.getCriteriaBuilder();
@@ -32,9 +32,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public List<BeaconGames> getGamesByType(String gameType) {
+ /*   public List<BeaconGames> getGamesByType(String gameType) {
 
         Session session = sessionFactory.openSession();
 
@@ -46,9 +46,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public List<BeaconGames> getGamesByStyle(String gameStyle) {
+  /*  public List<BeaconGames> getGamesByStyle(String gameStyle) {
 
         Session session = sessionFactory.openSession();
 
@@ -60,9 +60,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public List<BeaconGames> getGamesByPoints(int points) {
+  /*  public List<BeaconGames> getGamesByPoints(int points) {
 
         Session session = sessionFactory.openSession();
 
@@ -74,9 +74,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public List<BeaconGames> getGamesByArmy(String army) {
+ /*   public List<BeaconGames> getGamesByArmy(String army) {
 
         Session session = sessionFactory.openSession();
 
@@ -88,9 +88,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public List<BeaconGames> getGamesByLocation(String location) {
+ /*   public List<BeaconGames> getGamesByLocation(String location) {
 
         Session session = sessionFactory.openSession();
 
@@ -102,9 +102,9 @@ public class BeaconGamesDao {
         List<BeaconGames> games = session.createQuery(query).getResultList();
         session.close();
         return games;
-    }
+    }*/
 
-    public BeaconGames getGameById(int id) {
+ /*   public BeaconGames getGameById(int id) {
 
         Session session = sessionFactory.openSession();
         logger.debug("Searching for game by ID: " + id);
@@ -112,18 +112,18 @@ public class BeaconGamesDao {
         BeaconGames game = session.get(BeaconGames.class, id);
         session.close();
         return game;
-    }
+    }*/
 
-    public void saveOrUpdate(BeaconGames game) {
+  /*  public void saveOrUpdate(BeaconGames game) {
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(game);
         transaction.commit();
         session.close();
-    }
+    }*/
 
-    public int insert(BeaconGames game) {
+  /*  public int insert(BeaconGames game) {
         int id = 0;
 
         Session session = sessionFactory.openSession();
@@ -132,16 +132,16 @@ public class BeaconGamesDao {
         transaction.commit();
         session.close();
         return id;
-    }
+    }*/
 
-    public void delete(BeaconGames game) {
+  /*  public void delete(BeaconGames game) {
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(game);
         transaction.commit();
         session.close();
-    }
+    }*/
 
   /**  public List<BeaconUsers> getByPropertyEqual(String propertyName, String value) {
 

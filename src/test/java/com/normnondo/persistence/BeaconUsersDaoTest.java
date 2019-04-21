@@ -9,15 +9,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BeaconUsersDaoTest {
-  /*  // mkyong for many to many demo
+    // mkyong for many to many demo
 
-    BeaconUsersDao dao;
-  //  BeaconGamesDao gamesDao;
+    BeaconDao beaconDao;
 
     @BeforeEach
     void setUp() {
-        dao = new BeaconUsersDao();
-       // gamesDao = new BeaconGamesDao();
+        beaconDao = new BeaconDao(BeaconUsers.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -25,53 +23,53 @@ class BeaconUsersDaoTest {
 
     @Test
     void getAllUsersSuccess() {
-        List<BeaconUsers> users = dao.getAllUsers();
+        List<BeaconUsers> users = (List<BeaconUsers>)beaconDao.getAll();
         assertEquals(6, users.size());
     }
 
     @Test
     void getUsersByLastNameSuccess() {
-        List<BeaconUsers> users = dao.getUsersByLastName("Test");
+        List<BeaconUsers> users = beaconDao.getByLastName("Test");
         assertEquals(1, users.size());
     }
 
     @Test
     void getUsersByFirstNameSuccess() {
-        List<BeaconUsers> users = dao.getUsersByFirstName("Freddie");
+        List<BeaconUsers> users = beaconDao.getByFirstName("Freddie");
         assertEquals(1, users.size());
     }
 
     @Test
     void getUsersByZipCodeSuccess() {
-        List<BeaconUsers> users = dao.getUsersByZipCode(53718);
+        List<BeaconUsers> users = beaconDao.getByZipCode(53718);
         assertEquals(1, users.size());
     }
 
     @Test
     void getUsersByPhoneNumberSuccess() {
-        List<BeaconUsers> users = dao.getUsersByPhoneNumber(5551234);
+        List<BeaconUsers> users = beaconDao.getByPhoneNumber(5551234);
         assertEquals(1, users.size());
     }
 
     @Test
     void getUsersByEmailSuccess() {
-        List<BeaconUsers> users = dao.getUsersByEmail("jtest@gmail.com");
+        List<BeaconUsers> users = beaconDao.getByEmail("jtest@gmail.com");
         assertEquals(1, users.size());
     }
 
     @Test
     void getUserByIdSuccess() {
-        BeaconUsers users = dao.getUserById(2);
+        BeaconUsers users = (BeaconUsers)beaconDao.getById(2);
         assertEquals("Billy", users.getFirstName());
     }
 
     @Test
     void saveOrUpdateSuccess() {
         String newLastName = "Williams";
-        BeaconUsers userToUpdate = dao.getUserById(4);
+        BeaconUsers userToUpdate = (BeaconUsers)beaconDao.getById(4);
         userToUpdate.setLastName(newLastName);
-        dao.saveOrUpdate(userToUpdate);
-        BeaconUsers retrievedUser = dao.getUserById(4);
+        beaconDao.saveOrUpdate(userToUpdate);
+        BeaconUsers retrievedUser = (BeaconUsers)beaconDao.getById(4);
         assertEquals(newLastName, retrievedUser.getLastName());
     }
 
@@ -79,42 +77,31 @@ class BeaconUsersDaoTest {
     void insertSuccess() {
 
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
-        int id = dao.insert(beaconUsers);
+        int id = beaconDao.insert(beaconUsers);
         assertNotEquals(0,id);
-        BeaconUsers insertedBeaconUser = dao.getUserById(id);
+        BeaconUsers insertedBeaconUser = (BeaconUsers)beaconDao.getById(id);
         assertEquals("Fred", insertedBeaconUser.getFirstName());
     }
 
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getUserById(3));
-        assertNull(dao.getUserById(3));
+        beaconDao.delete(beaconDao.getById(3));
+        assertNull(beaconDao.getById(3));
 
     }
 
     @Test
     void getByPropertyEqualSuccess() {
-        List<BeaconUsers> beaconUsers = dao.getByPropertyEqual("lastName", "Mercury");
+        List<BeaconUsers> beaconUsers = beaconDao.getByPropertyEqual("lastName", "Mercury");
         assertEquals(1, beaconUsers.size());
         assertEquals(3, beaconUsers.get(0).getId());
     }
 
     @Test
     void getByPropertyLikeSuccess() {
-        List<BeaconUsers> beaconUsers = dao.getByPropertyLike("lastName", "m");
+        List<BeaconUsers> beaconUsers = beaconDao.getByPropertyLike("lastName", "m");
         assertEquals(4, beaconUsers.size());
 
     }
 
-    @Test
-    void insertGamesSuccess() {
-        BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone",53588,5559876,"fflint@yahoo.com");
-        BeaconGames game = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers);
-        beaconUsers.addGame(game);
-        int id = dao.insert(beaconUsers);
-        assertNotEquals(0,id);
-        BeaconUsers insertedBeaconUser = dao.getUserById(id);
-        assertEquals("Fred", insertedBeaconUser.getFirstName());
-        assertEquals(1, insertedBeaconUser.getGames().size());
-    }*/
 }

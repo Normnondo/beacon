@@ -1,6 +1,7 @@
 package com.normnondo.controller;
 
-import com.normnondo.persistence.BeaconGamesDao;
+import com.normnondo.entity.BeaconGames;
+import com.normnondo.persistence.BeaconDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,10 +22,10 @@ import java.io.IOException;
 public class AvailableOpponentsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /* Is this where I should change data from database to be more user-friendly? */
+        BeaconDao openGamesDao = new BeaconDao(BeaconGames.class);
 
-        BeaconGamesDao openGamesDao = new BeaconGamesDao();
-
-        req.setAttribute("gamesAvailable", openGamesDao.getAllGames());
+        req.setAttribute("gamesAvailable", openGamesDao.getAll());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
         dispatcher.forward(req, resp);
 
