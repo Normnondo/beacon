@@ -1,8 +1,10 @@
 <Context docBase="beacon_war" path="/beacon_war" reloadable="true">
         <Realm className="org.apache.catalina.realm.JDBCRealm"
                driverName="com.mysql.jdbc.Driver"
-               connectionURL="jdbc:mysql:///beacon?user=tomcat&amp;password=tomcat"
-               userTable="beacon_users" userNameCol="email" userCredCol="password"
+               connectionURL="jdbc:mysql:///beacon_test?user=Norm&amp;password=Grotlo88er"
+               userTable="beacon_user_test" userNameCol="email" userCredCol="password"
                userRoleTable="role" roleNameCol="role_name" >
         </Realm>
 </Context>
+
+<!-- connectionURL="jdbc:mysql:///beacon?user=tomcat&amp;password=tomcat" -->

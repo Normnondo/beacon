@@ -101,12 +101,12 @@
                  <!--   <a href = "/services/games/ORK">Click for Exercise</a> -->
                     <table>
                     <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                        <tr><td>${gamesAvailable.gameType}</td>
-                        <td>${gamesAvailable.gameStyle}</td>
-                        <td>${gamesAvailable.points}</td>
-                        <td>${gamesAvailable.army}</td>
-                        <td>${gamesAvailable.location}</td>
-                        <td>${gamesAvailable.beaconUsers.email}</td></tr>
+                        <tr><td><a href = "sendNotification">${gamesAvailable.gameType} <!-- now, figure out how to send notification!!!-->
+                        ${gamesAvailable.gameStyle}
+                        ${gamesAvailable.points}
+                        ${gamesAvailable.army}
+                        ${gamesAvailable.location}
+                        ${gamesAvailable.beaconUsers.email}</a></td></tr>
                     </c:forEach>
                     </table>
 

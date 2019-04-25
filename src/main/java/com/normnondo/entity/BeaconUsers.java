@@ -27,16 +27,19 @@ public class BeaconUsers {
     private String lastName;
 
     @Column(name = "zip_code")
-    private int zipCode;
+    private String zipCode;
 
     @Column(name = "phone_number")
-    private int phoneNumber;
+    private String phoneNumber;
 
     @Column(name = "email")
     private String email;
 
- //   @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-  //  private Set<BeaconGames> games = new HashSet<>();
+    @Column(name = "password")
+    private String password;
+
+   // @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+   // private Set<BeaconGames> games = new HashSet<>();
 
 
 
@@ -54,13 +57,15 @@ public class BeaconUsers {
      * @param zipCode     the zip code
      * @param phoneNumber the phone number
      * @param email       the email
+     * @param password    the password
      */
-    public BeaconUsers(String firstName, String lastName, int zipCode, int phoneNumber, String email) {
+    public BeaconUsers(String firstName, String lastName, String zipCode, String phoneNumber, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.zipCode = zipCode;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.password = password;
     }
 
     /**
@@ -122,54 +127,56 @@ public class BeaconUsers {
      *
      * @return the zip code
      */
-    public int getZipCode() {
-        return zipCode;
-    }
+    public String getZipCode() { return zipCode; }
 
     /**
      * Sets zip code.
      *
      * @param zipCode the zip code
      */
-    public void setZipCode(int zipCode) {
-        this.zipCode = zipCode;
-    }
+    public void setZipCode(String zipCode) { this.zipCode = zipCode; }
 
     /**
      * Gets phone number if Beacon users want to connect this way.
      *
      * @return the phone number
      */
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
+    public String getPhoneNumber() { return phoneNumber; }
 
     /**
      * Sets phone number.
      *
      * @param phoneNumber the phone number
      */
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
 
     /**
      * Gets email if Beacon users want to connect this way.
      *
      * @return the email
      */
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() { return email; }
 
     /**
      * Sets email.
      *
      * @param email the email
      */
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) { this.email = email; }
+
+    /**
+     * Gets password if Beacon users want to connect this way.
+     *
+     * @return the password
+     */
+    public String getPassword() { return password; }
+
+    /**
+     * Sets password.
+     *
+     * @param password the password
+     */
+    public void setPassword(String password) { this.password = password; }
 
 
     @Override
@@ -182,6 +189,7 @@ public class BeaconUsers {
                 "zipCode= '" + zipCode + '\'' +
                 "phoneNumber= '" + phoneNumber + '\'' +
                 "email= '" + email + '\'' +
+                "password= '********' " +
                 "}";
     }
 

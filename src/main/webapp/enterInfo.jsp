@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -96,7 +97,7 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newPilot" id="newPilot" action="/enterInfoAction" method="post">
+                            <form name="newPilot" id="newPilot" action="com/normnondo/controller/enterInfoAction" method="post">
                             <label for="firstName" title="First Name">First Name:</label>
                             <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" />
                             <label for="lastName" title="Last Name">Last Name:</label>
@@ -107,10 +108,13 @@
                             <input type="tel" name="phone" id="phone" maxlength="15" />
                                 <!-- other social media?? Maybe later -->
                             <label for="email">Email Address:</label>
-                            <input type="email" name="email" id="email" maxlength="40" /><br /><br />
+                            <input type="email" name="email" id="email" maxlength="40" />
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" maxlength="10" /><br /><br />
                             <p><input type="submit" value="Create Account"> <input type="reset" value="Clear Info"></p>
                             </form>
 
+                            <h3>${newBeaconUserAddMessage}</h3>
                           <!--  <a href="gameSearch.jsp" class="btn btn-primary">Request a game</a>
                             <a href="availableOpponents.jsp" class="btn btn-secondary">See available opponents</a> -->
 

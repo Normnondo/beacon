@@ -62,7 +62,11 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="gameSearch.jsp">Register/Login</a>
+                                <a class="nav-link" href="enterInfo.jsp">Register</a>
+                            </li>
+
+                            <li class="nav-item">
+                                    <a class="nav-link" href="gameSearch.jsp">Login</a>
                             </li>
 
                          <!--   <li class="nav-item">
