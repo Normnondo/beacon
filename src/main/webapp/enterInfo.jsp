@@ -97,15 +97,15 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newPilot" id="newPilot" action="com/normnondo/controller/enterInfoAction" method="post">
+                            <form name="newPilot" id="newPilot" action="/enterInfoAction" method="post">
                             <label for="firstName" title="First Name">First Name:</label>
                             <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" />
                             <label for="lastName" title="Last Name">Last Name:</label>
                             <input type="text" name="lastName" id="lastName" placeholder="Last Name" maxlength="25" /><br />
-                            <label for="zip">Zip:</label>
-                            <input type="text" name="zip" id="zip" maxlength="10" /><br />
-                            <label for="phone">Phone Number:</label>
-                            <input type="tel" name="phone" id="phone" maxlength="15" />
+                            <label for="zipCode">Zip:</label>
+                            <input type="text" name="zipCode" id="zipCode" maxlength="10" /><br />
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="15" />
                                 <!-- other social media?? Maybe later -->
                             <label for="email">Email Address:</label>
                             <input type="email" name="email" id="email" maxlength="40" />

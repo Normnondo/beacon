@@ -14,7 +14,8 @@ import javax.servlet.annotation.*;
 )
 
 public class EnterInfoServlet extends HttpServlet {
-        BeaconDao beaconDao = new BeaconDao(BeaconUsers.class);
+
+
     /**
      *  Handles HTTP GET requests.
      *
@@ -26,12 +27,9 @@ public class EnterInfoServlet extends HttpServlet {
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws ServletException, IOException {
-            int id = 0;
 
+            BeaconDao beaconDao = new BeaconDao(BeaconUsers.class);
             HttpSession session = request.getSession();
-
-
-            beaconDao = (BeaconDao)getServletContext().getAttribute("newBeaconUser");
 
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
@@ -40,8 +38,8 @@ public class EnterInfoServlet extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
 
-            BeaconUsers newBeaconUser = new BeaconUsers(firstName, lastName, zipCode, phoneNumber, email, password);
-            id = beaconDao.insert(newBeaconUser);
+            BeaconUsers beaconUser = new BeaconUsers(firstName, lastName, zipCode, phoneNumber, email, password);
+            int id = beaconDao.insert(beaconUser);
 
             String addMessage = "You have been added to database.";
 
@@ -49,7 +47,7 @@ public class EnterInfoServlet extends HttpServlet {
                 session.setAttribute("newBeaconUserAddMessage", addMessage);
             }
 
-            String url = "/enterInfo";
+            String url = "/enterInfo.jsp";
 
             response.sendRedirect(url);
         }

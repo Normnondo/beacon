@@ -38,8 +38,8 @@ public class BeaconUsers {
     @Column(name = "password")
     private String password;
 
-   // @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-   // private Set<BeaconGames> games = new HashSet<>();
+    //@OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    //private Set<BeaconGames> beaconGames = new HashSet<>();
 
 
 
@@ -134,7 +134,9 @@ public class BeaconUsers {
      *
      * @param zipCode the zip code
      */
-    public void setZipCode(String zipCode) { this.zipCode = zipCode; }
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
 
     /**
      * Gets phone number if Beacon users want to connect this way.
