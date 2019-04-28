@@ -3,7 +3,7 @@
                driverName="com.mysql.jdbc.Driver"
                connectionURL="jdbc:mysql:///beacon_test?user=Norm&amp;password=Grotlo88er"
                userTable="beacon_user_test" userNameCol="email" userCredCol="password"
-               userRoleTable="role" roleNameCol="role_name" >
+               userRoleTable="role" roleNameCol="role_name">
         </Realm>
 </Context>
 
