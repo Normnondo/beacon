@@ -23,7 +23,7 @@ public class BeaconGames {
     private String gameStyle;
 
     @Column(name = "points")
-    private int points;
+    private String points;
 
     @Column(name = "army")
     private String army;
@@ -52,7 +52,7 @@ public class BeaconGames {
      * @param location  the location
      * @param beaconUsers      the user id
      */
-    public BeaconGames(String gameType, String gameStyle, int points, String army, String location, BeaconUsers beaconUsers) {
+    public BeaconGames(String gameType, String gameStyle, String points, String army, String location, String userID/*BeaconUsers beaconUsers*/) {
         this.gameType = gameType;
         this.gameStyle = gameStyle;
         this.points = points;
@@ -120,7 +120,7 @@ public class BeaconGames {
      *
      * @return the points
      */
-    public int getPoints() {
+    public String getPoints() {
         return points;
     }
 
@@ -129,7 +129,7 @@ public class BeaconGames {
      *
      * @param points the points
      */
-    public void setPoints(int points) {
+    public void setPoints(String points) {
         this.points = points;
     }
 

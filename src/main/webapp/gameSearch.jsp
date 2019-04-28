@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -96,74 +97,32 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newGame" id="newGame" action="need database/API here???" method="post?">
+                            <form name="newGame" id="newGame" action="/enterGameSearch" method="post">
                                 <legend>Game type?</legend>
                                 <ul id="gameType">
                                     <li><input type="radio" name="gameType" value="40k">Warhammer 40,000</li>
-                                 <!--   <li><input type="radio" name="gameType" value="AoS">Age of Sigmar</li> -->
-                                </ul>
+                                    <li><input type="radio" name="gameType" value="AoS">Age of Sigmar</li>
+                                </ul><br />
                                 <legend>Game style?</legend>
                                 <ul id=gameStyle">
-                                    <li><input type="radio" name="gameStyle" value="Tour">Hardcore Tournament</li>
-                                    <li><input type="radio" name="gameStyle" value="Narr">Narrative</li>
-                                    <li><input type="radio" name="gameStyle" value="Cas">Casual</li>
-                                </ul>
-                                <label for="points">Number of Points?</label>
+                                    <li><input type="radio" name="gameStyle" value="Tourney Prep">Tournament Prep</li>
+                                    <li><input type="radio" name="gameStyle" value="ITC Style">ITC Style</li>
+                                    <li><input type="radio" name="gameStyle" value="Narrative">Narrative</li>
+                                    <li><input type="radio" name="gameStyle" value="Casual">Casual</li>
+                                </ul><br />
+                                <label class="col-md-3" for="points">Number of Points?</label>
                                 <input type="text" name="points" id="points" maxlength="4" /><br />
-                                <fieldset id="armyMenu">
-                                    <legend>Army?</legend>
-                                    <select name="army" id="army">
-                                        <option value="AAA" selected="selected">Please select an army</option>
-                                        <option value="SPM">Space Marines</option>
-                                        <option value="DRK">Dark Angels</option>
-                                        <option value="BLD">Blood Angels</option>
-                                        <option value="WOL">Space Wolves</option>
-                                        <option value="GRK">Grey Knights</option>
-                                        <option value="DEW">Deathwatch</option>
-                                        <option value="IKN">Imperial Knights</option>
-                                        <option value="ASM">Astra Militarum</option>
-                                        <option value="ADM">Adeptus Mechanicus</option>
-                                        <option value="ADC">Adeptus Custodes</option>
-                                        <option value="SOB">Adeptus Sororitas</option>
-                                        <option value="IMP">Imperium of Man</option>
-                                        <option value="CHA">Chaos Space Marines</option>
-                                        <option value="CHD">Chaos Daemons</option>
-                                        <option value="DEG">Death Guard</option>
-                                        <option value="TSO">Thousand Sons</option>
-                                        <option value="RKN">Renegade Knights</option>
-                                        <option value="CRA">Craftworlds</option>
-                                        <option value="YNN">Ynnari</option>
-                                        <option value="HAR">Harlequins</option>
-                                        <option value="DRU">Drukhari</option>
-                                        <option value="TYR">Tyranid</option>
-                                        <option value="GSC">Genestealer Cults</option>
-                                        <option value="ORK">Orks</option>
-                                        <option value="TAU">T'au Empire</option>
-                                        <option value="NEC">Necrons</option>
-                                    </select>
-                                </fieldset>
-                                <fieldset id="location">
-                                    <legend>Location?</legend>
-                                    <select name="location" id="location">
-                                        <option value="AAA" selected="selected">Please select a location</option>
-                                        <option value="IBW">I'm Board (West)</option>
-                                        <option value="IBE">I'm Board (East)</option>
-                                        <option value="MMG">Misty Mountain Games</option>
-                                        <option value="NEW">Netherworld Games</option>
-                                        <option value="NKG">Noble Knight Games</option>
-                                        <option value="PEG">Pegasus Games</option>
-                                        <option value="WHF">Warhammer Fitchburg</option>
-                                        <option value="OTH">Other?(specify)</option>
-                                    </select>
-                                </fieldset>
-                                <label for="otherLocation">Other Location?</label>
-                                <input type="text" name="otherLocation" id="otherLocation" maxlength="15" /><br />
-                            <label for="dateTime">Date/Time:</label>
+                                <label class="col-md-3" for="army">Army?</label>
+                                <input type="text" name="army" id="army" maxlength="25" /><br />
+                                <label class="col-md-3" for="location">Location?</label>
+                                <input type="text" name="location" id="location" maxlength="40" /><br />
+                                <p><input type="submit" value="Create Game"> <input type="reset" value="Clear Info"></p>
+                           <!-- <label for="dateTime">Date/Time:</label> -->
                                 <!-- calendar option?? -->
-                            <input type="text" name="dateTime" id="dateTime" maxlength="15" />
+                           <!-- <input type="text" name="dateTime" id="dateTime" maxlength="15" /> -->
                                 <!-- other social media?? -->
                             </form>
-
+                            <h3>${newBeaconGameAddMessage}</h3>
                             <a href="index.jsp" class="btn btn-primary">Home</a>
                             <a href="availableOpponents.jsp" class="btn btn-secondary">See available opponents</a>
 

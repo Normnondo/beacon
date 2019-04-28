@@ -41,13 +41,13 @@ class BeaconUsersDaoTest {
 
     @Test
     void getUsersByZipCodeSuccess() {
-        List<BeaconUsers> users = beaconDao.getByZipCode(53718);
+        List<BeaconUsers> users = beaconDao.getByZipCode("53718");
         assertEquals(1, users.size());
     }
 
     @Test
     void getUsersByPhoneNumberSuccess() {
-        List<BeaconUsers> users = beaconDao.getByPhoneNumber(5551234);
+        List<BeaconUsers> users = beaconDao.getByPhoneNumber("5551234");
         assertEquals(1, users.size());
     }
 
