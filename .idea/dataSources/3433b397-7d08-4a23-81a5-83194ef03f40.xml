@@ -977,7 +977,7 @@
     </column>
     <column id="244" parent="232" name="game_style">
       <Position>3</Position>
-      <DataType>varchar(4)|0s</DataType>
+      <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="245" parent="232" name="points">
@@ -987,12 +987,12 @@
     </column>
     <column id="246" parent="232" name="army">
       <Position>5</Position>
-      <DataType>varchar(4)|0s</DataType>
+      <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="247" parent="232" name="location">
       <Position>6</Position>
-      <DataType>varchar(4)|0s</DataType>
+      <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="248" parent="232" name="beaconUsers_id">

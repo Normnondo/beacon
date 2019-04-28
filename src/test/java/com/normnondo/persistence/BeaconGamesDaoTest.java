@@ -36,7 +36,7 @@ class BeaconGamesDaoTest {
 
     @Test
     void getGamesByStyleSuccess() {
-        List<BeaconGames> games = beaconDao.getByStyle("HRD");
+        List<BeaconGames> games = beaconDao.getByStyle("Narrative");
         assertEquals(2, games.size());
     }
 
@@ -48,25 +48,25 @@ class BeaconGamesDaoTest {
 
     @Test
     void getGamesByArmySuccess() {
-        List<BeaconGames> games = beaconDao.getByArmy("ORK");
+        List<BeaconGames> games = beaconDao.getByArmy("Orks");
         assertEquals(2, games.size());
     }
 
     @Test
     void getGamesByLocationSuccess() {
-        List<BeaconGames> games = beaconDao.getByLocation("PEG");
+        List<BeaconGames> games = beaconDao.getByLocation("Pegasus");
         assertEquals(2, games.size());
     }
 
     @Test
     void getGameByIdSuccess() {
         BeaconGames games = (BeaconGames)beaconDao.getById(2);
-        assertEquals("ORK", games.getArmy());
+        assertEquals("Orks", games.getArmy());
     }
 
     @Test
     void saveOrUpdateSuccess() {
-        String newArmy = "SPM";
+        String newArmy = "Space Marines";
         BeaconGames gameToUpdate = (BeaconGames)beaconDao.getById(4);
         gameToUpdate.setArmy(newArmy);
         beaconDao.saveOrUpdate(gameToUpdate);
@@ -78,7 +78,7 @@ class BeaconGamesDaoTest {
     void insertSuccess() {
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone","53588","5559876","fflint@yahoo.com", "taco");
         int userid = beaconDao.insert(beaconUsers);
-        BeaconGames beaconGames = new BeaconGames("40k", "HRD", 2000, "SPM", "MST", beaconUsers);
+        BeaconGames beaconGames = new BeaconGames("40k", "ITC Style", 2000, "Space Marines", "Misty Mountain", beaconUsers);
         int id = beaconDao.insert(beaconGames);
         assertNotEquals(0,userid);
         BeaconGames insertedBeaconGame = (BeaconGames)beaconDao.getById(id);
@@ -94,7 +94,7 @@ class BeaconGamesDaoTest {
 
     @Test
     void getByPropertyEqualSuccess() {
-        List<BeaconGames> beaconGames = beaconDao.getByPropertyEqual("army", "ELD");
+        List<BeaconGames> beaconGames = beaconDao.getByPropertyEqual("army", "Eldar");
         assertEquals(1, beaconGames.size());
         assertEquals(4, beaconGames.get(0).getId());
     }
