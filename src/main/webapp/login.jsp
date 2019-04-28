@@ -32,8 +32,8 @@
 
 <FORM ACTION="j_security_check" METHOD="POST">
     <TABLE>
-        <TR><TD>E-mail address: <INPUT TYPE="TEXT" NAME="j_username"><!--</TD></TR>-->
-        <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password"><!--</TD></TR>-->
+        <TR><TD>E-MAIL address: <INPUT TYPE="TEXT" NAME="j_username"><!-- </TD></TR> -->
+        <TR><TD>Enter password: <INPUT TYPE="PASSWORD" NAME="j_password"><!-- </TD></TR> -->
         <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In"><!--</TH></TR>-->
     </TABLE>
 </FORM>
