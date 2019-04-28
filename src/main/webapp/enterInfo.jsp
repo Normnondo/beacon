@@ -115,7 +115,7 @@
                             <p><input type="submit" value="Create Account"> <input type="reset" value="Clear Info"></p>
                             </form>
 
-                            <!-- <h3>${newBeaconUserAddMessage}</h3> -->
+
                           <!--  <a href="gameSearch.jsp" class="btn btn-primary">Request a game</a>
                             <a href="availableOpponents.jsp" class="btn btn-secondary">See available opponents</a> -->
 

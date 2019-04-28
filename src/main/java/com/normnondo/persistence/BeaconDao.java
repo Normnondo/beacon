@@ -80,7 +80,7 @@ public class BeaconDao<T> {
         return entity;
     }
 
-    public List<T> getByPoints(int points) {
+    public List<T> getByPoints(String points) {
 
         Session session = getSession();
 
@@ -162,7 +162,7 @@ public class BeaconDao<T> {
         return entity;
     }
 
-    public List<T> getByZipCode(int zipCode) {
+    public List<T> getByZipCode(String zipCode) {
 
         Session session = getSession();
 
@@ -176,7 +176,7 @@ public class BeaconDao<T> {
         return entity;
     }
 
-    public List<T> getByPhoneNumber(int phoneNumber) {
+    public List<T> getByPhoneNumber(String phoneNumber) {
 
         Session session = getSession();
 

@@ -34,9 +34,10 @@
 
 # Maven
 /target/
+*.log
 /log/
 /lib/
-/hibernate_/
+
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
