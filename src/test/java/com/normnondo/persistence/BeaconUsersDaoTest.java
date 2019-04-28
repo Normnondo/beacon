@@ -85,8 +85,8 @@ class BeaconUsersDaoTest {
 
     @Test
     void deleteSuccess() {
-        beaconDao.delete(beaconDao.getById(94));
-        assertNull(beaconDao.getById(94));
+        beaconDao.delete(beaconDao.getById(3));
+        assertNull(beaconDao.getById(3));
 
     }
 
