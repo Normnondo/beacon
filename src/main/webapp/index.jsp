@@ -186,7 +186,8 @@
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
                                 <a class="list-group-item active" href="index.jsp">Home Page</a>
-                                <a class="list-group-item" href="gameSearch.jsp">Register/Login</a>
+                                <a class="list-group-item" href="enterInfo.jsp">Register</a>
+                                <a class="list-group-item" href="gameSearch.jsp">Login</a>
                               <!--  <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->
                             </div>

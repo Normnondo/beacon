@@ -41,7 +41,7 @@ public class EnterInfoServlet extends HttpServlet {
             BeaconUsers beaconUser = new BeaconUsers(firstName, lastName, zipCode, phoneNumber, email, password);
             int id = beaconDao.insert(beaconUser);
 
-            String addMessage = "You have been added to database.";
+            String addMessage = "You have been added to database. Please login.";
 
             if (id > 0) {
                 session.setAttribute("newBeaconUserAddMessage", addMessage);

@@ -63,7 +63,7 @@
                             </li>
 
                             <li class="nav-item active">
-                                    <a class="nav-link" href="enterInfo.jsp">Enter your Info <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="login.jsp">Login<span class="sr-only">(current)</span></a>
                             </li>
 
                           <!--  <li class="nav-item">
@@ -98,23 +98,24 @@
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
                             <form name="newPilot" id="newPilot" action="/enterInfoAction" method="post">
-                            <label for="firstName" title="First Name">First Name:</label>
-                            <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" />
-                            <label for="lastName" title="Last Name">Last Name:</label>
+                            <label class="col-md-3" for="firstName" title="First Name">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" /><br />
+                            <label class="col-md-3" for="lastName" title="Last Name">Last Name:</label>
                             <input type="text" name="lastName" id="lastName" placeholder="Last Name" maxlength="25" /><br />
-                            <label for="zipCode">Zip:</label>
+                            <label class="col-md-3" for="zipCode">Zip:</label>
                             <input type="text" name="zipCode" id="zipCode" maxlength="10" /><br />
-                            <label for="phoneNumber">Phone Number:</label>
-                            <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="15" />
+                            <label class="col-md-3" for="phoneNumber">Phone Number:</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="15" /><br />
                                 <!-- other social media?? Maybe later -->
-                            <label for="email">Email Address:</label>
-                            <input type="email" name="email" id="email" maxlength="40" />
-                            <label for="password">Password:</label>
+                            <label class="col-md-3" for="email">Email Address:</label>
+                            <input type="email" name="email" id="email" maxlength="40" /><br />
+                            <label class="col-md-3" for="password">Password:</label>
                             <input type="password" name="password" id="password" maxlength="10" /><br /><br />
+                                <h3>${newBeaconUserAddMessage}</h3>
                             <p><input type="submit" value="Create Account"> <input type="reset" value="Clear Info"></p>
                             </form>
 
-                            <h3>${newBeaconUserAddMessage}</h3>
+                            <!-- <h3>${newBeaconUserAddMessage}</h3> -->
                           <!--  <a href="gameSearch.jsp" class="btn btn-primary">Request a game</a>
                             <a href="availableOpponents.jsp" class="btn btn-secondary">See available opponents</a> -->
 
@@ -129,7 +130,7 @@
                                         </a>
                                     </li>
                                     <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
-                                    <li class="page-item active"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="login.jsp">2</a></li>
                                 <!-- <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
                                     <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                                     <li class="page-item">
@@ -149,7 +150,7 @@
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
                                 <a class="list-group-item" href="index.jsp">Home Page</a>
-                                <a class="list-group-item active" href="enterInfo.jsp">Enter your info</a>
+                                <a class="list-group-item active" href="login.jsp">Login</a>
                              <!--   <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->
                             </div>
