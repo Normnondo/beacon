@@ -73,18 +73,18 @@ class BeaconGamesDaoTest {
         BeaconGames retrievedGame = (BeaconGames)beaconDao.getById(4);
         assertEquals(newArmy, retrievedGame.getArmy());
     }
-
+/*
     @Test
     void insertSuccess() {
-       /* BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone","53588","5559876","fflint@yahoo.com", "taco");
-        int userid = beaconDao.insert(beaconUsers);*/
-        BeaconGames beaconGames = new BeaconGames("40k", "ITC Style", "2000", "Space Marines", "Misty Mountain", "4");
+        BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone","53588","5559876","fflint@yahoo.com", "taco");
+        int userid = beaconDao.insert(beaconUsers);
+        BeaconGames beaconGames = new BeaconGames("40k", "ITC Style", "2000", "Space Marines", "Misty Mountain", "userid");
         int id = beaconDao.insert(beaconGames);
-      //  assertNotEquals(0,userid);
+        assertNotEquals(0,userid);
         BeaconGames insertedBeaconGame = (BeaconGames)beaconDao.getById(id);
         assertEquals("2000", insertedBeaconGame.getPoints());
     }
-
+*/
     @Test
     void deleteSuccess() {
         beaconDao.delete(beaconDao.getById(3));

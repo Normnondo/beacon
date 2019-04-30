@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(
         name = "enterGameSearch",
@@ -32,15 +34,19 @@ public class GameSearchServlet extends HttpServlet {
             throws ServletException, IOException {
 
         BeaconDao beaconDao = new BeaconDao(BeaconGames.class);
+        BeaconDao userDao = new BeaconDao(BeaconUsers.class);
         HttpSession session = request.getSession();
+        String remoteUser = request.getRemoteUser();
 
         String gameType = request.getParameter("gameType");
         String gameStyle = request.getParameter("gameStyle");
         String points = request.getParameter("points");
         String army = request.getParameter("army");
         String location = request.getParameter("location");
-        String userID = request.getParameter("1"); //hard coded until I figure out how to get logged in user info
 
+        String userEmail = remoteUser;
+        List<BeaconUsers> currentUser = userDao.getByEmail(userEmail);
+        BeaconUsers userID = currentUser.get(0);
         BeaconGames beaconGame = new BeaconGames(gameType, gameStyle, points, army, location, userID);
         int id = beaconDao.insert(beaconGame);
 

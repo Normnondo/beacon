@@ -52,7 +52,7 @@ public class BeaconGames {
      * @param location  the location
      * @param beaconUsers      the user id
      */
-    public BeaconGames(String gameType, String gameStyle, String points, String army, String location, String userID/*BeaconUsers beaconUsers*/) {
+    public BeaconGames(String gameType, String gameStyle, String points, String army, String location, BeaconUsers beaconUsers) {
         this.gameType = gameType;
         this.gameStyle = gameStyle;
         this.points = points;
@@ -196,7 +196,7 @@ public class BeaconGames {
                 ", points=" + points +
                 ", army='" + army + '\'' +
                 ", location='" + location + '\'' +
-                ", userid-'" + beaconUsers + '\'' +
+                ", userid='" + beaconUsers + '\'' +
                 '}';
     }
 
