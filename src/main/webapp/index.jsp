@@ -188,6 +188,7 @@
                                 <a class="list-group-item active" href="index.jsp">Home Page</a>
                                 <a class="list-group-item" href="enterInfo.jsp">Register</a>
                                 <a class="list-group-item" href="gameSearch.jsp">Login</a>
+<!-- good start, but use API --><a class="list-group-item" href="mailto:normnondo@yahoo.com?Subject=Please%20contact" target="_top">Contact Admin</a>
                               <!--  <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->
                             </div>
