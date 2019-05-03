@@ -69,6 +69,10 @@
                                     <a class="nav-link" href="gameSearch.jsp">Login</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="adminOnly.jsp">Admin</a>
+                            </li>
+
                          <!--   <li class="nav-item">
                                     <a class="nav-link" href="gameSearch.jsp">Request a game</a>
                             </li>
