@@ -32,13 +32,14 @@ public class AvailableOpponentsServlet extends HttpServlet {
 
         BeaconDao openGamesDao = new BeaconDao(BeaconGames.class);
         BeaconDao userDao = new BeaconDao(BeaconUsers.class);
-        openGamesDao.getAll();
+        //openGamesDao.getAll();
         List<BeaconGames> outputGames = new ArrayList<>();
+        List<BeaconUsers> outputUsers = new ArrayList<>();
+
         ZipCodeService getZips = new ZipCodeService();
         String remoteUser = req.getRemoteUser();
 
-        String userEmail = remoteUser;
-        List<BeaconUsers> currentUser = userDao.getByEmail(userEmail);
+        List<BeaconUsers> currentUser = userDao.getByEmail(remoteUser);
         BeaconUsers currentUserZip = currentUser.get(0);
         String currentZip = currentUserZip.getZipCode();
 
@@ -49,11 +50,22 @@ public class AvailableOpponentsServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+
         for(ZipCodeItem zips : zipCodes) {
-                List<BeaconGames> gamesByZip = new ArrayList<>();
-                outputGames = gamesByZip.stream().filter(game -> Objects.equals(game, zips))
-                        .collect(Collectors.toList());
-            }
+            List<BeaconUsers> allUsers = userDao.getAll();
+
+            tempUsers = allUsers.stream().filter(user -> user.getZipCode().equals(zips.getZipCode()))
+                    .collect(Collectors.toList());
+            outputUsers.add(tempUsers);
+        }
+
+        for (BeaconUsers users : outputUsers) {
+            List<BeaconGames> gamesByZip = openGamesDao.getAll();
+
+            outputGames = gamesByZip.stream().filter(game -> game.equals(users.getId()))
+                    .collect(Collectors.toList());
+
+        }
         req.setAttribute("gamesAvailable", outputGames/*openGamesDao.getAll()*/);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
         dispatcher.forward(req, resp);

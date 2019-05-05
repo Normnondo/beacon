@@ -44,8 +44,7 @@ public class GameSearchServlet extends HttpServlet {
         String army = request.getParameter("army");
         String location = request.getParameter("location");
 
-        String userEmail = remoteUser;
-        List<BeaconUsers> currentUser = userDao.getByEmail(userEmail);
+        List<BeaconUsers> currentUser = userDao.getByEmail(remoteUser);
         BeaconUsers userID = currentUser.get(0);
         BeaconGames beaconGame = new BeaconGames(gameType, gameStyle, points, army, location, userID);
         int id = beaconDao.insert(beaconGame);
