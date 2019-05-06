@@ -2,8 +2,6 @@ package com.normnondo.controller;
 
 import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
-import com.normnondo.persistence.BeaconUsersDao;
-
 
 
 import javax.servlet.RequestDispatcher;
@@ -24,11 +22,11 @@ public class SearchBeaconUsers extends HttpServlet {
 
         BeaconDao beaconDao = new BeaconDao(BeaconUsers.class);
 
-        String searchTerm = req.getParameter("searchTerm");
+      /*  String searchTerm = req.getParameter("searchTerm");
         String[] searchType = req.getParameterValues("searchType");
         String searchString = null;
 
-       /* if (searchTerm != null) {
+        if (searchTerm != null) {
 
             try {
 
@@ -46,12 +44,12 @@ public class SearchBeaconUsers extends HttpServlet {
                 nullPointer.printStackTrace();
             }
 
-            req.setAttribute("user", BeaconUsersDao.findSpecificUser(searchTerm, searchString));
+            req.setAttribute("user", BeaconDao.findSpecificUser(searchTerm, searchString));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, resp);
 
         } else {*/
-            req.setAttribute("users", (BeaconUsers)beaconDao.getAll());
+            req.setAttribute("users", /*(BeaconUsers)*/beaconDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, resp);
 

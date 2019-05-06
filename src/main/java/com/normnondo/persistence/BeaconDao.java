@@ -45,7 +45,7 @@ public class BeaconDao<T> {
         CriteriaBuilder builder = session.getCriteriaBuilder();
 
         CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
+        Root<T> root = query.from(type); //?? Why is root never used here?
         List<T> list = session.createQuery(query).getResultList();
         session.close();
         return list;

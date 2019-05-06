@@ -2,7 +2,6 @@ package com.normnondo.service;
 
 import com.normnondo.entity.BeaconGames;
 import com.normnondo.persistence.BeaconDao;
-import com.normnondo.persistence.BeaconGamesDao;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
