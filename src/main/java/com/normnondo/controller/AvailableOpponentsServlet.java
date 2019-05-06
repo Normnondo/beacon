@@ -31,7 +31,7 @@ public class AvailableOpponentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         BeaconDao openGamesDao = new BeaconDao(BeaconGames.class);
-        BeaconDao userDao = new BeaconDao(BeaconUsers.class);
+       /* BeaconDao userDao = new BeaconDao(BeaconUsers.class);
         //openGamesDao.getAll();
         List<BeaconGames> outputGames = new ArrayList<>();
         List<BeaconUsers> outputUsers = new ArrayList<>();
@@ -54,9 +54,9 @@ public class AvailableOpponentsServlet extends HttpServlet {
         for(ZipCodeItem zips : zipCodes) {
             List<BeaconUsers> allUsers = userDao.getAll();
 
-            tempUsers = allUsers.stream().filter(user -> user.getZipCode().equals(zips.getZipCode()))
+            outputUsers = allUsers.stream().filter(user -> user.getZipCode().equals(zips.getZipCode()))
                     .collect(Collectors.toList());
-            outputUsers.add(tempUsers);
+
         }
 
         for (BeaconUsers users : outputUsers) {
@@ -65,8 +65,9 @@ public class AvailableOpponentsServlet extends HttpServlet {
             outputGames = gamesByZip.stream().filter(game -> game.equals(users.getId()))
                     .collect(Collectors.toList());
 
-        }
-        req.setAttribute("gamesAvailable", outputGames/*openGamesDao.getAll()*/);
+
+        }*/
+        req.setAttribute("gamesAvailable",/* outputGames*/openGamesDao.getAll());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
         dispatcher.forward(req, resp);
 
