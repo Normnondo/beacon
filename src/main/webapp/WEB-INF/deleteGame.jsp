@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Beacon Admin Page</title>
+    <title>Beacon Delete Game</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,17 +62,17 @@
                         <a class="nav-link" href="index.jsp">Home</a>
                     </li>
 
-                   <!--  <li class="nav-item">
-                        <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
-                    </li>
+                    <!--  <li class="nav-item">
+                         <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
+                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="gameSearch.jsp">Request a game</a>
-                    </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="gameSearch.jsp">Request a game</a>
+                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
-                    </li> -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
+                     </li> -->
                 </ul>
 
                 <form class="form-inline header-search-form my-2 my-lg-0">
@@ -98,40 +98,14 @@
 
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                            <tr><td><a href = "deleteOnClick">${gamesAvailable.gameType} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${gamesAvailable.gameStyle}
-                                    ${gamesAvailable.points}
-                                    ${gamesAvailable.army}
-                                    ${gamesAvailable.location}
-                                    ${gamesAvailable.beaconUsers.email}</a></td></tr>
+                            <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                                <td>${gamesAvailable.gameStyle}</td>
+                                <td>${gamesAvailable.points}</td>
+                                <td>${gamesAvailable.army}</td>
+                                <td>${gamesAvailable.location}</td>
+                                <td>${gamesAvailable.beaconUsers.email}</td></tr><btn href="/deleteGame">Delete Game</btn>
                         </c:forEach>
                     </table>
-
-                    <h2 class="article-title">Users Table</h2>
-
-                    <table>
-                        <c:forEach var="usersAvailable" items="${usersAvailable}">
-                            <tr><td><a href = "deleteOnClick">${usersAvailable.id} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${usersAvailable.firstName}
-                                    ${usersAvailable.lastName}
-                                    ${usersAvailable.zipCode}
-                                    ${usersAvailable.phoneNumber}
-                                    ${usersAvailable.email}
-                                    ${usersAvailable.password}</a></td></tr>
-                        </c:forEach>
-                    </table>
-
-                    <h2 class="article-title">Role Table</h2>
-
-                    <table>
-                        <c:forEach var="rolesAvailable" items="${rolesAvailable}">
-                            <tr><td><a href = "makeAdminonClick">${rolesAvailable.id} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${usersAvailable.roleName}
-                                    ${usersAvailable.email}
-                                    ${usersAvailable.beaconUsers.id}</a></td></tr>
-                        </c:forEach>
-                    </table>
-
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
 
@@ -147,9 +121,9 @@
                             </a>
                         </li>
                         <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
-                     <!--   <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
-                        <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
-                        <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
+                        <!--   <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                           <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
+                           <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                         <li class="page-item">
                             <a class="page-link" href="index.jsp" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
@@ -167,9 +141,9 @@
                     <h4>Categories</h4>
                     <div class="list-group list-group-root">
                         <a class="list-group-item" href="index.jsp">Home Page</a>
-                      <!--  <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
-                        <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
-                        <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a> -->
+                        <!--  <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
+                          <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
+                          <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a> -->
                     </div>
                 </div>
             </aside>
