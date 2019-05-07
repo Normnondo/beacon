@@ -98,12 +98,12 @@
 
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                            <tr><td><a href = "deleteOnClick">${gamesAvailable.gameType} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${gamesAvailable.gameStyle}
-                                    ${gamesAvailable.points}
-                                    ${gamesAvailable.army}
-                                    ${gamesAvailable.location}
-                                    ${gamesAvailable.beaconUsers.email}</a></td></tr>
+                        <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                            <td>${gamesAvailable.gameStyle}</td>
+                            <td>${gamesAvailable.points}</td>
+                            <td>${gamesAvailable.army}</td>
+                            <td>${gamesAvailable.location}</td>
+                            <td>${gamesAvailable.beaconUsers.email}</td></tr><btn href = "/deleteGames">Delete Game</btn>
                         </c:forEach>
                     </table>
 
@@ -111,13 +111,13 @@
 
                     <table>
                         <c:forEach var="usersAvailable" items="${usersAvailable}">
-                            <tr><td><a href = "deleteOnClick">${usersAvailable.id} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${usersAvailable.firstName}
-                                    ${usersAvailable.lastName}
-                                    ${usersAvailable.zipCode}
-                                    ${usersAvailable.phoneNumber}
-                                    ${usersAvailable.email}
-                                    ${usersAvailable.password}</a></td></tr>
+                            <tr><td><${usersAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                                <td>${usersAvailable.firstName}</td>
+                                <td>${usersAvailable.lastName}</td>
+                                <td>${usersAvailable.zipCode}</td>
+                                <td>${usersAvailable.phoneNumber}</td>
+                                <td>${usersAvailable.email}</td>
+                                <td>${usersAvailable.password}</td></tr><btn href = "/deleteUser">Delete User</btn>
                         </c:forEach>
                     </table>
 
@@ -125,10 +125,10 @@
 
                     <table>
                         <c:forEach var="rolesAvailable" items="${rolesAvailable}">
-                            <tr><td><a href = "makeAdminonClick">${rolesAvailable.id} <!-- now, figure out how to delete upon clicking!!!-->
-                                    ${usersAvailable.roleName}
-                                    ${usersAvailable.email}
-                                    ${usersAvailable.beaconUsers.id}</a></td></tr>
+                            <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                                <td>${usersAvailable.roleName}</td>
+                                <td>${usersAvailable.email}</td>
+                                <td>${usersAvailable.beaconUsers.id}</td></tr><btn href = "/makeAdmin">Grant Admin Status</btn>
                         </c:forEach>
                     </table>
 
