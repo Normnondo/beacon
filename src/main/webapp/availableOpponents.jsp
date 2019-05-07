@@ -98,15 +98,15 @@
                     <p class="article-meta">Posted on <time datetime="2019-02-16">0.017.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
                     <h3>Games in your area</h3>
                     <a href = "availableOpponents">Show local games</a>
-                 <!--   <a href = "/services/games/ORK">Click for Exercise</a> -->
+
                     <table>
                     <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                        <tr><td><a href = "sendNotification">${gamesAvailable.gameType} <!-- now, figure out how to send notification!!!-->
-                        ${gamesAvailable.gameStyle}
-                        ${gamesAvailable.points}
-                        ${gamesAvailable.army}
-                        ${gamesAvailable.location}
-                        ${gamesAvailable.beaconUsers.email}</a></td></tr>
+                        <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to send notification!!!-->
+                            <td>${gamesAvailable.gameStyle}</td>
+                            <td>${gamesAvailable.points}</td>
+                            <td>${gamesAvailable.army}</td>
+                            <td>${gamesAvailable.location}</td>
+                            <td><a href = "sendNotification">${gamesAvailable.beaconUsers.email}</a></td></tr>
                     </c:forEach>
                     </table>
 
