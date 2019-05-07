@@ -14,8 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.List;
 
 /**
@@ -31,8 +29,7 @@ public class AvailableOpponentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         BeaconDao openGamesDao = new BeaconDao(BeaconGames.class);
-       /* BeaconDao userDao = new BeaconDao(BeaconUsers.class);
-        //openGamesDao.getAll();
+        BeaconDao userDao = new BeaconDao(BeaconUsers.class);
         List<BeaconGames> outputGames = new ArrayList<>();
         List<BeaconUsers> outputUsers = new ArrayList<>();
 
@@ -50,24 +47,24 @@ public class AvailableOpponentsServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
-        for(ZipCodeItem zips : zipCodes) {
-            List<BeaconUsers> allUsers = userDao.getAll();
-
-            outputUsers = allUsers.stream().filter(user -> user.getZipCode().equals(zips.getZipCode()))
-                    .collect(Collectors.toList());
-
+        List<BeaconUsers> allUsers = userDao.getAll();
+        for (ZipCodeItem zipCode : zipCodes) {
+            for (BeaconUsers user : allUsers) {
+              if (zipCode.getZipCode().equals(user.getZipCode())) {
+                    outputUsers.add(user);
+                }
+            }
         }
 
+        List<BeaconGames> gamesByZip = openGamesDao.getAll();
         for (BeaconUsers users : outputUsers) {
-            List<BeaconGames> gamesByZip = openGamesDao.getAll();
+            for (BeaconGames games : gamesByZip)
+            if (users.getId() == games.getBeaconUsers().getId()) {
+                outputGames.add(games);
+            }
 
-            outputGames = gamesByZip.stream().filter(game -> game.equals(users.getId()))
-                    .collect(Collectors.toList());
-
-
-        }*/
-        req.setAttribute("gamesAvailable",/* outputGames*/openGamesDao.getAll());
+        }
+        req.setAttribute("gamesAvailable", outputGames);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
         dispatcher.forward(req, resp);
 
