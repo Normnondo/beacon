@@ -186,21 +186,21 @@
                 <div class="row">
                     <div class="col-sm">
                         <ul>
-                            <li><h4>Not sure I need</h4></li>
+                            <li><h4></h4></li>
                         </ul>
                     </div>
                     <div class="col-sm">
                         <ul>
-                            <li><h4>anything down here</h4></li>
+                            <li><h4></h4></li>
                         </ul>
                     </div>
                     <div class="col-sm">
                         <ul>
-                            <li><h4>but just in case</h4></li>
+                            <li><h4></h4></li>
                         </ul>
                     </div>
                     <div class="col-sm">
-                        <h4>I won't trash it yet.</h4>
+                        <h4></h4>
 
                         <p class="social-icons">
                             <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
