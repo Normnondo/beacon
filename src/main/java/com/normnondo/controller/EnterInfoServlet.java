@@ -1,8 +1,9 @@
 package com.normnondo.controller;
 
 import java.io.*;
-import java.util.*;
 import javax.servlet.*;
+
+import com.normnondo.entity.BeaconRole;
 import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
 import javax.servlet.http.*;
@@ -29,7 +30,9 @@ public class EnterInfoServlet extends HttpServlet {
             throws ServletException, IOException {
 
             BeaconDao beaconDao = new BeaconDao(BeaconUsers.class);
+            BeaconDao roleDao = new BeaconDao(BeaconRole.class);
             HttpSession session = request.getSession();
+            String roleName = "user";
 
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
@@ -41,9 +44,12 @@ public class EnterInfoServlet extends HttpServlet {
             BeaconUsers beaconUser = new BeaconUsers(firstName, lastName, zipCode, phoneNumber, email, password);
             int id = beaconDao.insert(beaconUser);
 
+            BeaconRole beaconRole = new BeaconRole(roleName, email);
+            int roleId = roleDao.insert(beaconRole);
+
             String addMessage = "You have been added to database. Please login.";
 
-            if (id > 0) {
+            if (id > 0 && roleId > 0) {
                 session.setAttribute("newBeaconUserAddMessage", addMessage);
             }
 

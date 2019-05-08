@@ -958,58 +958,67 @@
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="241" parent="231" name="PRIMARY">
+    <index id="241" parent="231" name="beacon_user_test_email_uindex">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="242" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="242" parent="232" name="id">
+    <key id="243" parent="231" name="beacon_user_test_email_uindex">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>beacon_user_test_email_uindex</UnderlyingIndexName>
+    </key>
+    <column id="244" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(5)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="232" name="game_type">
+    <column id="245" parent="232" name="game_type">
       <Position>2</Position>
       <DataType>varchar(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="232" name="game_style">
+    <column id="246" parent="232" name="game_style">
       <Position>3</Position>
       <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="232" name="points">
+    <column id="247" parent="232" name="points">
       <Position>4</Position>
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="232" name="army">
+    <column id="248" parent="232" name="army">
       <Position>5</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="232" name="location">
+    <column id="249" parent="232" name="location">
       <Position>6</Position>
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="232" name="beaconUsers_id">
+    <column id="250" parent="232" name="beaconUsers_id">
       <Position>7</Position>
       <DataType>int(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="249" parent="232" name="games_test_beacon_user_test_id_fk">
+    <index id="251" parent="232" name="games_test_beacon_user_test_id_fk">
       <ColNames>beaconUsers_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="250" parent="232" name="PRIMARY">
+    <key id="252" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="251" parent="232" name="games_test_beacon_user_test_id_fk">
+    <foreign-key id="253" parent="232" name="games_test_beacon_user_test_id_fk">
       <ColNames>beaconUsers_id</ColNames>
       <RefSchemaName>beacon_test</RefSchemaName>
       <RefTableName>beacon_user_test</RefTableName>
@@ -1017,43 +1026,36 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="252" parent="233" name="id">
+    <column id="254" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="233" name="role_name">
+    <column id="255" parent="233" name="role_name">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="233" name="email">
+    <column id="256" parent="233" name="email">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="233" name="user_id">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="256" parent="233" name="role_beacon_user_test__fk">
-      <ColNames>user_id</ColNames>
+    <index id="257" parent="233" name="email">
+      <ColNames>email</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="257" parent="233" name="PRIMARY">
+    <key id="258" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="258" parent="233" name="role_beacon_user_test__fk">
-      <ColNames>user_id</ColNames>
+    <foreign-key id="259" parent="233" name="role_ibfk_1">
+      <ColNames>email</ColNames>
       <RefSchemaName>beacon_test</RefSchemaName>
       <RefTableName>beacon_user_test</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>email</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
