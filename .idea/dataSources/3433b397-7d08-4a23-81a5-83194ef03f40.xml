@@ -1030,6 +1030,7 @@
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="255" parent="233" name="role_name">
@@ -1040,22 +1041,28 @@
     <column id="256" parent="233" name="email">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="257" parent="233" name="email">
-      <ColNames>email</ColNames>
+    <column id="257" parent="233" name="beaconUsers_id">
+      <Position>4</Position>
+      <DataType>int(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="258" parent="233" name="role_beacon_user_fk">
+      <ColNames>beaconUsers_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="258" parent="233" name="PRIMARY">
+    <key id="259" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="259" parent="233" name="role_ibfk_1">
-      <ColNames>email</ColNames>
+    <foreign-key id="260" parent="233" name="role_ibfk_1">
+      <ColNames>beaconUsers_id</ColNames>
       <RefSchemaName>beacon_test</RefSchemaName>
       <RefTableName>beacon_user_test</RefTableName>
-      <RefColNames>email</RefColNames>
+      <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>

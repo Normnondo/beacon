@@ -44,16 +44,16 @@ public class EnterInfoServlet extends HttpServlet {
             BeaconUsers beaconUser = new BeaconUsers(firstName, lastName, zipCode, phoneNumber, email, password);
             int id = beaconDao.insert(beaconUser);
 
-            BeaconRole beaconRole = new BeaconRole(roleName, email);
+            BeaconRole beaconRole = new BeaconRole(roleName, email, beaconUser);
             int roleId = roleDao.insert(beaconRole);
 
             String addMessage = "You have been added to database. Please login.";
 
             if (id > 0 && roleId > 0) {
-                session.setAttribute("newBeaconUserAddMessage", addMessage);
+                session.setAttribute("newBeaconUserAddMessage", addMessage); /* make this a modal later?*/
             }
 
-            String url = "/enterInfo.jsp";
+            String url = "/index.jsp";
 
             response.sendRedirect(url);
         }

@@ -7,7 +7,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 
-//import com.normnondo.entity.BeaconUsers;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -197,6 +197,20 @@ public class BeaconDao<T> {
         Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get("email");
         query.where(builder.like(propertyPath, "%" + email + "%"));
+        List<T> entity = session.createQuery(query).getResultList();
+        session.close();
+        return entity;
+    }
+
+    public List<T> getByRoleName(String roleName) {
+
+        Session session = getSession();
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get("roleName");
+        query.where(builder.like(propertyPath, "%" + roleName + "%"));
         List<T> entity = session.createQuery(query).getResultList();
         session.close();
         return entity;

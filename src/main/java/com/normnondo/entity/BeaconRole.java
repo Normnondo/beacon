@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -26,6 +27,10 @@ public class BeaconRole {
     @Column(name = "email")
     private String email;
 
+    @ManyToOne
+    @JoinColumn(name = "beaconUsers_id", nullable = false)
+    private BeaconUsers beaconUsers;
+
    // @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
    // private Set<BeaconUsers> beaconUsers = new HashSet<>();
 
@@ -43,9 +48,10 @@ public class BeaconRole {
      * @param roleName    the role name
      * @param email       the users email
      */
-    public BeaconRole(String roleName, String email) {
+    public BeaconRole(String roleName, String email, BeaconUsers beaconUsers) {
         this.roleName = roleName;
         this.email = email;
+        this.beaconUsers = beaconUsers;
     }
 
     /**
@@ -98,6 +104,25 @@ public class BeaconRole {
      */
     public void setEmail(String email) { this.email = email; }
 
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
+    public BeaconUsers getBeaconUsers() {
+        return beaconUsers;
+    }
+
+    /**
+     * Sets user id.
+     *
+     * @param beaconUsers the user
+     */
+    public void setBeaconUsers(BeaconUsers beaconUsers) {
+        this.beaconUsers = beaconUsers;
+    }
+
+
     @Override
     public String toString() {
 
@@ -105,7 +130,25 @@ public class BeaconRole {
                 "id= '" + id + '\'' +
                 "roleName= '" + roleName + '\'' +
                 "email= '" + email + '\'' +
+                "userId= '" + beaconUsers + '\'' +
                 "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BeaconRole role = (BeaconRole) o;
+        return id == role.id &&
+                Objects.equals(email, role.email) &&
+                Objects.equals(roleName, role.roleName) &&
+                Objects.equals(beaconUsers.getId(), role.beaconUsers);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, roleName, email, beaconUsers);
     }
 
 
