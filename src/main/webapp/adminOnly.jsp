@@ -95,6 +95,7 @@
                 <article>
                     <a href = "adminOnly">Show all</a>
                     <h2 class="article-title">Games Table</h2>
+                    <h4>Select e-mail to delete game</h4>
 
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
@@ -103,11 +104,12 @@
                             <td>${gamesAvailable.points}</td>
                             <td>${gamesAvailable.army}</td>
                             <td>${gamesAvailable.location}</td>
-                            <td>${gamesAvailable.beaconUsers.email}</td></tr><btn href = "/deleteGames">Delete Game</btn>
+                            <td><a href = "/deleteGames">${gamesAvailable.beaconUsers.email}</a></td></tr>
                         </c:forEach>
                     </table>
 
                     <h2 class="article-title">Users Table</h2>
+                    <h4>Select e-mail to delete user</h4>
 
                     <table>
                         <c:forEach var="usersAvailable" items="${usersAvailable}">
@@ -116,19 +118,20 @@
                                 <td>${usersAvailable.lastName}</td>
                                 <td>${usersAvailable.zipCode}</td>
                                 <td>${usersAvailable.phoneNumber}</td>
-                                <td>${usersAvailable.email}</td>
-                                <td>${usersAvailable.password}</td></tr><btn href = "/deleteUser">Delete User</btn>
+                                <td><a href = "/deleteUser">${usersAvailable.email}</a></td>
+                                <td>${usersAvailable.password}</td></tr>
                         </c:forEach>
                     </table>
 
                     <h2 class="article-title">Role Table</h2>
+                    <h4>Select e-mail to grant admin status</h4>
 
                     <table>
                         <c:forEach var="rolesAvailable" items="${rolesAvailable}">
                             <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
                                 <td>${rolesAvailable.roleName}</td>
-                                <td>${rolesAvailable.email}</td>
-                                <td>${rolesAvailable.beaconUsers.id}</td></tr><btn href = "/makeAdmin">Grant Admin Status</btn>
+                                <td><a href = "/makeAdmin">${rolesAvailable.email}</a></td>
+                                <td>${rolesAvailable.beaconUsers.id}</td></tr>
                         </c:forEach>
                     </table>
 
