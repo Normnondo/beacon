@@ -126,9 +126,9 @@
                     <table>
                         <c:forEach var="rolesAvailable" items="${rolesAvailable}">
                             <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
-                                <td>${usersAvailable.roleName}</td>
-                                <td>${usersAvailable.email}</td>
-                                <td>${usersAvailable.beaconUsers.id}</td></tr><btn href = "/makeAdmin">Grant Admin Status</btn>
+                                <td>${rolesAvailable.roleName}</td>
+                                <td>${rolesAvailable.email}</td>
+                                <td>${rolesAvailable.beaconUsers.id}</td></tr><btn href = "/makeAdmin">Grant Admin Status</btn>
                         </c:forEach>
                     </table>
 

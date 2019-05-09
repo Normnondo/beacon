@@ -1,6 +1,7 @@
 package com.normnondo.controller;
 
 import com.normnondo.entity.BeaconGames;
+import com.normnondo.entity.BeaconRole;
 import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
 
@@ -26,9 +27,11 @@ public class AdminOnlyServlet extends HttpServlet {
 
         BeaconDao openGamesDao = new BeaconDao(BeaconGames.class);
         BeaconDao allUsersDao = new BeaconDao(BeaconUsers.class);
+        BeaconDao allRolesDao = new BeaconDao(BeaconRole.class);
 
         req.setAttribute("gamesAvailable", openGamesDao.getAll());
         req.setAttribute("usersAvailable", allUsersDao.getAll());
+        req.setAttribute("rolesAvailable", allRolesDao.getAll());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/adminOnly.jsp");
         dispatcher.forward(req, resp);
 

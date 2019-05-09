@@ -18,6 +18,7 @@
 
         <mapping class="com.normnondo.entity.BeaconUsers"/>
         <mapping class="com.normnondo.entity.BeaconGames"/>
+        <mapping class="com.normnondo.entity.BeaconRole"/>
         <!-- add another 'mapping class' for each table you add -->
 
     </session-factory>

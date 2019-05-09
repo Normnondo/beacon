@@ -3,4 +3,4 @@ INSERT INTO beacon_user_test VALUES (1,'Jonny','Test','53718','5551234','jtest@g
 delete from games_test;
 INSERT INTO games_test VALUES (1,'40k','Casual','1500','Sisters of Battle','Pegasus',3),(2,'40k','ITC Style','2000','Orks','Misty Mountain',4),(3,'40k','Narrative','2000','Tau','Noble Knight',2),(4,'40k','Tourney Prep','1750','Eldar','Netherworld',1),(5,'40k','Casual','2000','Orks','Pegasus',5),(6,'40k','Narrative','2000','Genestealer Cults','Misty Mountain',3);
 delete from role;
-INSERT INTO role VALUES (1,'admin','jtest@gmail.com'),(2,'user','bmadison@gmail.com'),(3,'user','queen@hotmail.com'),(4,'user','tmeng@yahoo.com'),(5,'user','costas@gmail.com'),(6,'user','corky@hotmail.com');
+INSERT INTO role VALUES (1,'admin','jtest@gmail.com',1),(2,'user','bmadison@gmail.com',2),(3,'user','queen@hotmail.com',3),(4,'user','tmeng@yahoo.com',4),(5,'user','costas@gmail.com',5),(6,'user','corky@hotmail.com',6);
