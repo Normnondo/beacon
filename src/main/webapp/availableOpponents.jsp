@@ -73,6 +73,10 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="availableOpponents.jsp">See available opponents <span class="sr-only">(current)</span></a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="deleteGame.jsp">Delete your game</a>
+                    </li>
                 </ul>
 
                 <form class="form-inline header-search-form my-2 my-lg-0">

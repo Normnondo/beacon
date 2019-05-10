@@ -95,45 +95,59 @@
                 <article>
                     <a href = "adminOnly">Show all</a>
                     <h2 class="article-title">Games Table</h2>
-                    <h4>Select e-mail to delete game</h4>
 
+                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                        <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                            <tr><td>${gamesAvailable.id}</td>
+                            <td>${gamesAvailable.gameType}</td>
                             <td>${gamesAvailable.gameStyle}</td>
                             <td>${gamesAvailable.points}</td>
                             <td>${gamesAvailable.army}</td>
                             <td>${gamesAvailable.location}</td>
-                            <td><a href = "/deleteGames">${gamesAvailable.beaconUsers.email}</a></td></tr>
+                            <td>${gamesAvailable.beaconUsers.email}</td></tr>
                         </c:forEach>
                     </table>
+                        <label>Select Game Number for Deletion</label>
+                        <input type="text" name="game" id="game" maxlength="8" />
+                        <p><input class="btn btn-primary" type="submit" value="Delete"></p>
+                    </form>
+                    <h3>${deleteGameMessage}</h3>
 
                     <h2 class="article-title">Users Table</h2>
-                    <h4>Select e-mail to delete user</h4>
 
+                    <form name="deleteUser" id="deleteUser" action="/deleteUserAction" method="post">
                     <table>
                         <c:forEach var="usersAvailable" items="${usersAvailable}">
-                            <tr><td><${usersAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                            <tr><td>${usersAvailable.id}</td>
                                 <td>${usersAvailable.firstName}</td>
                                 <td>${usersAvailable.lastName}</td>
                                 <td>${usersAvailable.zipCode}</td>
                                 <td>${usersAvailable.phoneNumber}</td>
-                                <td><a href = "/deleteUser">${usersAvailable.email}</a></td>
+                                <td>${usersAvailable.email}</td>
                                 <td>${usersAvailable.password}</td></tr>
                         </c:forEach>
                     </table>
+                        <label>Select User Number for Deletion</label>
+                        <input type="text" name="user" id="user" maxlength="8" />
+                        <p><input class="btn btn-primary" type="submit" value="Delete"></p>
+                    </form>
 
                     <h2 class="article-title">Role Table</h2>
-                    <h4>Select e-mail to grant admin status</h4>
 
+                    <form name="makeAdmin" id="makeAdmin" action="/makeAdminAction" method="post">
                     <table>
                         <c:forEach var="rolesAvailable" items="${rolesAvailable}">
                             <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
                                 <td>${rolesAvailable.roleName}</td>
-                                <td><a href = "/makeAdmin">${rolesAvailable.email}</a></td>
+                                <td>${rolesAvailable.email}</td>
                                 <td>${rolesAvailable.beaconUsers.id}</td></tr>
                         </c:forEach>
                     </table>
+                        <label>Select User Number to Grant Admin Status</label>
+                        <input type="text" name="newAdmin" id="newAdmin" maxlength="8" />
+                        <p><input class="btn btn-primary" type="submit" value="New Admin"></p>
+                    </form>
 
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
