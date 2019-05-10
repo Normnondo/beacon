@@ -106,7 +106,9 @@
                             <td>${gamesAvailable.points}</td>
                             <td>${gamesAvailable.army}</td>
                             <td>${gamesAvailable.location}</td>
-                            <td><a href = "sendNotification">${gamesAvailable.beaconUsers.email}</a></td></tr>
+                            <td><a href="mailto:${gamesAvailable.beaconUsers.email}?
+                                subject=Game%20On!&amp;body=Ready%20for%20${gamesAvailable.gameType}%20${gamesAvailable.gameStyle}%20${gamesAvailable.points}%20${gamesAvailable.army}%20${gamesAvailable.location}">
+                                ${gamesAvailable.beaconUsers.email}</a></td></tr>
                     </c:forEach>
                     </table>
 
@@ -168,7 +170,7 @@
                 <div class="row">
                     <div class="col-sm">
                         <ul>
-                            <li><h4></h4></li>
+                            <li><h4><a href="mailto:whbeacon@gmail.com?subject=Feedback">Questions, comments, suggestions?</a></h4></li>
                         </ul>
                     </div>
                     <div class="col-sm">

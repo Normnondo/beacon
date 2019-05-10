@@ -169,7 +169,7 @@
                         <div class="row">
                             <div class="col-sm">
                                 <ul>
-                                    <li><h4></h4></li>
+                                    <li><h4><a href="mailto:whbeacon@gmail.com?subject=Feedback">Questions, comments, suggestions?</a></h4></li>
                                 </ul>
                             </div>
                             <div class="col-sm">
