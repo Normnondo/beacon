@@ -93,12 +93,13 @@
             <!-- Main content -->
             <div class="col-md-8">
                 <article>
-                    <a href = "adminOnly">Show all</a>
+                    <a href = "deleteGameUser">Show all</a>
                     <h2 class="article-title">Games Table</h2>
 
+                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                            <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to delete upon clicking!!!-->
+                            <tr><td>${gamesAvailable.gameType}</td>
                                 <td>${gamesAvailable.gameStyle}</td>
                                 <td>${gamesAvailable.points}</td>
                                 <td>${gamesAvailable.army}</td>
@@ -106,6 +107,11 @@
                                 <td>${gamesAvailable.beaconUsers.email}</td></tr><btn href="/deleteGame">Delete Game</btn>
                         </c:forEach>
                     </table>
+                        <label>Select Game Number for Deletion</label>
+                        <input type="text" name="game" id="game" maxlength="8" />
+                        <p><input class="btn btn-primary" type="submit" value="Delete"></p>
+                    </form>
+                    <h3>${deleteGameMessage}</h3>
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
 
