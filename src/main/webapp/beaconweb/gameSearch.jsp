@@ -32,10 +32,10 @@
                         <!-- Right header box -->
                         <div class="col-6 text-right">               
                             <p class="header-social-icons social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                                <a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                                <a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                <a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+                                <a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
                             </p>
                         </div>
                     </div>
@@ -63,22 +63,30 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="../enterInfo.jsp">Enter your Info</a>
+                                    <a class="nav-link" href="../enterInfo.jsp">Register</a>
                             </li>
 
                             <li class="nav-item active">
-                                    <a class="nav-link" href="gameSearch.jsp">Request a game <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="gameSearch.jsp">Request a game<span class="sr-only">(current)</span></a>
                             </li>
 
                             <li class="nav-item">
                                     <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="deleteGame.jsp">Delete game</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="adminOnly.jsp">Admin</a>
+                            </li>
                         </ul>
 
-                        <form class="form-inline header-search-form my-2 my-lg-0">
+                        <!-- <form class="form-inline header-search-form my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
                             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                        </form> -->
 
                     </div>
 
@@ -136,6 +144,7 @@
                                     <li class="page-item"><a class="page-link" href="../enterInfo.jsp">2</a></li>
                                     <li class="page-item active"><a class="page-link" href="gameSearch.jsp">3</a></li>
                                     <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="deleteGame.jsp">5</a></li>
                                     <li class="page-item">
                                         <a class="page-link" href="availableOpponents.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
@@ -153,9 +162,10 @@
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
                                 <a class="list-group-item" href="../index.jsp">Home Page</a>
-                                <a class="list-group-item" href="../enterInfo.jsp">Enter your info</a>
+                                <a class="list-group-item" href="../enterInfo.jsp">Register</a>
                                 <a class="list-group-item active" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a>
+                                <a class="list-group-item" href="deleteGame.jsp">Delete game</a>
                             </div>
                         </div>
                     </aside> 
@@ -189,10 +199,10 @@
                                 <h4></h4>
 
                                 <p class="social-icons">
-                                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                                    <a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                                    <a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+                                    <a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
                                 </p>
                             </div>
                         </div>

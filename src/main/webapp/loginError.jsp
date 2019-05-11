@@ -29,6 +29,5 @@
 <body>
 Log-in failed... please try again
 <a href="../login.jsp">Back to Login Page</a>
-<%-- add a link back to the login page --%>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <title>Beacon Login</title>
 
 
-   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Beacon</title>
 
     <meta charset="utf-8">

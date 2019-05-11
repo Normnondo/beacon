@@ -31,10 +31,10 @@
                         <!-- Right header box -->
                         <div class="col-6 text-right">               
                             <p class="header-social-icons social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
-                                <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                                <a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                                <a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                <a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+                                <a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
                             </p>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <div class="collapse navbar-collapse" id="mainNavbar">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                    <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
                             </li>
 
                             <li class="nav-item">
@@ -66,26 +66,26 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="beaconweb/gameSearch.jsp">Login</a>
+                                    <a class="nav-link" href="beaconweb/gameSearch.jsp">Request a game</a>
+                            </li>
+
+                            <li class="nav-item">
+                                    <a class="nav-link" href="beaconweb/availableOpponents.jsp">See available opponents</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="beaconweb/deleteGame.jsp">Delete game</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="beaconweb/adminOnly.jsp">Admin</a>
                             </li>
-
-                         <!--   <li class="nav-item">
-                                    <a class="nav-link" href="gameSearch.jsp">Request a game</a>
-                            </li>
-
-                            <li class="nav-item">
-                                    <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
-                            </li> -->
                         </ul>
 
-                        <form class="form-inline header-search-form my-2 my-lg-0">
+                        <!-- <form class="form-inline header-search-form my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
                             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                        </form> -->
 
                     </div>
 
@@ -156,9 +156,6 @@
 
                             will tell you, "I'm your huckleberry."</p>
 
-                          <!--  <a href="#" class="btn btn-primary">Request a game</a>
-                            <a href="#" class="btn btn-secondary">See available opponents</a> -->
-
                         </article>
                         <!-- Example pagination Bootstrap component -->
                         <nav>
@@ -170,9 +167,10 @@
                                         </a>
                                     </li>
                                     <li class="page-item active"><a class="page-link" href="index">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="beaconweb/gameSearch.jsp">2</a></li>
-                                  <!--  <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
+                                    <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="beaconweb/gameSearch.jsp">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="beaconweb/availableOpponents.jsp">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="beaconweb/deleteGame.jsp">5</a></li>
                                     <li class="page-item">
                                         <a class="page-link" href="beaconweb/gameSearch.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
@@ -191,10 +189,9 @@
                             <div class="list-group list-group-root">
                                 <a class="list-group-item active" href="index.jsp">Home Page</a>
                                 <a class="list-group-item" href="enterInfo.jsp">Register</a>
-                                <a class="list-group-item" href="beaconweb/gameSearch.jsp">Login</a>
-<!-- good start, but use API --><a class="list-group-item" href="mailto:normnondo@yahoo.com?Subject=Please%20contact" target="_top">Contact Admin</a>
-                              <!--  <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
-                                <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->
+                                <a class="list-group-item" href="beaconweb/gameSearch.jsp">Request a game</a>
+                                <a class="list-group-item" href="beaconweb/availableOpponents.jsp">See available opponents</a>
+                                <a class="list-group-item" href="beaconweb/deleteGame.jsp">Delete game</a>
                             </div>
                         </div>
                     </aside> 
@@ -211,7 +208,7 @@
                         <div class="row">
                             <div class="col-sm">
                                 <ul>
-                                    <li><h4><a href="mailto:whbeacon@gmail.com?subject=Feedback">Questions, comments, suggestions?</a></h4></li>
+                                    <li><h4><a href="mailto:whbeacon@gmail.com?Subject=Feedback">Questions, comments, suggestions?</a></h4></li>
                                 </ul>
                             </div>
                             <div class="col-sm">
@@ -228,10 +225,10 @@
                                 <h4></h4>
 
                                 <p class="social-icons">
-                                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
-                                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                                    <a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                                    <a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+                                    <a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
                                 </p>
                             </div>
                         </div>
