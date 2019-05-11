@@ -66,11 +66,11 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="gameSearch.jsp">Login</a>
+                                    <a class="nav-link" href="beaconweb/gameSearch.jsp">Login</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="adminOnly.jsp">Admin</a>
+                                <a class="nav-link" href="beaconweb/adminOnly.jsp">Admin</a>
                             </li>
 
                          <!--   <li class="nav-item">
@@ -170,11 +170,11 @@
                                         </a>
                                     </li>
                                     <li class="page-item active"><a class="page-link" href="index">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="gameSearch.jsp">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="beaconweb/gameSearch.jsp">2</a></li>
                                   <!--  <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
                                     <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                                     <li class="page-item">
-                                        <a class="page-link" href="gameSearch.jsp" aria-label="Next">
+                                        <a class="page-link" href="beaconweb/gameSearch.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                             <span class="sr-only">Next</span>
                                         </a>
@@ -191,7 +191,7 @@
                             <div class="list-group list-group-root">
                                 <a class="list-group-item active" href="index.jsp">Home Page</a>
                                 <a class="list-group-item" href="enterInfo.jsp">Register</a>
-                                <a class="list-group-item" href="gameSearch.jsp">Login</a>
+                                <a class="list-group-item" href="beaconweb/gameSearch.jsp">Login</a>
 <!-- good start, but use API --><a class="list-group-item" href="mailto:normnondo@yahoo.com?Subject=Please%20contact" target="_top">Contact Admin</a>
                               <!--  <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a> -->

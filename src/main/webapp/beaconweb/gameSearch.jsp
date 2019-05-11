@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../favicon.ico" type="image/x-icon" />
         <title>Beacon Game Request</title>
 
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
 
 
         <!-- Main CSS --> 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
 
         <!-- Font Awesome -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -59,11 +59,11 @@
                     <div class="collapse navbar-collapse" id="mainNavbar">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                    <a class="nav-link" href="index.jsp">Home</a>
+                                    <a class="nav-link" href="../index.jsp">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
+                                    <a class="nav-link" href="../enterInfo.jsp">Enter your Info</a>
                             </li>
 
                             <li class="nav-item active">
@@ -117,13 +117,9 @@
                                 <label class="col-md-3" for="location">Location?</label>
                                 <input type="text" name="location" id="location" maxlength="40" /><br />
                                 <p><input type="submit" value="Create Game"> <input type="reset" value="Clear Info"></p>
-                           <!-- <label for="dateTime">Date/Time:</label> -->
-                                <!-- calendar option?? -->
-                           <!-- <input type="text" name="dateTime" id="dateTime" maxlength="15" /> -->
-                                <!-- other social media?? -->
                             </form>
                             <h3>${newBeaconGameAddMessage}</h3>
-                            <a href="index.jsp" class="btn btn-primary">Home</a>
+                            <a href="../index.jsp" class="btn btn-primary">Home</a>
                             <a href="availableOpponents.jsp" class="btn btn-secondary">See available opponents</a>
 
                         </article>
@@ -136,8 +132,8 @@
                                             <span class="sr-only">Previous</span>
                                         </a>
                                     </li>
-                                    <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="../index.jsp">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="../enterInfo.jsp">2</a></li>
                                     <li class="page-item active"><a class="page-link" href="gameSearch.jsp">3</a></li>
                                     <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li>
                                     <li class="page-item">
@@ -156,8 +152,8 @@
                         <div class="sidebar-box">
                             <h4>Categories</h4>
                             <div class="list-group list-group-root">
-                                <a class="list-group-item" href="index.jsp">Home Page</a>
-                                <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
+                                <a class="list-group-item" href="../index.jsp">Home Page</a>
+                                <a class="list-group-item" href="../enterInfo.jsp">Enter your info</a>
                                 <a class="list-group-item active" href="gameSearch.jsp">Request a game</a>
                                 <a class="list-group-item" href="availableOpponents.jsp">See available opponents</a>
                             </div>
@@ -176,7 +172,7 @@
                         <div class="row">
                             <div class="col-sm">
                                 <ul>
-                                    <li><h4><a href="mailto:whbeacon@gmail.com?subject=Feedback">Questions, comments, suggestions?</a></h4></li>
+                                    <li><h4><a href="mailto:whbeacon@gmail.com?Subject=Feedback">Questions, comments, suggestions?</a></h4></li>
                                 </ul>
                             </div>
                             <div class="col-sm">

@@ -12,7 +12,7 @@
 <head>
     <title>Beacon Login Failed</title>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Beacon</title>
 
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
 
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 </head>
 <body>
 Log-in failed... please try again
-<a href="login.jsp">Back to Login Page</a>
+<a href="../login.jsp">Back to Login Page</a>
 <%-- add a link back to the login page --%>
 </body>
 </html>

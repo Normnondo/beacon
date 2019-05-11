@@ -11,7 +11,7 @@
     <title>Beacon Login</title>
 
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Beacon</title>
 
     <meta charset="utf-8">
@@ -19,7 +19,7 @@
 
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,15 +28,15 @@
 <body>
 
 <h2>Not a member yet?</h2>
-<a href="enterInfo.jsp" class="btn btn-primary">Create Account</a><br /><br />
+<a href="../enterInfo.jsp" class="btn btn-primary">Create Account</a><br /><br />
 
 <FORM ACTION="j_security_check" METHOD="POST">
     <TABLE>
-        <TR><TD>E-MAIL address: <INPUT TYPE="TEXT" NAME="j_username"><!-- </TD></TR> -->
-        <TR><TD>Enter password: <INPUT TYPE="PASSWORD" NAME="j_password"><!-- </TD></TR> -->
-        <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In"><!--</TH></TR>-->
+        <TR><TD>E-MAIL address: <INPUT TYPE="TEXT" NAME="j_username">
+        <TR><TD>Enter password: <INPUT TYPE="PASSWORD" NAME="j_password">
+        <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
     </TABLE>
 </FORM>
-<!-- if login successful should go to gameSearch.jsp -->
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Beacon Delete Game</title>
 
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
 
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.jsp">Home</a>
+                        <a class="nav-link" href="../index.jsp">Home</a>
                     </li>
 
                     <!--  <li class="nav-item">
@@ -113,7 +113,7 @@
                     </form>
                     <h3>${deleteGameMessage}</h3>
 
-                    <a href="index.jsp" class="btn btn-primary">Home</a>
+                    <a href="../index.jsp" class="btn btn-primary">Home</a>
 
 
                 </article>
@@ -126,12 +126,12 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
+                        <li class="page-item"><a class="page-link" href="../index.jsp">1</a></li>
                         <!--   <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
                            <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
                            <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                         <li class="page-item">
-                            <a class="page-link" href="index.jsp" aria-label="Next">
+                            <a class="page-link" href="../index.jsp" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -146,7 +146,7 @@
                 <div class="sidebar-box">
                     <h4>Categories</h4>
                     <div class="list-group list-group-root">
-                        <a class="list-group-item" href="index.jsp">Home Page</a>
+                        <a class="list-group-item" href="../index.jsp">Home Page</a>
                         <!--  <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
                           <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
                           <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a> -->
