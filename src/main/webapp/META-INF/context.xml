@@ -8,3 +8,4 @@
 </Context>
 
 <!-- connectionURL="jdbc:mysql:///beacon?user=tomcat&amp;password=tomcat" -->
+<!-- userTable="beacon_users" -->

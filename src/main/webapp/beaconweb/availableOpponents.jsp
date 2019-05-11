@@ -2,15 +2,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Beacon Admin Page</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Beacon Available Opponents</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -59,20 +59,24 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.jsp">Home</a>
+                        <a class="nav-link" href="../index.jsp">Home</a>
                     </li>
 
-                   <!--  <li class="nav-item">
-                        <a class="nav-link" href="enterInfo.jsp">Enter your Info</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../enterInfo.jsp">Enter your Info</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="gameSearch.jsp">Request a game</a>
                     </li>
 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="availableOpponents.jsp">See available opponents <span class="sr-only">(current)</span></a>
+                    </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="availableOpponents.jsp">See available opponents</a>
-                    </li> -->
+                        <a class="nav-link" href="deleteGame.jsp">Delete your game</a>
+                    </li>
                 </ul>
 
                 <form class="form-inline header-search-form my-2 my-lg-0">
@@ -93,64 +97,34 @@
             <!-- Main content -->
             <div class="col-md-8">
                 <article>
-                    <a href = "adminOnly">Show all</a>
-                    <h2 class="article-title">Games Table</h2>
+                    <h2 class="article-title">Search Available Opponents</h2>
+
+                    <p class="article-meta">Posted on <time datetime="2019-02-16">0.017.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
+                    <h3>Games in your area</h3>
+                    <h5>Click on e-mail to connect with your opponent</h5>
+                    <a href = "availableOpponents">Show local games</a>
 
                     <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
                     <table>
-                        <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                            <tr><td>${gamesAvailable.id}</td>
-                            <td>${gamesAvailable.gameType}</td>
+                    <c:forEach var="gamesAvailable" items="${gamesAvailable}">
+                        <tr><td>${gamesAvailable.id}</td>
+                            <td>${gamesAvailable.gameType}</td> <!-- now, figure out how to send notification!!!-->
                             <td>${gamesAvailable.gameStyle}</td>
                             <td>${gamesAvailable.points}</td>
                             <td>${gamesAvailable.army}</td>
                             <td>${gamesAvailable.location}</td>
-                            <td>${gamesAvailable.beaconUsers.email}</td></tr>
-                        </c:forEach>
+                            <td><a href="mailto:${gamesAvailable.beaconUsers.email}?subject=Game%20On
+                                &amp;body=Ready%20for%20${gamesAvailable.gameType}%20${gamesAvailable.gameStyle}%20${gamesAvailable.points}%20${gamesAvailable.army}%20${gamesAvailable.location}">
+                                    ${gamesAvailable.beaconUsers.email}</a></td></tr>
+                    </c:forEach>
                     </table>
-                        <label>Select Game Number for Deletion</label>
-                        <input type="text" name="game" id="game" maxlength="8" />
-                        <p><input class="btn btn-primary" type="submit" value="Delete"></p>
+                           <label>Enter Game number after emailing</label>
+                           <input type="text" name="game" id="game" maxlength="4" /><p><input class="btn btn-primary" type="submit" value="Selected"></p>
+
                     </form>
 
-                    <h2 class="article-title">Users Table</h2>
-
-                    <form name="deleteUser" id="deleteUser" action="/deleteUserAction" method="post">
-                    <table>
-                        <c:forEach var="usersAvailable" items="${usersAvailable}">
-                            <tr><td>${usersAvailable.id}</td>
-                                <td>${usersAvailable.firstName}</td>
-                                <td>${usersAvailable.lastName}</td>
-                                <td>${usersAvailable.zipCode}</td>
-                                <td>${usersAvailable.phoneNumber}</td>
-                                <td>${usersAvailable.email}</td>
-                                <td>${usersAvailable.password}</td></tr>
-                        </c:forEach>
-                    </table>
-                        <label>Select User Number for Deletion</label>
-                        <input type="text" name="user" id="user" maxlength="8" />
-                        <p><input class="btn btn-primary" type="submit" value="Delete"></p>
-                    </form>
-
-                    <h2 class="article-title">Role Table</h2>
-
-                    <form name="makeAdmin" id="makeAdmin" action="/makeAdminAction" method="post">
-                    <table>
-                        <c:forEach var="rolesAvailable" items="${rolesAvailable}">
-                            <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->
-                                <td>${rolesAvailable.roleName}</td>
-                                <td>${rolesAvailable.email}</td>
-                                <td>${rolesAvailable.beaconUsers.id}</td></tr>
-                        </c:forEach>
-                    </table>
-                        <label>Select User Number to Grant Admin Status</label>
-                        <input type="text" name="newAdmin" id="newAdmin" maxlength="8" />
-                        <p><input class="btn btn-primary" type="submit" value="New Admin"></p>
-                    </form>
-
-
-                    <a href="index.jsp" class="btn btn-primary">Home</a>
-
+                    <a href="../index.jsp" class="btn btn-primary">Home</a>
+                    <a href="gameSearch.jsp" class="btn btn-secondary">Request a game</a>
 
                 </article>
                 <!-- Example pagination Bootstrap component -->
@@ -162,12 +136,12 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="index.jsp">1</a></li>
-                     <!--   <li class="page-item"><a class="page-link" href="enterInfo.jsp">2</a></li>
+                        <li class="page-item"><a class="page-link" href="../index.jsp">1</a></li>
+                        <li class="page-item"><a class="page-link" href="../enterInfo.jsp">2</a></li>
                         <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
-                        <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
+                        <li class="page-item active"><a class="page-link" href="availableOpponents.jsp">4</a></li>
                         <li class="page-item">
-                            <a class="page-link" href="index.jsp" aria-label="Next">
+                            <a class="page-link" href="../index.jsp" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -182,10 +156,10 @@
                 <div class="sidebar-box">
                     <h4>Categories</h4>
                     <div class="list-group list-group-root">
-                        <a class="list-group-item" href="index.jsp">Home Page</a>
-                      <!--  <a class="list-group-item" href="enterInfo.jsp">Enter your info</a>
+                        <a class="list-group-item" href="../index.jsp">Home Page</a>
+                        <a class="list-group-item" href="../enterInfo.jsp">Enter your info</a>
                         <a class="list-group-item" href="gameSearch.jsp">Request a game</a>
-                        <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a> -->
+                        <a class="list-group-item active" href="availableOpponents.jsp">See available opponents</a>
                     </div>
                 </div>
             </aside>

@@ -13,11 +13,16 @@
     </form-login-config>
   </login-config>
 
+  <error-page>
+    <error-code>403</error-code>
+    <location>/loginError.jsp</location>
+  </error-page>
+
   <!-- Protect everything within the "beacon" directory. -->
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>beacon</web-resource-name>
-      <url-pattern>/gameSearch.jsp</url-pattern> <!-- Should this just be the jsp? -->
+      <web-resource-name>beaconweb</web-resource-name>
+      <url-pattern>/beaconweb/*</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>
@@ -30,9 +35,9 @@
 
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>beacon</web-resource-name>
-      <url-pattern>/gameSearch.jsp</url-pattern>
-      <url-pattern>/adminOnly.jsp</url-pattern> <!-- Should this just be the jsp? -->
+      <web-resource-name>beaconweb</web-resource-name>
+      <url-pattern>/beaconweb/*</url-pattern>
+      <url-pattern>/beaconweb/adminOnly.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>

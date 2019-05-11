@@ -134,7 +134,7 @@
                                 <!-- <li class="page-item"><a class="page-link" href="gameSearch.jsp">3</a></li>
                                     <li class="page-item"><a class="page-link" href="availableOpponents.jsp">4</a></li> -->
                                     <li class="page-item">
-                                        <a class="page-link" href="gameSearch.jsp" aria-label="Next">
+                                        <a class="page-link" href="beaconweb/gameSearch.jsp" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                             <span class="sr-only">Next</span>
                                         </a>
