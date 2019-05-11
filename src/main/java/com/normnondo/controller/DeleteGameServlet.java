@@ -1,8 +1,6 @@
 package com.normnondo.controller;
 
 import com.normnondo.entity.BeaconGames;
-import com.normnondo.entity.BeaconRole;
-import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
 
 import javax.servlet.ServletException;
@@ -13,13 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Servlet to delete games from the game database
+ */
 @WebServlet(
         name = "deleteGameAction",
         urlPatterns = { "/deleteGameAction" }
 )
 
 public class DeleteGameServlet extends HttpServlet {
-
 
     /**
      *  Handles HTTP GET requests.

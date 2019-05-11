@@ -1,7 +1,5 @@
 package com.normnondo.controller;
 
-import com.normnondo.entity.BeaconGames;
-import com.normnondo.entity.BeaconRole;
 import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
 
@@ -13,13 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Servlet to get user information to adminOnly.jsp for deletion
+ */
 @WebServlet(
         name = "deleteUserAction",
         urlPatterns = { "/deleteUserAction" }
 )
 
 public class DeleteUserServlet extends HttpServlet {
-
 
     /**
      *  Handles HTTP GET requests.

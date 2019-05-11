@@ -1,5 +1,5 @@
 package com.normnondo.controller;
-
+/*
 import com.normnondo.service.GamesService;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -16,8 +16,8 @@ public class GameApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        /* Could have multiple classes here */
+        // Could have multiple classes here
         h.add(GamesService.class);
         return h;
     }
-}
+}*/

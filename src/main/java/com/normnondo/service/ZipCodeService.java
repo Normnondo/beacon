@@ -11,14 +11,23 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * The type Zip code service.
+ */
 public class ZipCodeService {
 
     private Properties properties;
 
+    /**
+     * Instantiates a new Zip code service.
+     */
     public ZipCodeService() {
         loadProperties();
     }
 
+    /**
+     * Loads the properties from the zipcode.properties file
+     */
     private void loadProperties() {
         properties = new Properties();
         try {
@@ -33,10 +42,15 @@ public class ZipCodeService {
 
     }
 
-
+    /**
+     * Zip code api list.
+     *
+     * @param zipCode the zip code
+     * @return the list
+     * @throws Exception the exception
+     */
     public List<ZipCodeItem> zipCodeAPI(String zipCode) throws Exception {
         Client client = ClientBuilder.newClient();
-        /* URL should come from a properties file, parameter from a, well, a parameter */
         WebTarget target =
                 client.target(properties.getProperty("apiKey") + zipCode + properties.getProperty("apiRadius"));
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);

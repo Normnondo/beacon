@@ -41,7 +41,6 @@ public class BeaconGames {
     public BeaconGames() {
     }
 
-
     /**
      * Instantiates a new Beacon games.
      *
@@ -199,6 +198,5 @@ public class BeaconGames {
                 ", userid='" + beaconUsers + '\'' +
                 '}';
     }
-
 
 }

@@ -9,13 +9,15 @@ import com.normnondo.persistence.BeaconDao;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
+/**
+ * Servlet to enter user information to register for the site, gets info from the enterInfo.jsp
+ */
 @WebServlet(
         name = "enterInfoAction",
         urlPatterns = { "/enterInfoAction" }
 )
 
 public class EnterInfoServlet extends HttpServlet {
-
 
     /**
      *  Handles HTTP GET requests.
@@ -50,7 +52,7 @@ public class EnterInfoServlet extends HttpServlet {
             String addMessage = "You have been added to database. Please login.";
 
             if (id > 0 && roleId > 0) {
-                session.setAttribute("newBeaconUserAddMessage", addMessage); /* make this a modal later?*/
+                session.setAttribute("newBeaconUserAddMessage", addMessage); /* make this a modal v2.0?*/
             }
 
             String url = "/index.jsp";

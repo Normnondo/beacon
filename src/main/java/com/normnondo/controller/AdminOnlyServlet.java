@@ -14,14 +14,21 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 /**
- * Servlet to display the available games from the database to the availableOpponents jsp
+ * Servlet to display all users, games, and roles to admin for adminstrative purposes
  */
-
 @WebServlet(
         urlPatterns = {"/adminOnly"}
 )
 
 public class AdminOnlyServlet extends HttpServlet {
+
+    /**
+     * This doGet grabs all the database information and sends it to the adminOnly.jsp
+     *@param  req                  Description of the Parameter
+     *@param  resp                 Description of the Parameter
+     *@exception ServletException  if there is a Servlet failure
+     *@exception IOException       if there is an IO failure
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -34,7 +41,6 @@ public class AdminOnlyServlet extends HttpServlet {
         req.setAttribute("rolesAvailable", allRolesDao.getAll());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/adminOnly.jsp");
         dispatcher.forward(req, resp);
-
 
     }
 }

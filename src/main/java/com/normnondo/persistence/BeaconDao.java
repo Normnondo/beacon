@@ -7,21 +7,20 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-    /**
-     * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
-     *
-     */
+/**
+ * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
+ *
+ * @param <T> the type parameter
+ */
 public class BeaconDao<T> {
 
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
-
 
     /**
      * Instantiates a new Generic dao.
@@ -50,6 +49,12 @@ public class BeaconDao<T> {
 
     }
 
+    /**
+     * Gets by type.
+     *
+     * @param gameType the game type
+     * @return the by type
+     */
     public List<T> getByType(String gameType) {
 
         Session session = getSession();
@@ -64,6 +69,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by style.
+     *
+     * @param gameStyle the game style
+     * @return the by style
+     */
     public List<T> getByStyle(String gameStyle) {
 
         Session session = getSession();
@@ -78,6 +89,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by points.
+     *
+     * @param points the points
+     * @return the by points
+     */
     public List<T> getByPoints(String points) {
 
         Session session = getSession();
@@ -92,6 +109,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by army.
+     *
+     * @param army the army
+     * @return the by army
+     */
     public List<T> getByArmy(String army) {
 
         Session session = getSession();
@@ -106,6 +129,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by location.
+     *
+     * @param location the location
+     * @return the by location
+     */
     public List<T> getByLocation(String location) {
 
         Session session = getSession();
@@ -122,8 +151,10 @@ public class BeaconDao<T> {
 
     /**
      * Gets an entity by id
-     * @param id entity id to search by
-     * @return entity
+     *
+     * @param <T> the type parameter
+     * @param id  entity id to search by
+     * @return entity by id
      */
     public <T> T getById(int id) {
         Session session = getSession();
@@ -132,6 +163,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by last name.
+     *
+     * @param lastName the last name
+     * @return the by last name
+     */
     public List<T> getByLastName(String lastName) {
 
         Session session = getSession();
@@ -146,6 +183,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by first name.
+     *
+     * @param firstName the first name
+     * @return the by first name
+     */
     public List<T> getByFirstName(String firstName) {
 
         Session session = getSession();
@@ -160,6 +203,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by zip code.
+     *
+     * @param zipCode the zip code
+     * @return the by zip code
+     */
     public List<T> getByZipCode(String zipCode) {
 
         Session session = getSession();
@@ -174,6 +223,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by phone number.
+     *
+     * @param phoneNumber the phone number
+     * @return the by phone number
+     */
     public List<T> getByPhoneNumber(String phoneNumber) {
 
         Session session = getSession();
@@ -188,6 +243,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by email.
+     *
+     * @param email the email
+     * @return the by email
+     */
     public List<T> getByEmail(String email) {
 
         Session session = getSession();
@@ -202,6 +263,12 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by role name.
+     *
+     * @param roleName the role name
+     * @return the by role name
+     */
     public List<T> getByRoleName(String roleName) {
 
         Session session = getSession();
@@ -216,6 +283,11 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Save or update.
+     *
+     * @param entity the entity
+     */
     public void saveOrUpdate(T entity) {
 
         Session session = getSession();
@@ -225,6 +297,12 @@ public class BeaconDao<T> {
         session.close();
     }
 
+    /**
+     * Insert int.
+     *
+     * @param entity the entity
+     * @return the int
+     */
     public int insert(T entity) {
         int id = 0;
 
@@ -249,6 +327,13 @@ public class BeaconDao<T> {
         session.close();
     }
 
+    /**
+     * Gets by property equal.
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property equal
+     */
     public List<T> getByPropertyEqual(String propertyName, String value) {
 
         Session session = getSession();
@@ -264,6 +349,13 @@ public class BeaconDao<T> {
         return entity;
     }
 
+    /**
+     * Gets by property like.
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property like
+     */
     public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
 
@@ -280,7 +372,6 @@ public class BeaconDao<T> {
         session.close();
         return entity;
     }
-
 
     /**
      * Returns an open session from the SessionFactory
