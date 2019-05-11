@@ -24,6 +24,7 @@ public class SessionFactoryProvider {
     private SessionFactoryProvider() {
 
     }
+
     /**
      * Create session factory.
      */
@@ -48,4 +49,5 @@ public class SessionFactoryProvider {
         return sessionFactory;
 
     }
+
 }

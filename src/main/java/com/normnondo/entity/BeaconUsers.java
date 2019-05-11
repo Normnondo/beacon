@@ -39,8 +39,6 @@ public class BeaconUsers {
     //@OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     //private Set<BeaconGames> beaconGames = new HashSet<>();
 
-
-
     /**
      * Instantiates a new Beacon users.
      */
@@ -178,7 +176,6 @@ public class BeaconUsers {
      */
     public void setPassword(String password) { this.password = password; }
 
-
     @Override
     public String toString() {
 
@@ -192,6 +189,5 @@ public class BeaconUsers {
                 "password= '********' " +
                 "}";
     }
-
 
 }

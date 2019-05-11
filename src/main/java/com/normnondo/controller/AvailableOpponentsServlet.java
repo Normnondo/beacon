@@ -17,14 +17,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Servlet to display the available games from the database to the availableOpponents jsp
+ * Servlet to display the available games from the database to the availableOpponents.jsp
  */
 
 @WebServlet(
         urlPatterns = {"/availableOpponents"}
 )
 
+
 public class AvailableOpponentsServlet extends HttpServlet {
+    /**
+     * This doGet pulls the games from the database, then compares them to the zip codes from the API and displays all
+     * the games in a 20 mile radius
+     * /**
+     *
+     *@param  req                  Description of the Parameter
+     *@param  resp                 Description of the Parameter
+     *@exception ServletException  if there is a Servlet failure
+     *@exception IOException       if there is an IO failure
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -64,10 +75,10 @@ public class AvailableOpponentsServlet extends HttpServlet {
             }
 
         }
+
         req.setAttribute("gamesAvailable", outputGames);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
         dispatcher.forward(req, resp);
-
 
     }
 }

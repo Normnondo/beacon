@@ -3,9 +3,7 @@ package com.normnondo.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * The type Beacon role.
@@ -30,11 +28,6 @@ public class BeaconRole {
     @ManyToOne
     @JoinColumn(name = "beaconUsers_id", nullable = false)
     private BeaconUsers beaconUsers;
-
-   // @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-   // private Set<BeaconUsers> beaconUsers = new HashSet<>();
-
-
 
     /**
      * Instantiates a new Beacon role.
@@ -150,6 +143,5 @@ public class BeaconRole {
 
         return Objects.hash(id, roleName, email, beaconUsers);
     }
-
 
 }
