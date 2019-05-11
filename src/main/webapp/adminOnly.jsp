@@ -112,7 +112,6 @@
                         <input type="text" name="game" id="game" maxlength="8" />
                         <p><input class="btn btn-primary" type="submit" value="Delete"></p>
                     </form>
-                    <h3>${deleteGameMessage}</h3>
 
                     <h2 class="article-title">Users Table</h2>
 
