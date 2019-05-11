@@ -101,25 +101,27 @@
 
                     <p class="article-meta">Posted on <time datetime="2019-02-16">0.017.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
                     <h3>Games in your area</h3>
+                    <h5>Click on e-mail to connect with your opponent</h5>
                     <a href = "availableOpponents">Show local games</a>
 
+                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
                     <table>
                     <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                        <tr><td>${gamesAvailable.gameType}</td> <!-- now, figure out how to send notification!!!-->
+                        <tr><td>${gamesAvailable.id}</td>
+                            <td>${gamesAvailable.gameType}</td> <!-- now, figure out how to send notification!!!-->
                             <td>${gamesAvailable.gameStyle}</td>
                             <td>${gamesAvailable.points}</td>
                             <td>${gamesAvailable.army}</td>
                             <td>${gamesAvailable.location}</td>
-                            <td><a href="mailto:${gamesAvailable.beaconUsers.email}?
-                                subject=Game%20On!&amp;body=Ready%20for%20${gamesAvailable.gameType}%20${gamesAvailable.gameStyle}%20${gamesAvailable.points}%20${gamesAvailable.army}%20${gamesAvailable.location}">
-                                ${gamesAvailable.beaconUsers.email}</a></td></tr>
+                            <td><a href="mailto:${gamesAvailable.beaconUsers.email}?subject=Game%20On
+                                &amp;body=Ready%20for%20${gamesAvailable.gameType}%20${gamesAvailable.gameStyle}%20${gamesAvailable.points}%20${gamesAvailable.army}%20${gamesAvailable.location}">
+                                    ${gamesAvailable.beaconUsers.email}</a></td></tr>
                     </c:forEach>
                     </table>
+                           <label>Enter Game number after emailing</label>
+                           <input type="text" name="game" id="game" maxlength="4" /><p><input class="btn btn-primary" type="submit" value="Selected"></p>
 
-                  <!--  <p>Here through the magic of Java, Hibernate, API's, DAO, and everything else we're supposed to learn
-                    will be a list of the game searches that members have put out, people will be able to click on them to see
-                    the details (or perhaps the details will be shown right there in the list, sounds easier) and then they
-                    can click to confirm that's the game they are committing to play.</p> -->
+                    </form>
 
                     <a href="index.jsp" class="btn btn-primary">Home</a>
                     <a href="gameSearch.jsp" class="btn btn-secondary">Request a game</a>
