@@ -38,5 +38,7 @@
     </TABLE>
 </FORM>
 
+<a href="../index.jsp" class="btn btn-primary">Home</a>
+
 </body>
 </html>

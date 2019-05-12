@@ -102,7 +102,7 @@
             <!-- Main content -->
             <div class="col-md-8">
                 <article>
-                    <a href = "deleteGameUser">Show all</a>
+                    <a href = "deleteGameUser">Show my games</a>
                     <h2 class="article-title">Games Table</h2>
 
                     <form name="deleteGame" id="deleteGame" action="../deleteGameAction" method="post">

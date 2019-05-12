@@ -12,10 +12,12 @@ class BeaconUsersDaoTest {
     // mkyong for many to many demo
 
     BeaconDao beaconDao;
+    BeaconDao beaconGamesDao;
 
     @BeforeEach
     void setUp() {
         beaconDao = new BeaconDao(BeaconUsers.class);
+        beaconGamesDao = new BeaconDao(BeaconGames.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -86,6 +88,14 @@ class BeaconUsersDaoTest {
     @Test
     void deleteSuccess() {
         beaconDao.delete(beaconDao.getById(3));
+        assertNull(beaconDao.getById(3));
+
+    }
+
+    @Test
+    void deleteCompleteSuccess() {
+        beaconDao.delete(beaconDao.getById(3));
+        assertNull(beaconGamesDao.getById(1));
         assertNull(beaconDao.getById(3));
 
     }

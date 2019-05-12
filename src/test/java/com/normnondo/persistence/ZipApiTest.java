@@ -44,6 +44,6 @@ public class ZipApiTest {
         ZipCodeResults results = mapper.readValue(response, ZipCodeResults.class);
         ZipCodeItem item = results.getZipCodes().get(0);
 
-        assertEquals("53558", item.getZipCode());
+        assertEquals("53589", item.getZipCode());
     }
 }
