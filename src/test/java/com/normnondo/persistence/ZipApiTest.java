@@ -1,7 +1,7 @@
 package com.normnondo.persistence;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.normnondo.controller.ZipCodeResults;
+import com.normnondo.entity.ZipCodeResults;
 import com.normnondo.entity.ZipCodeItem;
 import org.junit.jupiter.api.Test;
 import javax.ws.rs.client.*;

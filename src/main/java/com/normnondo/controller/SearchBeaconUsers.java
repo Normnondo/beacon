@@ -1,5 +1,5 @@
 package com.normnondo.controller;
-/*
+/* This class was just part of the Soap API exercise, it is not used in this project.
 import com.normnondo.entity.BeaconUsers;
 import com.normnondo.persistence.BeaconDao;
 

@@ -105,7 +105,7 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newGame" id="newGame" action="/enterGameSearch" method="post">
+                            <form name="newGame" id="newGame" action="../enterGameSearch" method="post">
                                 <legend>Game type?</legend>
                                 <ul id="gameType">
                                     <li><input type="radio" name="gameType" value="40k">Warhammer 40,000</li>

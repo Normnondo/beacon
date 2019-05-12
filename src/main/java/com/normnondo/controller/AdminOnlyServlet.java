@@ -17,7 +17,7 @@ import java.io.IOException;
  * Servlet to display all users, games, and roles to admin for adminstrative purposes
  */
 @WebServlet(
-        urlPatterns = {"/adminOnly"}
+        urlPatterns = {"/beaconweb/adminOnly"}
 )
 
 public class AdminOnlyServlet extends HttpServlet {
@@ -39,7 +39,7 @@ public class AdminOnlyServlet extends HttpServlet {
         req.setAttribute("gamesAvailable", openGamesDao.getAll());
         req.setAttribute("usersAvailable", allUsersDao.getAll());
         req.setAttribute("rolesAvailable", allRolesDao.getAll());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/adminOnly.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/adminOnly.jsp");
         dispatcher.forward(req, resp);
 
     }

@@ -104,7 +104,7 @@
                     <a href = "adminOnly">Show all</a>
                     <h2 class="article-title">Games Table</h2>
 
-                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
+                    <form name="deleteGame" id="deleteGame" action="../deleteGameAction" method="post">
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
                             <tr><td>${gamesAvailable.id}</td>
@@ -123,7 +123,7 @@
 
                     <h2 class="article-title">Users Table</h2>
 
-                    <form name="deleteUser" id="deleteUser" action="/deleteUserAction" method="post">
+                    <form name="deleteUser" id="deleteUser" action="../deleteUserAction" method="post">
                     <table>
                         <c:forEach var="usersAvailable" items="${usersAvailable}">
                             <tr><td>${usersAvailable.id}</td>
@@ -142,7 +142,7 @@
 
                     <h2 class="article-title">Role Table</h2>
 
-                    <form name="makeAdmin" id="makeAdmin" action="/makeAdminAction" method="post">
+                    <form name="makeAdmin" id="makeAdmin" action="../makeAdminAction" method="post">
                     <table>
                         <c:forEach var="rolesAvailable" items="${rolesAvailable}">
                             <tr><td>${rolesAvailable.id}</td> <!-- now, figure out how to delete upon clicking!!!-->

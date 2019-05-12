@@ -1,7 +1,7 @@
 package com.normnondo.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.normnondo.controller.ZipCodeResults;
+import com.normnondo.entity.ZipCodeResults;
 import com.normnondo.entity.ZipCodeItem;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;

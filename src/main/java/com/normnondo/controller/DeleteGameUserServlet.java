@@ -18,7 +18,7 @@ import java.util.List;
  * Servlet used to delete games entered by the user
  */
 @WebServlet(
-        urlPatterns = {"/deleteGameUser"}
+        urlPatterns = {"/beaconweb/deleteGameUser"}
 )
 
 public class DeleteGameUserServlet extends HttpServlet {
@@ -50,7 +50,7 @@ public class DeleteGameUserServlet extends HttpServlet {
         }
 
         req.setAttribute("gamesAvailable", outputGames);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/deleteGame.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/deleteGame.jsp");
         dispatcher.forward(req, resp);
 
     }

@@ -105,10 +105,11 @@
                     <a href = "deleteGameUser">Show all</a>
                     <h2 class="article-title">Games Table</h2>
 
-                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
+                    <form name="deleteGame" id="deleteGame" action="../deleteGameAction" method="post">
                     <table>
                         <c:forEach var="gamesAvailable" items="${gamesAvailable}">
-                            <tr><td>${gamesAvailable.gameType}</td>
+                            <tr><td>${gamesAvailable.id}</td>
+                                <td>${gamesAvailable.gameType}</td>
                                 <td>${gamesAvailable.gameStyle}</td>
                                 <td>${gamesAvailable.points}</td>
                                 <td>${gamesAvailable.army}</td>

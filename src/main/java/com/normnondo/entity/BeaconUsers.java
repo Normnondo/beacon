@@ -11,6 +11,7 @@ import javax.persistence.*;
  */
 @Entity(name = "BeaconUsers")
 @Table(name = "beacon_user_test")
+//@Table(name = "beacon_users")
 public class BeaconUsers {
 
     @Id

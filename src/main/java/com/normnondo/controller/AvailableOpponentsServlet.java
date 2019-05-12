@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 @WebServlet(
-        urlPatterns = {"/availableOpponents"}
+        urlPatterns = {"/beaconweb/availableOpponents"}
 )
 
 
@@ -77,7 +77,7 @@ public class AvailableOpponentsServlet extends HttpServlet {
         }
 
         req.setAttribute("gamesAvailable", outputGames);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/availableOpponents.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/availableOpponents.jsp");
         dispatcher.forward(req, resp);
 
     }

@@ -1,5 +1,5 @@
 package com.normnondo.controller;
-/*
+/*  This class exists only for the Soap API exercise, not actually part of the project.
 import com.normnondo.service.GamesService;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

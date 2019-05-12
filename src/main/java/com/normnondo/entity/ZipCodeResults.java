@@ -1,8 +1,8 @@
-package com.normnondo.controller;
+package com.normnondo.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.annotation.Generated;
-import com.normnondo.entity.ZipCodeItem;
 import java.util.List;
 
 /**

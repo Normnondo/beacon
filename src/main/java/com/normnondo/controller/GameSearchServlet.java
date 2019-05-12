@@ -57,7 +57,7 @@ public class GameSearchServlet extends HttpServlet {
             session.setAttribute("newBeaconGameAddMessage", addMessage);
         }
 
-        String url = "/gameSearch.jsp";
+        String url = "/beaconweb/gameSearch.jsp";
 
         response.sendRedirect(url);
     }

@@ -18,6 +18,11 @@
     <location>/loginError.jsp</location>
   </error-page>
 
+  <error-page>
+    <error-code>404</error-code>
+    <location>/loginError.jsp</location>
+  </error-page>
+
   <!-- Protect everything within the "beacon" directory. -->
   <security-constraint>
     <web-resource-collection>

@@ -9,6 +9,7 @@ import javax.persistence.*;
  */
 @Entity(name = "BeaconGames")
 @Table(name = "games_test")
+//@Table(name = "games")
 public class BeaconGames {
 
     @Id

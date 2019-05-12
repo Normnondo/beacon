@@ -111,7 +111,7 @@
                     <h5>Click on e-mail to connect with your opponent</h5>
                     <a href = "availableOpponents">Show local games</a>
 
-                    <form name="deleteGame" id="deleteGame" action="/deleteGameAction" method="post">
+                    <form name="deleteGame" id="deleteGame" action="../deleteGameAction" method="post">
                     <table>
                     <c:forEach var="gamesAvailable" items="${gamesAvailable}">
                         <tr><td>${gamesAvailable.id}</td>
