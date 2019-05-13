@@ -1,4 +1,4 @@
-package com.normnondo.persistence;
+/*package com.normnondo.persistence;
 
 import com.normnondo.entity.*;
 import com.normnondo.test.util.Database;
@@ -107,4 +107,4 @@ class BeaconGamesDaoTest {
     }
 
 
-}
+}*/
