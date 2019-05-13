@@ -39,7 +39,7 @@ public class AdminOnlyServlet extends HttpServlet {
         req.setAttribute("gamesAvailable", openGamesDao.getAll());
         req.setAttribute("usersAvailable", allUsersDao.getAll());
         req.setAttribute("rolesAvailable", allRolesDao.getAll());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/adminOnly.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("adminOnly.jsp");
         dispatcher.forward(req, resp);
 
     }

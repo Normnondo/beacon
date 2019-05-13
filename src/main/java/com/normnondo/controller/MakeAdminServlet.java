@@ -51,7 +51,7 @@ public class MakeAdminServlet extends HttpServlet {
             session.setAttribute("makeAdminMessage", makeAdminMessage);
         }
 
-        String url = "/index.jsp";
+        String url = "index.jsp";
 
         response.sendRedirect(url);
     }

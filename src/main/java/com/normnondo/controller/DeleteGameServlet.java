@@ -48,7 +48,7 @@ public class DeleteGameServlet extends HttpServlet {
             session.setAttribute("deleteGameMessage", deleteGameMessage);
         }
 
-        String url = "/index.jsp";
+        String url = "index.jsp";
 
         response.sendRedirect(url);
     }

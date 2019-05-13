@@ -89,7 +89,7 @@
 
                             <p class="article-meta">Posted on <time datetime="2019-02-13">0.016.019.M3</time> by <a href="#" rel="author">Norm Nondorf</a></p>
 
-                            <form name="newPilot" id="newPilot" action="/enterInfoAction" method="post">
+                            <form name="newPilot" id="newPilot" action="enterInfoAction" method="post">
                             <label class="col-md-3" for="firstName" title="First Name">First Name:</label>
                             <input type="text" name="firstName" id="firstName" placeholder="First Name" maxlength="20" /><br />
                             <label class="col-md-3" for="lastName" title="Last Name">Last Name:</label>

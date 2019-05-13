@@ -50,7 +50,7 @@ public class DeleteGameUserServlet extends HttpServlet {
         }
 
         req.setAttribute("gamesAvailable", outputGames);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/deleteGame.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("deleteGame.jsp");
         dispatcher.forward(req, resp);
 
     }

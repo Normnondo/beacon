@@ -77,7 +77,7 @@ public class AvailableOpponentsServlet extends HttpServlet {
         }
 
         req.setAttribute("gamesAvailable", outputGames);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/beaconweb/availableOpponents.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("availableOpponents.jsp");
         dispatcher.forward(req, resp);
 
     }
