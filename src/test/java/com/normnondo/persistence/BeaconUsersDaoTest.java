@@ -77,6 +77,7 @@ class BeaconUsersDaoTest {
 
     @Test
     void insertSuccess() {
+       // int id = 0;
 
         BeaconUsers beaconUsers = new BeaconUsers("Fred","Flintstone","53588","5559876","fflint@yahoo.com", "taco");
         int id = beaconDao.insert(beaconUsers);

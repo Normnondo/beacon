@@ -8,8 +8,8 @@ import javax.persistence.*;
  * The type Beacon games.
  */
 @Entity(name = "BeaconGames")
-@Table(name = "games_test")
-//@Table(name = "games")
+//@Table(name = "games_test")
+@Table(name = "games")
 public class BeaconGames {
 
     @Id
@@ -183,8 +183,7 @@ public class BeaconGames {
      *
      * @param beaconUsers the user
      */
-    public void setBeaconUsers(BeaconUsers beaconUsers) {
-        this.beaconUsers = beaconUsers;
+    public void setBeaconUsers(BeaconUsers beaconUsers) { this.beaconUsers = beaconUsers;
     }
 
     @Override

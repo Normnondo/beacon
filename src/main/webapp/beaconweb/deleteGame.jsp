@@ -84,10 +84,10 @@
 
                 </ul>
 
-                <form class="form-inline header-search-form my-2 my-lg-0">
+                <!-- <form class="form-inline header-search-form my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
                     <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                </form> -->
 
             </div>
 
@@ -114,7 +114,7 @@
                                 <td>${gamesAvailable.points}</td>
                                 <td>${gamesAvailable.army}</td>
                                 <td>${gamesAvailable.location}</td>
-                                <td>${gamesAvailable.beaconUsers.email}</td></tr><btn href="/deleteGame">Delete Game</btn>
+                                <td>${gamesAvailable.beaconUsers.email}</td></tr>
                         </c:forEach>
                     </table>
                         <label>Select Game Number for Deletion</label>

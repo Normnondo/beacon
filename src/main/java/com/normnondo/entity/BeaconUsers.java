@@ -3,6 +3,8 @@ package com.normnondo.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The type Beacon users.
@@ -10,8 +12,8 @@ import javax.persistence.*;
  * @author normnondo
  */
 @Entity(name = "BeaconUsers")
-@Table(name = "beacon_user_test")
-//@Table(name = "beacon_users")
+//@Table(name = "beacon_user_test")
+@Table(name = "beacon_users")
 public class BeaconUsers {
 
     @Id
@@ -36,9 +38,8 @@ public class BeaconUsers {
 
     @Column(name = "password")
     private String password;
-
-    //@OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    //private Set<BeaconGames> beaconGames = new HashSet<>();
+    @OneToMany(mappedBy = "beaconUsers", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<BeaconGames> beaconGames = new HashSet<>();
 
     /**
      * Instantiates a new Beacon users.

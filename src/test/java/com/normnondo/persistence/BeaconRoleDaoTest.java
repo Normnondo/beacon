@@ -1,13 +1,13 @@
 package com.normnondo.persistence;
 
-import com.normnondo.entity.BeaconRole;
+import com.normnondo.entity.*;
 import com.normnondo.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class BeaconRoleDaoTest {
     // mkyong for many to many demo

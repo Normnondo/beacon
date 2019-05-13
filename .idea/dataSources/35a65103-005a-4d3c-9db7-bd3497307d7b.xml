@@ -919,89 +919,137 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="231" parent="2" name="beacon_users"/>
-    <table id="232" parent="2" name="role"/>
-    <column id="233" parent="231" name="id">
-      <Position>1</Position>
-      <DataType>int(4)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="234" parent="231" name="first_name">
-      <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="235" parent="231" name="last_name">
-      <Position>3</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="236" parent="231" name="zip_code">
-      <Position>4</Position>
-      <DataType>int(5)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="237" parent="231" name="phone_number">
-      <Position>5</Position>
-      <DataType>int(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="238" parent="231" name="email">
-      <Position>6</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="239" parent="231" name="password">
-      <Position>7</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="240" parent="231" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="241" parent="232" name="id">
+    <table id="232" parent="2" name="games"/>
+    <table id="233" parent="2" name="role"/>
+    <column id="234" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="232" name="role_name">
+    <column id="235" parent="231" name="first_name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="232" name="email">
+    <column id="236" parent="231" name="last_name">
       <Position>3</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="231" name="zip_code">
+      <Position>4</Position>
+      <DataType>varchar(5)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="231" name="phone_number">
+      <Position>5</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="231" name="email">
+      <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="232" name="user_id">
-      <Position>4</Position>
-      <DataType>int(4)|0s</DataType>
+    <column id="240" parent="231" name="password">
+      <Position>7</Position>
+      <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="245" parent="232" name="role_id_uindex">
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="246" parent="232" name="role_beacon_users_id_fk">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="247" parent="232" name="PRIMARY">
+    <key id="241" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="248" parent="232" name="role_id_uindex">
+    <column id="242" parent="232" name="id">
+      <Position>1</Position>
+      <DataType>int(5)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="232" name="game_type">
+      <Position>2</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="232" name="game_style">
+      <Position>3</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="232" name="points">
+      <Position>4</Position>
+      <DataType>varchar(5)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="232" name="army">
+      <Position>5</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="232" name="location">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="232" name="beaconUsers_id">
+      <Position>7</Position>
+      <DataType>int(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="249" parent="232" name="games_beacon_users_id_fk">
+      <ColNames>beaconUsers_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="250" parent="232" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>role_id_uindex</UnderlyingIndexName>
+      <Primary>1</Primary>
     </key>
-    <foreign-key id="249" parent="232" name="role_beacon_users_id_fk">
+    <foreign-key id="251" parent="232" name="games_beacon_users_id_fk">
+      <ColNames>beaconUsers_id</ColNames>
+      <RefSchemaName>beacon</RefSchemaName>
+      <RefTableName>beacon_users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="252" parent="233" name="id">
+      <Position>1</Position>
+      <DataType>int(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="233" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="233" name="email">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="233" name="user_id">
+      <Position>4</Position>
+      <DataType>int(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="256" parent="233" name="role_beacon_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="257" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="258" parent="233" name="role_beacon_users_id_fk">
       <ColNames>user_id</ColNames>
       <RefSchemaName>beacon</RefSchemaName>
       <RefTableName>beacon_users</RefTableName>
