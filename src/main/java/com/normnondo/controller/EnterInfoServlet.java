@@ -55,7 +55,7 @@ public class EnterInfoServlet extends HttpServlet {
                 session.setAttribute("newBeaconUserAddMessage", addMessage); /* make this a modal v2.0?*/
             }
 
-            String url = "/index.jsp";
+            String url = "index.jsp";
 
             response.sendRedirect(url);
         }

@@ -28,7 +28,7 @@
 <body>
 
 <h2>Not a member yet?</h2>
-<a href="../enterInfo.jsp" class="btn btn-primary">Create Account</a><br /><br />
+<a href="/enterInfo.jsp" class="btn btn-primary">Create Account</a><br /><br />
 
 <FORM ACTION="j_security_check" METHOD="POST">
     <TABLE>
@@ -38,7 +38,7 @@
     </TABLE>
 </FORM>
 
-<a href="../index.jsp" class="btn btn-primary">Home</a>
+<a href="/index.jsp" class="btn btn-primary">Home</a>
 
 </body>
 </html>

@@ -48,7 +48,7 @@ public class DeleteUserServlet extends HttpServlet {
             session.setAttribute("deleteUserMessage", deleteUserMessage);
         }
 
-        String url = "/index.jsp";
+        String url = "index.jsp";
 
         response.sendRedirect(url);
     }
