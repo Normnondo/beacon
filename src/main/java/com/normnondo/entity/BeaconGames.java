@@ -32,6 +32,9 @@ public class BeaconGames {
     @Column(name = "location")
     private String location;
 
+    @Column(name ="datetime")
+    private String datetime;
+
     @ManyToOne
     @JoinColumn(name = "beaconUsers_id", nullable = false)
     private BeaconUsers beaconUsers;
@@ -168,6 +171,10 @@ public class BeaconGames {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public String getDatetime() { return datetime; }
+
+    public void setDatetime(String datetime) { this.datetime = datetime; }
 
     /**
      * Gets user id.
